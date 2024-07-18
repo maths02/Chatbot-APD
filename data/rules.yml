@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Khong hieu y nguoi dung
+  steps:
+  - intent: nlu_fallback
+  - action: utter_khong_hieu_y_dinh
+
+- rule: modau
+  steps:
+    - action: utter_modau
+    - intent: chào

@@ -1,0 +1,1260 @@
+version: "3.1"
+
+stories:
+
+- story: chào hỏi
+  steps:
+    - intent: chào
+    - action: utter_greet
+
+
+
+- story: tạm biệt
+  steps:
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+
+
+
+- story: mã tuyển sinh
+  steps:
+    - intent: ma_tuyen_sinh
+    - action: utter_ma_tuyen_sinh
+
+- story: số lượng chỉ tiêu
+  steps:
+    - intent: so_luong_chi_tieu
+    - action: utter_so_luong_chi_tieu
+
+- story: cao đẳng
+  steps:
+    - intent: cao_dang
+    - action: utter_cao_dang
+
+- story: ask ability
+  steps:
+  - intent: ask_ability
+  - action: utter_ask_ability
+
+- story: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+
+- story: khen
+  steps:
+  - intent: khen
+  - action: utter_happy
+
+- story: che
+  steps:
+  - intent: che
+  - action: utter_sorry
+
+
+
+- story: ask admissions online
+  steps:
+  - intent: ask_admissions_online
+  - action: utter_admissions_online
+
+
+
+
+- story: ask main link
+  steps:
+  - intent: ask_main_link
+  - action: utter_ask_main_link
+
+- story: ask admissions link
+  steps:
+  - intent: ask_admissions_link
+  - action: utter_ask_admissions_link
+
+
+- story: ask kts
+  steps:
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask kts 1
+  steps:
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: ask_ptts
+    - action: utter_ask_ptts
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask kts 2
+  steps:
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: ask_ptts
+    - action: utter_ask_ptts
+    - intent: ask_ptts_kts_tuyen_danh_gia_nang_luc
+    - action: utter_ask_ptts_kts_tuyen_danh_gia_nang_luc
+    - intent: ask_ptts_kts_hoc_ba
+    - action: utter_ask_ptts_kts_hoc_ba
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask kts 3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: ask_dll
+    - action: utter_ask_dll
+
+
+
+
+- story: ask tgian nop ho so
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_ho_so_xt
+    - action: utter_ask_ho_so_xt
+    - intent: ask_tg_ho_so
+    - action: utter_ask_tg_ho_so
+    - action: utter_ask_admissions_link
+    - intent: ask_van_phong_kts
+    - action: utter_ask_van_phong_kts
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask tgian nop ho so 2
+  steps:
+    - intent: ask_hotline_kts
+    - action: utter_ask_hotline_kts
+    - action: utter_ask_admissions_link
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask thxht
+  steps:
+    - intent: ask_to_hop_xt
+    - action: utter_ask_to_hop_xt
+
+- story: ask thxht
+  steps:
+    - intent: ask_hotline_kts
+    - action: utter_ask_hotline_kts
+    - action: utter_ask_admissions_link
+    - intent: ask_to_hop_xt
+    - action: utter_ask_to_hop_xt
+    - intent: ma_tuyen_sinh
+    - action: utter_ma_tuyen_sinh
+
+- story: dki tin
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: xep_lich_hoc
+    - action: utter_xep_lich_hoc
+    - intent: ask_dang_ky_tin_chi
+    - action: utter_ask_dang_ky_tin_chi
+    - intent: ask_thoi_gian_hoc_trong_ngay
+    - action: utter_ask_thoi_gian_hoc_trong_ngay
+    - action: utter_goodbye
+
+- story: hoc phi
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_hp_kts
+    - action: utter_ask_hp_kts
+
+- story: hoc phi 1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_hp_kts
+    - action: utter_ask_hp_kts
+    - intent: ask_cai_thien
+    - action: utter_ask_cai_thien
+    - intent: ask_hoc_lai
+    - action: utter_ask_hoc_lai
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb
+  steps:
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_TA
+    - action: utter_ask_clb_TA
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb ta
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_TA
+    - action: utter_ask_clb_TA
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb tt
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_tt
+    - action: utter_ask_clb_tt
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb bong da
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_bong_da
+    - action: utter_ask_clb_bong_da
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb bong avsc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_AVSC
+    - action: utter_ask_AVSC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb bong br
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_br
+    - action: utter_ask_clb_br
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb  nckh
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_clb_nckh
+    - action: utter_ask_clb_nckh
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb  bsc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_APD_BSC
+    - action: utter_ask_APD_BSC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb aivc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_AIVC
+    - action: utter_ask_AIVC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb qldt
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_qly_dtu
+    - action: utter_ask_qly_dtu
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb abc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_ABC
+    - action: utter_ask_ABC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb ict
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_ict
+    - action: utter_ask_ict
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb amc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_AMC
+    - action: utter_ask_AMC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb yaa
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_YAA
+    - action: utter_ask_YAA
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb CMA
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_CMA
+    - action: utter_ask_CMA
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb AIC
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_AIC
+    - action: utter_ask_AIC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb yjac
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_YJAC
+    - action: utter_ask_YJAC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb adc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_ADC
+    - action: utter_ask_ADC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask clb APDLifeSkillsClub
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_clb
+    - action: utter_ask_clb
+    - intent: ask_APDLifeSkillsClub
+    - action: utter_ask_APDLifeSkillsClub
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask APD1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask nghanh dao tao
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_nghanh_dt
+    - action: utter_ask_nghanh_dt
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask nghanh dao tao clc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_nghanh_clc
+    - action: utter_ask_nghanh_clc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask dao tao ts
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_dao_tao_ts
+    - action: utter_ask_dao_tao_ts
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask chuong trinh hop tac o APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_chuong_trinh_hop_tac
+    - action: utter_ask_chuong_trinh_hop_tac
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+
+
+- story: ask co cau to chuc o APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_cocau_tcochuc
+    - action: utter_ask_cocau_tcochuc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+
+- story: ask hoc bong o APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask dkien duoc hoc bong va quy doi diem he 4 APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: quy_doi_thang4
+    - action: utter_quy_doi_thang4
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask dkien duoc hoc bong va quy doi diem he 4 APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: quy_doi_thang4
+    - action: utter_quy_doi_thang4
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask cong thuc tinh quy doi diem he 4 APD
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: quy_doi_thang4
+    - action: utter_quy_doi_thang4
+    - intent: ask_ct_tinh_thang4
+    - action: utter_ask_ct_tinh_thang4
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask khen thuong hoc bong
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_muc_khen_thuong_hoc_bongdt
+    - action: utter_ask_muc_khen_thuong_hoc_bongdt
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask APD toc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD_toc
+    - action: utter_ask_APD_toc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask APD toc
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_APD_toc
+    - action: utter_ask_APD_toc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask duong day nong
+  steps:
+    - intent: ask_hotline_kts
+    - action: utter_ask_hotline_kts
+
+- story: ask hđ ngoai khoa cua kts
+  steps:
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: ask_hđ_nk
+    - action: utter_ask_hđ_nk
+
+- story: ask tham quan dn kts
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_kts
+    - action: utter_ask_kts
+
+- story: ask chuong trinh hoc cua dll
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_chuong_trinh_hoc_dll
+    - action: utter_ask_chuong_trinh_hoc_dll
+
+- story: ask chuong trinh hoc cua ktkds
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_chuong_trinh_hoc_ktkds
+    - action: utter_ask_chuong_trinh_hoc_ktkds
+
+- story: ask chuong trinh hoc cua ktkds1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_kts
+    - action: utter_ask_kts
+    - intent: ask_chuong_trinh_hoc_ktkds
+    - action: utter_ask_chuong_trinh_hoc_ktkds
+
+- story: ask chuong trinh hoc cua ktkds2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_chuong_trinh_hoc_ktkds
+    - action: utter_ask_chuong_trinh_hoc_ktkds
+
+- story: ask cc dau ra
+  steps:
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+
+- story: ask cc dau ra 1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask cc mos
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_mos
+    - action: utter_ask_mos
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask cc íc3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_ic3
+    - action: utter_ask_ic3
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask quy doi mos
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: quy_doi_mos
+    - action: utter_quy_doi_mos
+
+- story: ask quy doi mos1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: quy_doi_mos
+    - action: utter_quy_doi_mos
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask quy doi mos2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - intent: ask_mos
+    - action: utter_ask_mos
+    - action: utter_ask_cc_dau_ra
+    - intent: quy_doi_mos
+    - action: utter_quy_doi_mos
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask quy doi mos3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - intent: ask_mos
+    - action: utter_ask_mos
+    - action: utter_ask_cc_dau_ra
+    - intent: quy_doi_mos
+    - action: utter_quy_doi_mos
+    - intent: ask_qt_mien_hoc_tin_hoc
+    - action: utter_ask_qt_mien_hoc_tin_hoc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask ic3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_ic3
+    - action: utter_ask_ic3
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask ic3 1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_ic3
+    - action: utter_ask_ic3
+    - intent: quy_doi_ic3
+    - action: utter_quy_doi_ic3
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask ic3 2
+  steps:
+    - intent: chào
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_ic3
+    - action: utter_ask_ic3
+    - intent: quy_doi_ic3
+    - action: utter_quy_doi_ic3
+    - intent: ask_qt_mien_hoc_tin_hoc
+    - action: utter_ask_qt_mien_hoc_tin_hoc
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_ITP
+  steps:
+    - intent: chào
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_ITP
+    - action: utter_ask_TOEFL_ITP
+    - intent: quy_doi_TOEFL_ITP
+    - action: utter_quy_doi_TOEFL_ITP
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_ITP1
+  steps:
+    - intent: chào
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_ITP
+    - action: utter_ask_TOEFL_ITP
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_ITP2
+  steps:
+    - intent: chào
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_ITP
+    - action: utter_ask_TOEFL_ITP
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+
+- story: ask TOEFL_ITP3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_ITP
+    - action: utter_ask_TOEFL_ITP
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_iBT
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_TOEFL_iBT
+    - action: utter_ask_TOEFL_iBT
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_iBT1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_iBT
+    - action: utter_ask_TOEFL_iBT
+    - intent: quy_doi_TOEFL_iBT
+    - action: utter_quy_doi_TOEFL_iBT
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_iBT2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_iBT
+    - action: utter_ask_TOEFL_iBT
+    - intent: quy_doi_TOEFL_iBT
+    - action: utter_quy_doi_TOEFL_iBT
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEFL_iBT3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEFL_iBT
+    - action: utter_ask_TOEFL_iBT
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEIC
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_TOEIC
+    - action: utter_ask_TOEIC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEIC1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEIC
+    - action: utter_ask_TOEIC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEIC2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEIC
+    - action: utter_ask_TOEIC
+    - intent: quy_doi_TOEIC
+    - action: utter_quy_doi_TOEIC
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask TOEIC3
+  steps:
+    - action: steps
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_TOEIC
+    - action: utter_ask_TOEIC
+    - intent: quy_doi_TOEIC
+    - action: utter_quy_doi_TOEIC
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask IELTS
+  steps:
+    - intent: ask_IELTS
+    - action: utter_ask_IELTS
+
+- story: ask IELTS1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_IELTS
+    - action: utter_ask_IELTS
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask IELTS3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_IELTS
+    - action: utter_ask_IELTS
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask IELTS4
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_IELTS
+    - action: utter_ask_IELTS
+    - intent: quy_doi_IELTS
+    - action: utter_quy_doi_IELTS
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask IELTS5
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_IELTS
+    - action: utter_ask_IELTS
+    - intent: quy_doi_IELTS
+    - action: utter_quy_doi_IELTS
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: Cambridge
+  steps:
+    - action: utter_greet
+    - intent: ask_Cambridge
+    - action: utter_ask_Cambridge
+
+- story: Cambridge1
+  steps:
+    - action: utter_greet
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_Cambridge
+    - action: utter_ask_Cambridge
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: Cambridge2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Cambridge
+    - action: utter_ask_Cambridge
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: Cambridge3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Cambridge
+    - action: utter_ask_Cambridge
+    - intent: quy_doi_Cambridge
+    - action: utter_quy_doi_Cambridge
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: Cambridge4
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Cambridge
+    - action: utter_ask_Cambridge
+    - intent: quy_doi_Cambridge
+    - action: utter_quy_doi_Cambridge
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Vstep
+  steps:
+    - intent: ask_Vstep
+    - action: utter_ask_Vstep
+
+- story: ask Vstep1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_Vstep
+    - action: utter_ask_Vstep
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Vstep2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Vstep
+    - action: utter_ask_Vstep
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Vstep3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Vstep
+    - action: utter_ask_Vstep
+    - intent: quy_doi_Vstep
+    - action: utter_quy_doi_Vstep
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Vstep4
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Vstep
+    - action: utter_ask_Vstep
+    - intent: quy_doi_Vstep
+    - action: utter_quy_doi_Vstep
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Aptis_ESOL
+  steps:
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+
+- story: ask Aptis_ESOL1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Aptis_ESOL2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Aptis_ESOL3
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Aptis_ESOL4
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+    - intent: quy_doi_AptisESOL
+    - action: utter_quy_doi_AptisESOL
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask Aptis_ESOL5
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_cc_dau_ra
+    - action: utter_ask_cc_dau_ra
+    - intent: ask_Aptis_ESOL
+    - action: utter_ask_Aptis_ESOL
+    - intent: ask_quy_doi_ta
+    - action: utter_ask_quy_doi_ta
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask he clc
+  steps:
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_nghanh_clc
+    - action: utter_ask_nghanh_clc
+
+
+
+- story: ask thi dau vao tieng anh
+  steps:
+    - intent: ask_thi_dau_vao
+    - action: utter_ask_thi_dau_vao
+
+- story: ask thi dau vao tieng anh1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_thi_dau_vao
+    - action: utter_ask_thi_dau_vao
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask de xe
+  steps:
+    - intent: ask_de_xe
+    - action: utter_ask_de_xe
+
+- story: ask de xe1
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_de_xe
+    - action: utter_ask_de_xe
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask de xe2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_de_xe
+    - action: utter_ask_de_xe
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask xe bus 19
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_bus_19
+    - action: utter_ask_bus_19
+
+- story: ask xe bus 19 pt2
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: ask_APD
+    - action: utter_ask_APD
+    - intent: ask_bus_19
+    - action: utter_ask_bus_19
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask ve xe
+  steps:
+    - intent: ask_de_xe
+    - action: utter_ask_de_xe
+
+
+
+
+
+
+
+
+
+
+- story: cang_tin
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: co_so_vat_chat
+    - action: utter_co_so_vat_chat
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: cang_tin
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: dung_tai_lieu_thi
+    - action: utter_dung_tai_lieu_thi
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+- story: ask ktx
+  steps:
+    - intent: kytucxa
+    - action: utter_kytucxa
+
+- story: ask ktx
+  steps:
+    - intent: chào
+    - action: utter_greet
+    - intent: kytucxa
+    - action: utter_kytucxa
+    - intent: tạm biệt
+    - action: utter_goodbye
+
+
+- story: Khong hieu y nguoi dung
+  steps:
+    - intent: nlu_fallback
+    - action: utter_khong_hieu_y_dinh
+
+- story: ask BSC
+  steps:
+    - intent: ask_APD_BSC
+    - action: utter_ask_APD_BSC
+
+- story: ask_SMC
+  steps:
+    - intent: ask_SMC
+    - action: utter_ask_SMC
+
+- story: ask_clb_nha_dau_tu_tre
+  steps:
+    - intent: ask_clb_nha_dau_tu_tre
+    - action: utter_ask_clb_nha_dau_tu_tre
+
+- story: ask_hinh_thuc_dky_xt
+  steps:
+    - intent: ask_hinh_thuc_dky_xt
+    - action: utter_ask_hinh_thuc_dky_xt
+
+- story: ask_ptts_kts_cc
+  steps:
+    - intent: ask_ptts_kts_cc
+    - action: utter_ask_ptts_kts_cc
+
+- story: ask_ptts_kts_hsg
+  steps:
+    - intent: ask_ptts_kts_hsg
+    - action: utter_ask_ptts_kts_hsg
+
+- story: ask_ptts_kts_tuyen_thang
+  steps:
+    - intent: ask_ptts_kts_tuyen_thang
+    - action: utter_ask_ptts_kts_tuyen_thang
+
+- story: ask_tc_kts
+  steps:
+    - intent: ask_tc_kts
+    - action: utter_ask_tc_kts
+
+- story: ask_tham_quan_dn
+  steps:
+    - intent: ask_tham_quan_dn
+    - action: utter_ask_tham_quan_dn
+
+- story: ask_thu_vien
+  steps:
+    - intent: ask_thu_vien
+    - action: utter_ask_thu_vien
+
+- story: quy_doi_AptisESOL
+  steps:
+    - intent: quy_doi_AptisESOL
+    - action: utter_quy_doi_AptisESOL
+
+- story: quy_doi_TOEFL_iBT
+  steps:
+    - intent: quy_doi_TOEFL_iBT
+    - action: utter_quy_doi_TOEFL_iBT
+
+- story: utter_ask_quoc_phong
+  steps:
+    - intent: ask_quoc_phong
+    - action: utter_ask_quoc_phong

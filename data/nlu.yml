@@ -1,0 +1,2386 @@
+version: "3.1"
+
+nlu:
+- intent: quy_doi_thang4
+  examples: |
+    - em mới lên đại học không biết cách quy đổi sang thang điểm 4 như nào
+    - em là tân sinh viên chưa rõ quy đổi thang điểm 4 ra sao
+    - cho em xem cách quy đổi từ thang điểm 10 sang thang điểm 4 với ạ
+    - thang điểm hệ 4 được quy đổi như thế nào ạ
+    - cho em hỏi cách quy đổi sang thang điểm 4
+    - ở APD thì quy đổi sang thang điểm 4 như nào vậy ạ
+    - thang điểm hệ 4 là thang điểm gì vậy ạ
+    - thang điểm 4 có quan trọng không ạ
+    - cho em xem bảng quy đổi thang điểm 4 với ạ
+    - thang điểm hệ 4 dùng để tính gpa như thế nào
+    - cho em xem bảng quy đổi từ thang điểm 10 sang thang điểm 4 và thang điểm chữ với ạ
+    - em được 5.3 thang điểm 10 thì sang thang điểm hệ 4 là bao nhiêu vậy ạ
+    - được 7.0 thang điểm 10 sang thang điểm 4 được bao nhiêu
+    - được 7.3 thang điểm 10 sang thang điểm hệ 4 được bao nhiêu
+    - nếu em được 8.3 thang điểm 10 thì sang thang điểm 4 được bao nhiêu ạ
+    - nếu em được 9.3 thang điểm 10 thì sang thang điểm hệ 4 được bao nhiêu ạ
+    - để được 3.0 thang điểm hệ 4 thì em phải được bao nhiêu thang điểm 10 ạ
+    - em được 5.8 thì sang thang điểm chữ được bao nhiêu ạ
+    - em được 6.9 thì sang thang điểm hệ chữ được bao nhiêu thế ạ
+    - em được 8.9 thì sang thang điểm chữ được bao nhiêu thế ạ
+    - nếu em được 9 thang điểm 10 thì sang thang điểm chữ em được bao nhiêu vậy ạ
+    - nếu em được 7/10 thì sang thang điểm hệ 4 em được bao nhiêu vậy ạ
+
+- intent: ask_ct_tinh_thang4
+  examples: |
+    - cho em hỏi công thức tính trung bình cộng hệ 4 với ạ
+    - công thức tính điểm hệ 4 của APD ra sao
+    - em muốn xem công thức tính điểm hệ 4 của APD
+    - công thức tính điểm bậc 4 để xét học bổng của APD ra sao
+    - làm thế nào để tính điểm hệ 4 thế ạ
+    - em là tân sinh viên có mục tiêu học bổng nhưng chưa biết tính điểm hệ 4 ra sao
+    - nếu như có một số bạn đăng ký tín nhiều hơn thì tính điểm xét học bổng ra sao ạ
+    - cách tính điểm hệ 4 với các bạn đăng ký nhiều tín chỉ thế nào ạ
+    - APD tính điểm xét học bổng ra sao
+    - với các môn học ít tín chỉ hơn thì tính điểm xét học bổng ra sao ạ
+    - em là tân sinh viên có thắc mắc về cách tính điểm xét học bổng của trường mình ạ
+    - tổng số tín chỉ một kỳ của mỗi bạn sinh viên là khác nhau thì tính điểm hệ 4 xét học bổng ra sao ạ
+    - cách tính điểm hệ 4 của APD có khác với các trường đại học khác không
+    - những môn học có nhiều tín chỉ hơn thì tính điểm trung bình cộng hệ 4 kiểu gì
+    - tổng số tín chỉ học trong kỳ của sinh viên khác nhau thì tính ra sao
+    - em muốn biết rõ việc tính trung bình cộng với tổng số tín khác nhau
+
+- intent: ask_muc_khen_thuong_hoc_bongdt
+  examples: |
+    - cách tính mức khen thưởng học bổng hệ đại trà của APD
+    - học bổng loại suất xắc được khen thưởng như nào
+    - mức khen thưởng của học bổng loại suất xắc của APD
+    - loại học bổng suất xắc được khen thưởng như nào
+    - được học bổng xuất sắc sẽ được khen thưởng gì
+    - học bổng loại giỏi được khen thưởng như nào
+    - mức khen thưởng của học bổng loại giỏi của APD
+    - loại học bổng giỏi đợc khen thưởng gì
+    - mức khen thửng của học bổng loại khá là gì
+    - loại học bổng khá được thưởng gì thế ạ
+    - được học bổng khá được thưởng như thế nào
+    - khen thưởng các loại học bổng
+    - nếu em được học bổng thì em sẽ được khen thưởng gì
+    - số tiền nhận được từ học bổng là bao nhiêu
+    - nếu được học bổng thì em được khen thưởng bao nhiêu
+    - em là tân sinh viên không biết cách tính giải thưởng của các loại học bổng
+    - cho em xem chỉ tiêu học bổng với
+    - làm thế nào để đạt được học bổng ạ
+    - cách tính điểm học bổng
+    - các loại học bổng
+    - có những loại học bổng nào
+    - những loại học bổng
+    - gpa 3.6 được học bổng nào
+    - các điều kiện để đạt học bổng
+    - chỉ tiêu học bổng là bao nhiêu phần trăm
+    - bao nhiêu phần trăm sv được học bổng
+    - cách xếp loại học bổng thế nào
+    - phân loại các học bổng
+    - ngoài gpa có điều kiện nào khác để đạt học bổng
+    - những điều kiện cần có để đạt học bổng
+
+- intent: ask_cai_thien
+  examples: |
+    - học cải thiện
+    - học cải thiện là gì thế ạ
+    - em có thắc mắc không biết học cải thiện là gì ạ
+    - em muốn biết về học cải thiện
+    - học cải thiện là học những gì ạ
+    - em là tân sinh viên không biết học cải thiện ở APD như nào
+    - ở APD có được học cải thiện không ạ
+    - có được học cải thiện ở APD không ạ
+    - em muốn hỏi ở APD có được học cải thiện không ạ
+    - không biết ở APD có được học nâng điểm không ạ
+    - em có thắc mắc là học nâng điểm thì học phí ra sao so với học lần đầu ạ
+    - em định học nâng điểm thì học phí như thế nào ạ
+    - học nâng điểm thì học phí có cao hơn không
+    - học phí khi học nâng điểm ra sao
+    - học phí học cải thiện so với học phí học lần đầu tiên
+    - em là tân sinh viên không biết học phí khi học cải thiện có thay đổi gì không
+    - chương trình học cải thiện ở APD ra sao
+    - chương trình học nâng điểm ở APD ra sao
+    - học phần thấp có được học nâng điểm không
+    - APD có mở các lớp học phần nâng điểm không
+
+- intent: ask_hoc_lai
+  examples: |
+    - em là tân sinh viên có thắc mắc về việc học lại
+    - học lại ở APD
+    - việc học lại ở APD ra sao
+    - bao nhiêu điểm tổng kết học phần thì bị học lại
+    - mức điểm học lại một học phần ở APD
+    - học phí học lại ra sao
+    - em muốn biết học phí học lại ở APD
+    - học phí học lại ở APD có gì thay đổi so với học phí lần học lần đầu ở APD không
+    - em muốn hiểu rõ thêm vấn đề về việc học lại ở APD
+    - dưới mức điểm nào em phải học lại một học phần
+    - học phí học lại của APD có nhiều hơn so với học phí gốc không
+    - những điều kiện bị bắt buộc học lại ở một học phần
+    - trường hợp em bị buộc học lại thì phải đóng học phí bao nhiêu
+    - nếu em học bị học lại nhiều có bị hạ bằng không
+    - với số tín học lại bao nhiêu thì em bị hạ bằng
+
+- intent: ask_tc_kts
+  examples: |
+    - chương trình đào tạo của kts yêu cầu bao nhiêu điểm thì được ra trường
+    - khoa kinh tế số yêu cầu số tín chỉ tối thiểu bao nhiêu để được ra trường
+    - số tín chỉ tối thiểu khoa kinh tế số yêu cầu để đạt tốt nghiệp
+    - bao nhiêu tín chỉ là có thể ra trường nếu như em học khoa kinh tế số
+    - với chương trình đào tạo của khoa kinh tế số thì em cần đạt bao nhiêu tín chỉ để xét tốt nghiệp
+    - em định đăng ký vào học kinh tế số thì liệu số tín chỉ em đạt là bao nhiêu để được ra trường
+    - tín chỉ tối thiểu để ra trường theo yêu cầu khoa kts
+    - với yêu cầu của khoa kinh tế số thì trong quá trình học em cần đạt bao nhiêu tín chỉ để tốt nghiệp
+    - trong 4 năm học kinh tế số em cần đạt bao nhiêu tín để được ra trường
+    - thôn tin về tín chỉ tốt nghiệp của kinh tế số
+    - em có ý định đăng ký vào học kinh tế số mà không rõ em cần đủ bao nhiêu tín để ra trường
+
+- intent: ask_van_phong_kts
+  examples: |
+    - cho em hỏi văn phòng của khoa kinh tế số với ạ
+    - em muốn biết văn phòng của khoa kinh tế số
+    - khoa kinh tế số có văn phòng ở chỗ nào ạ
+    - văn phòng khoa kinh tế ở chỗ nào trong trường thế ạ
+    - văn phòng khoa kinh tế số
+    - địa chỉ văn phòng khoa kinh tế số
+    - trường APD rộng quá không biết văn phòng khoa kinh tế số ở đâu ạ
+    - văn phòng khoa kinh tế số ở tầng bao nhiêu tòa nào vậy ạ
+    - văn phòng khoa ở chỗ nào trong trường
+
+- intent: ask_hotline_kts
+  examples: |
+    - kinh tế số có hotline không ạ
+    - hotline của khoa kinh tế số là gì thế ạ
+    - em muốn biết hotline của khoa kinh tế số
+    - thông tin liên quan tới hotline của khoa kinh tế số
+    - hotline của kts
+    - hotline kinh tế số
+    - em muốn trao đổi thêm với kinh tế số
+    - em muốn giải đáp các thắc mắc khác của khoa kinh tế số
+    - kinh tế số có zalo để trao đổi không ạ
+    - cho em xin thông tin liên lạc của khoa kinh tế số với ạ
+    - em muốn biết đường dây liên lạc của kinh tế số để tiện trao đổi vấn đề khác
+    - em muốn có thông tin liên lạc để tiện trao đổi ạ
+    - cho em xin số thầy Tú với ạ
+    - cho em xin số thầy Trường với ạ
+
+- intent: ask_APD_toc
+  examples: |
+    - trường mình có chương trình chào tân sinh viên không ạ
+    - apd tộc là gì vậy ạ
+    - apd tộc là gì mà mn đều quan tâm vậy ạ
+    - đầu năm học trường có tổ chức sự kiện gì ko ạ
+    - trường có tổ chức chào tân sinh viên ko
+    - chào tân sinh viên APD tộc là gì vậy ạ
+    - cho e thông tin về Chương trình chào tân sinh viên “APD TỘC”
+    - chương trình tộc đầu năm là gì vậy ạ
+    - apd tộc có gì đặc sắc ko ạ
+    - Tóm tắt về apd tộc
+    - tổng quan về apd tộc cho mình với ạ
+    - chương trình chào đón Tân sinh viên APD bao h diễn ra vậy ạ
+    - chương trình apd tộc do ai tổ chức vậy ạ
+    - ai cũng có thể tham gia apd tộc đúng ko? hay chỉ sv năm nhất mới đc tham gia
+    - cho e hỏi phần thi nhảy Flashmob của apd tộc có j hay ạ
+    - apd tộc mỗi năm tổ chức 1 lần ạ
+    - có phải apd tộc năm nào cũng tổ chức ko ạ
+    - apd tộc được tổ chức ở đâu ạ
+    - chương trình apd tộc là do sinh viên tự tổ chức ạ
+    - phần thi Teamwork của apd tộc diễn ra lúc nào vậy ạ
+    - thể thức phần thi Ấn tượng tộc như nào vậy ạ
+
+- intent: ask_hđ_nk
+  examples: |
+    - khoa kts có những hoạt động ngoại khóa nào ạ
+    - khoa mình cho tổ chức cho sinh viên đi du lịch ko ạ
+    - khoa mình có thường xuyên tổ chức các cuộc thi ko ạ
+    - kts hàng năm có những hoạt động j vậy ạ
+    - khoa mình có tổ chức giải thể thao ko ạ
+    - khoa mình có tổ chức đi dã ngoại khộng ạ
+    - khoa mình có tổ chức cuộc thi nào ko ạ
+    - khoa mình có tổ chức cuộc thi NCKH ko
+    - những sự kiệm mà khoa mình tổ chức
+    - những sự kiện tiêu biểu của khoa kinh tế số là gì
+    - ngoài tổ chức hội thảo cho sinh viên khao mình còn hoạt động j ko
+    - khoa mình có tổ chức giải bóng đá không ạ
+
+- intent: ask_tham_quan_dn
+  examples: |
+    - khoa mình có tổ chức tham quan doanh nghiệp ko ạ
+    - có có thể kể 1 số doanh nghiệp mà khoa đã tổ chức tham quan đc ko
+    - khoa có thường xuyên tổ chứ tham quan doanh nghiệp ko
+    - trong quá trình học có đc tham quan DN ko ạ
+    - có đc thăm quan doanh nghiệp trong quá trình học không
+    - hằng năm có đc đi đến những doanh nghiệp để tham quan không ạ
+    - có được đi thực tế ở doanh nghiệp ko a
+    - có được giải nghiệm môi trường làm vc tại DN ko, đặc biệt là doanh nghiệp số
+    - e thấy công ty Giải pháp Phân tích Dữ liệu Insight Data rất phù hợp vs ngành học của mình. ko biết khoa có tổ chức cho sinh viên thăm quan ko ạ
+    - thăm quan doanh nghiệp có phải hoạt động thường xuyên mà kts tổ chức ko
+    - khoa kinh tế số có tổ chức cho sinh viên đi thực tế tại các doanh nghiệp không
+    - những hoạt động thực tế tại doanh nghiệp
+
+- intent: ask_chuong_trinh_hoc_dll
+  examples: |
+    - các môn học được học nghành dữ liệu lớn
+    - chuyên nghành phân tích dữ liệu sẽ được học những môn học nào
+    - em muốn xem các môn học của nghành dữ liệu lớn sẽ được học
+    - khi học nghành phân tích dữ liệu trong kinh tế và kinh doanh thì em sẽ được học những môn nào
+    - các môn học của nghành phân tích dữ liệu
+    - cho em xem các môn học của nghành dữ liệu trong kinh tế và kinh doanh
+    - các môn học bắt buộc phải học của nghành dữ liệu lớn
+    - danh sách các môn học của nghành dữ liệu lớn
+    - ở nghành dữ liệu lớn sẽ được học những môn học bắt buộc nào
+    - các môn học trọng tâm của nghành ptdl
+    - chương trình đào tạo của nghành phân tích dữ liệu
+    - các môn học trong chương trình đào tạo của nghành phân tích dữ liệu khoa kinh tế số
+    - cho em xem các môn học trong chương trình đạo tạo của chuyên nghành ptich dữ liệu lớn trong kinh tế và kinh doanh với
+
+- intent: ask_chuong_trinh_hoc_ktkds
+  examples: |
+    - các môn học được học nghành Kinh tế và kinh doanh số
+    - chuyên nghành Kinh tế và kinh doanh số sẽ được học những môn học nào
+    - em muốn xem các môn học của nghành Kinh tế và kinh doanh số sẽ được học
+    - khi học nghành Kinh tế và kinh doanh số thì em sẽ được học những môn nào
+    - các môn học của nghành Kinh tế và kinh doanh số
+    - cho em xem các môn học của nghành Kinh tế và kinh doanh số
+    - các môn học bắt buộc phải học của nghành Kinh tế và kinh doanh số
+    - danh sách các môn học của nghành Kinh tế và kinh doanh số
+    - ở nghành Kinh tế và kinh doanh số sẽ được học những môn học bắt buộc nào
+    - các môn học trọng tâm của nghành ktkds
+    - chương trình đào tạo của nghành Kinh tế và kinh doanh số
+    - các môn học trong chương trình đào tạo của nghành Kinh tế và kinh doanh số
+    - cho em xem các môn học trong chương trình đạo tạo của chuyên nghành Kinh tế và kinh doanh số với
+    - chuong trinh hoc ktkds
+
+- intent: ask_thi_dau_vao
+  examples: |
+    - có thi đầu vào không ạ
+    - em là tân sinh viên không biết APD có tổ chức thi tiếng anh đầu vào không
+    - có thi tiếng anh đầu vào không
+    - lúc đầu vào trường có phải làm bài thi đầu vào tiếng anh không
+    - có bài thi tiếng anh đầu vào không ạ
+    - ở APD có bài thi tiếng anh đầu vào hay không
+    - bài thi đánh giá năng lực tiếng anh
+    - có bài thi đánh giá năng lực tiếng anh đầu vào không
+    - tân sinh viên có phải làm bài thi tiếng anh đầu vào hay không
+    - đề thi tiếng anh đầu vào ra sao
+    - bài thi tiếng anh đầu vào ra sao
+    - form đề thi tiếng anh đầu vào như thế nào
+    - e là tân sinh viên không biết có phải làm bài thi tiếng anh đầu vào không
+
+- intent: ask_chuong_trinh_hop_tac
+  examples: |
+    - có những chương trình hợp tác với trường quốc tế nào không
+    - các tổ chức quốc tế mà  hợp tác
+    - các tổ chức quốc tế hợp tác với 
+    - em là tân sinh viên đang có thắc mắc là có hợp tác với các trường đại học quốc tế nào không
+    - những trường quốc tế  hợp tác
+    -  hiện nay đang hợp tác với những tổ chức quốc tế nào
+    - những tổ chức nước ngoài mà  hợp tác
+    - những trường đại học quốc tế liên thông
+    - trường đại học quốc tế  liên thông
+    - chương trình đào tạo  có hợp tác với trường quốc tế nào không
+    - những chương trình đào tạo quốc tế  liên thông với trường đại học nào
+    - các tổ chức quốc tế mà  liên thông để tổ chức chương trình đào tạo
+    - hiện nay  có liên thông với tổ chức quốc tế nào để tổ chức chương trình đào tạo hay không
+    - những tổ chức mà  hợp tác để làm chương trình đào tạo
+
+- intent: ask_APD
+  examples: |
+    - giới thiệu cho em về APD với
+    - APD
+    - em muốn xem các thông tin liên quan tới APD
+    - em muốn xem các thông tin về học viện chính sách và phát triển
+    - cho em các thông tin về học viện A với
+    - hiện tại học viện trực thuộc bộ nào thế ạ
+    - em là tân sinh viên không biết học viện mình trực thuộc bộ nào ạ
+    - hiện nay học viện mình thuộc bộ nào ạ
+    - các lĩnh vực liên quan tới APD
+    - các lĩnh vực chính của APD đang hướng tới
+    - APD đang hướng tới lĩnh vực nào
+    - các lĩnh vực học viện chính sách và phát triển nghiên cứu
+    - những lĩnh vực mũi nhọn của APD
+    - APD có những lĩnh vực mũi nhọn nào
+    - học viện chính sách và phát triển
+    - em muốn biết thêm thông tin về học viện APD
+    - những chương trình đạt chuẩn của APD hiện nay
+    - chương trình của APD có đạt chuẩn về chất lượng của bộ giáo dục và đào tạo không
+    - chương trình học của APD thế nào
+    - những định hướng của APD
+    - định hướng của học viện chính sách và phát triển
+    - có phải học viện chính sách và phát triển trực thuộc bộ  Kế hoạch và Đầu tư
+    - học viện A trực thuộc bộ  Kế hoạch và Đầu tư
+    - học viện APD có trực thuộc bộ Kế hoạch và Đầu tư hay không
+    - cho tôi thêm thông tin về học viện APD
+    - tôi muốn biết thêm các thông tin của học viện chính sách
+    - tôi muốn đọc thêm các thông tin của học viện APD
+    - APD hiện tại là một đơn vị trực thuộc bộ nào
+    - APD là một đơn vị trực thuộc bộ nào
+    - giới thiệu về học viện APD
+    - giới thiệu về học viện chính sách và phát triển
+    - giới thiệu về quá trình hình thành và phát triển của APD
+    -    - APD ở đâu
+    - APD hiện đang có trụ sở ở đâu
+    - APD có phải trường ở nội thành không
+    - APD hiện tại đang ở đâu Hà Nội
+    - APD có phải trường đại học ở Hà Nội không
+    - hiện nay APD đang có trụ sở ở đâu
+    - với cơ sở vật chất như APD sẽ đảm bảo việc học tập của khoảng bao nhiêu sinh viên
+    - trụ sở đào tạo chính của APD hiện nay đang tọa lạc ở đâu
+    - diện tích của cơ sở vật chất là bao nhiêu
+    - diện tích của học viện A rộng bao nhiêu
+    - học viện A tọa lạc trên mảnh đất rộng bao nhiêu
+    - trường APD có rộng không
+    - diện tích của trụ sở đào tạo chính của APD
+    - môi trường học tập của APD ra sao
+    - cơ sở vật chất của APD có hiện đại không
+    - những thiết bị ở APD có đảm bảo quá trình học tập và nghiên cứu của sinh viên
+    - hạ tầng của APD ra sao
+    - hạ tầng của APD thế nào
+    - điều kiện cơ sở vật chất của APD thế nào
+    - APD có điều kiện cơ sở vật chất như thế nào
+    - điều kiện cơ sở vật chất của APD có đảm bảo cho học viên không
+    - những trang thiết bị của APD có đảm cho nhu cầu học của sinh viên không
+    - trang thiết bị của APD có đáp ứng môi trường học tập cấp đại học không
+
+- intent: ask_nghanh_dt
+  examples: |
+    - hiện tại APD đang có những chuyên nghành đào tạo nào
+    - những chuyên nghành đào tạo của APD hiện tại
+    - chuyên nghành đào tạo hệ chính quy của APD
+    - những chuyên nghành đào tạo hệ chính quy tại APD
+    - chuyên nghành đào tạo
+    - các chuyên nghành đạo tạo hệ chính quy
+    - ở APD đang đào tạo những chuyên nghành nào
+    - có những chuyên nghành đạo tạo chính quy nào
+    - cho em xem những chuyên nghành ở APD với
+    - em có ý định thi vào APD không biết trường mình có những chuyên nghành nào
+    - cho em xem các chuyên nghành của APD với
+    - học viện hiện nay đang có những chuyên nghành đào tạo nào
+    - cho em xem các nghành đào tạo và các chuyên nghành đào tạo của APD với
+    - những nghành học hiện nay ở APD
+    - những chuyên nghành đào tạo hệ đại học của APD
+    - chuyên nghành đào tạo hệ đại học của APD gồm những nghành nào
+    - những chuyên nghành đào tạo của các nghành đào tạo tại APD
+    - hiện tại ở hệ đào tạo hệ đại trà có những chuyên nghành nào
+    - cho em xem danh sách các nghành đào tạo hệ đại trà với
+    - danh sách các nghành đào tạo hệ đại trà
+    - thông tin liên quan tới nghành đạo tạo hệ đại trà
+    - em muốn biết các nghành đạo tạo hệ đại trà hiện tại ở APD
+    - tôi muốn xem các nghành đạo tạo ở hệ đại trà
+    - hệ đại trà có những ngan đào tạo nào
+    - hệ đại trà có tất cả những nghành học nào
+    - tất cả các nghành học ở hệ đại trà của APD
+    - đội ngũ giảng viên ở APD thế nào
+    - trình độ của đội ngũ giảng viên ra sao
+    - các giảng viên tại APD có trình độ thế nào
+    - các giảng viên ở APD
+    - hình thức đào tạo của APD
+    - các chương trình học và đào tạo ở APD theo hệ thống nào
+    - sinh viên khi học tại APD được đào tạo theo hệ thống nào
+    - có phải sinh viên ở APD được đào tạo theo hệ thống tín chỉ hay không
+    - ở APD có đào tạo theo hệ thống tín chỉ không
+
+- intent: ask_nghanh_clc
+  examples: |
+    - ở APD có nghành đào tạo chất lượng cao nào không
+    - nghành đào tạo chất lượng cao ở APD
+    - các nghành học clc ở APD
+    - nghành đào tạo clc ở APD
+    - clc ở APD
+    - clc
+    - có những nghành đào tạo chất lượng cao nào
+    - APD có bao nhiêu nghành đào tạo chất lượng cao
+    - cho em xem những nghành đào tạo hệ chất lượng cao với
+    - hiện tại ở APD có những nghành đào tạo hệ chất lượng cao nào
+    - có bao nhiêu nghành đào tạo chất lượng cao ở APD
+    - cho em xem những nghành đào tạo hệ chất lượng cao ở APD với
+    - ở hệ chất lượng cao có những nghành đào tạo nào
+    - các nghành ở hệ đào tạo chất lượng cao
+    - cho em xem nhưng nghành học ở hệ chất lượng cao
+    - em thắc mắc không biết APD có nghành đạo tạo chất lượng cao không
+    - hệ chất lượng cao ở APD
+    - các chuyên nghành đào tạo ở hệ chất lượng cao
+    - học viện A đang có chuyên nghành đào tạo chất lượng cao nào
+    - nghành đào tạo ở hệ chất lượng cao
+    - các nghành đạo tạo ở chất lượng cao của APD
+
+- intent: ask_dao_tao_ts
+  examples: |
+    - ở APD có những chuyên nghành đào tạo nào sau đại học không
+    - những chuyên nghành đào tạo sau đại học ở APD
+    - có tất cả bao nhiêu chuyên nghành đào tạo trình độ sau đại học
+    - danh sách các chuyên nghành đạo tạo trình độ thạc sỹ
+    - có những chuyên nghành đào tạo cấp thạc sỹ nào
+    - ở cấp thạc sỹ thì APD đào tạo những chuyên nghành nào
+    - cấp bậc thạc sỹ thì APD đào tạo những nghành nào
+    - thông tin về đào tạo sau đại học của APD
+    - các thông tin liên quan tới những nghành đào tạo sau đại học ở APD
+    - APD đang đào tạo những chuyên nghành nào sau đại học
+    - APD có đào tạo cấp bậc thạc sỹ không
+    - ở cấp bậc thạc sỹ thì APD đào tạo những nghành nào
+    - hiện nay cấp bậc thạc sỹ thì APD có đào tạo không
+    - hiện nay cấp bậc thạc sỹ APD đang đào tạo chuyên nghành nào
+
+- intent: chào
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - chào em
+    - hello em
+    - hi em
+    - em ơi, cho anh hỏi
+    - bot ơi
+    - cho mình hỏi chút
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - có ai ở đây không?
+    - chào bạn
+    - bot ơi
+    - cho mình hỏi chút
+    - ê
+    - hú
+    - em muốn hỏi chút
+    - em có tí thắc mắc
+    - cho em hỏi tí với
+    - e cần giúp
+    - cho e hỏi chút được ko
+    - e muốn hỏi chút
+    - cho e hỏi chút
+    - mình muốn hỏi chút
+    - mình cần giúp đỡ
+    - có thể giúp e tí ko ạ
+    - e muốn hỏi một vài vấn đề
+    - mình có chút thắc mắc
+    - e co chut thac mac
+    - cho e hoi chut
+    - em can giup
+    - giúp em với
+    - cứu
+    - aloo
+    - alo
+    - lô
+    - lo
+
+- intent: tạm biệt
+  examples: |
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - tạm biệt
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
+    - biến
+    - hẹn gặp lại
+    - cút
+
+
+
+
+- intent: ma_tuyen_sinh
+  examples: |
+    - mã tuyển sinh
+    - ma xet tuyen
+    - ma xt
+    - đại học APD có mã tuyển sinh là gì vậy
+    - mã tuyển sinh của đh APD
+    - trường mình có mã tuyển sinh là gì?
+    - mã tuyển sinh thi đại học của đh APD là gì?
+    - mã tuyển sinh trường mình là gì
+    - mã thi đại học trường đh APD là gì
+    - mã đại học APD là gì
+    - đh APD có mã tuyển sinh là gì
+    - mã xét tuyển
+    - đại học APD có mã xét tuyển là gì vậy
+    - mã xét tuyển của đh APD
+    - trường mình có mã xét tuyển là gì?
+    - mã xét tuyển thi đại học của đh APD là gì?
+    - mã xét tuyển trường mình là gì
+    - đh APD có mã xét tuyển là gì
+
+- intent: so_luong_chi_tieu
+  examples: |
+    - chỉ tiêu
+    - chi tieu tuyen sinh
+    - chi tieu
+    - so luong tuyen sinh nam nay
+    - năm nay tuyển sinh bao nhiêu sinh viên
+    - chỉ tiêu tuyển sinh năm nay là bao nhiêu
+    - năm nay xét tuyển bao nhiêu sinh viên
+    - chỉ tiêu xét tuyển năm nay là bao nhiêu
+    - năm nay nhận bao nhiêu sinh viên
+    - số lượng sinh viên tuyển sinh năm nay của trường là bao nhiêu
+    - số lượng sinh viên xét tuyển năm nay của trường là bao nhiêu
+    - chỉ tiêu sinh viên bao nhiêu
+    - năm nay đh APD lấy bao nhiêu sinh viên
+    - chỉ tiêu tuyển sinh năm nay
+    - chỉ tiêu xét tuyển năm nay
+    - năm nay trường lấy bao nhiêu sinh viên
+    - đh APD năm nay lấy bao nhiêu sv
+    - năm nay trường lấy nhiêu sv
+    - đh APD chỉ tiêu năm nay bao nhiêu
+
+- intent: cao_dang
+  examples: |
+    - còn cao đẳng thì sao
+    - có cđ ko
+    - co tuyen cao dang ko
+    - cao dang nam nay bao nhieu diem
+    - cao dang the nao
+    - có tuyển cđ ko
+    - cao đẳng xét tuyển thế nào
+    - cao đẳng tuyển sinh thế nào
+    - cao đẳng có tuyển sinh ko
+    - cao đẳng có xét tuyển ko
+    - tuyển sinh cao đẳng như thế nào
+    - xét tuyển cao đẳng như thế nào vậy ạ
+    - năm nay có tuyển sinh cao đẳng không
+    - có tuyển sinh cao đẳng không ạ
+    - trường có tuyển sinh cao đăng ko
+    - có đào tạo cao đẳng ko vậy
+    - năm nay có xét tuyển cao đẳng không
+    - có xét tuyển cao đẳng không ạ
+    - trường có xét tuyển cao đăng ko
+    - trường có cao đẳng ko
+
+- intent: ask_ability
+  examples: |
+    - em có thể làm những gì nhỉ
+    - em có chức năng gì?
+    - em giúp gì được anh không?
+    - em có thể giúp gì cho anh?
+    - em biết làm gì?
+    - em hỗ trợ anh như thế nào?
+    - cho anh xem các chức năng của em
+    - bạn có thể làm được những gì
+    - bạn giúp được gì nào
+    - chức năng của bạn là gì
+    - bạn có thể làm được mấy chức năng
+    - bạn giỏi nhất làm gì
+    - bạn có tư vấn giúp mình được không
+    - việc gì bạn làm được
+    - kể xem bạn làm được gì
+    - cho mình biết bạn làm được gì nhé
+    - bạn hữu dụng như thế nào
+    - bạn có ích trong những việc gì
+    - lĩnh vực gì bạn giỏi nhất
+    - mình tò mò về những việc bạn làm được
+    - chẳng biết bạn làm được gì
+    - bạn tệ nhất trong việc gì
+    - bạn biết được những lĩnh vực gì
+    - bạn giỏi hỗ trợ nhất trong lĩnh vực gì
+    - kể cho mình biết những việc bạn có thể làm được nhé
+    - nói cho mình về những việc bạn giúp được mình
+    - bạn giúp được mình gì nào
+    - bạn có thể làm gì
+    - em giúp được gì
+    - em làm được gì
+    - mày biết làm gì
+    - em biết làm gì
+    - bạn biết làm gì
+    - biết làm gì
+    - làm được gì
+    - có làm được gì
+    - có làm được trò gì
+    - giúp giúp cái gì
+    - biết gì mà nói
+    - làm được gì
+    - giúp được gì
+    - mày làm được gì
+    - có biết gì
+    - có thể làm gì
+    - co the lam gi
+
+- intent: thankyou
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+    - xia xia
+    - cam on
+    - cảm on nhiều
+
+- intent: khen
+  examples: |
+    - bot giỏi quá
+    - great
+    - awsome
+    - bot làm tốt lắm
+    - ui giỏi thế
+    - bot thông minh
+    - đẹp trai đấy
+    - Em đẹp lắm
+    - em tuyệt vời lắm
+    - đỉnh đỉnh
+    - em siêu thế
+    - em giỏi quá
+    - em rất nice
+
+- intent: che
+  examples: |
+    - quá tệ
+    - ngu ngốc
+    - chả biết gì cả
+    - ngu thật
+    - dở ghê
+    - có thế mà cũng không biết
+    - kém cỏi
+    - thật chán
+    - câu trả lời tệ
+    - dốt
+    - óc chó
+    - tệ ác
+    - đần
+
+- intent: ask_have_hold_an_exam
+  examples: |
+    - nhà trường có tổ chức kì thi riêng ko
+    - trường có thi riêng ko ạ
+    - còn về việc thi riêng của trường thì sao ạ
+    - có thi riêng tại trường ko ạ
+    - có kì thi riêng tại trường ko
+    - co thi rieng ko
+    - truong co to chuc thi rieng ko 
+    - em muốn thi ở trường thì làm thế nào
+
+- intent: ask_admissions_online
+  examples: |
+    - nhà trường có cho đăng ký xét tuyển online ko
+    - có xét tuyển online ko
+    - bao giờ thì xét tuyển online
+    - khi nào đk onl đc ạ
+    - khi nào có thể đăng ký online
+    - làm sao để đăng ký online
+    - có đk onl đc ko
+    - trường có cho đk onl ko
+    - có thể đk onl ko
+    - cổng đk onl
+    - cổng đăng ký online
+    - trang web đăng ký onl
+    - website đăng ký online
+    - đăng ký online đc ko
+    - dang ky online
+    - cach dk online
+    - đăng ký online như thế nào 
+    - có nhận đăng ký online không
+    - có thể đăng ký online được chứ 
+
+ 
+
+- intent: ask_main_link
+  examples: |
+    - trang chủ của trường APD là gì
+    - trang trường là gì
+    - cho e xin link trang của trường được ko ạ
+    - link trang chủ chính thức của nhà trường
+    - web trường là gì
+    - trang chủ của trường
+    - trang web của nhà trường là gì
+    - trang chu cua truong
+    - website cua truong
+    - trang web cua truong
+    - website chinh thuc cua truong
+    - trang chủ của Học viện Chính sách và Phát triển là gì
+
+- intent: ask_admissions_link
+  examples: |
+    - trang thông tin tuyển sinh của trường học viện chính sách và phát triển là gì
+    - trang thông tin tuyển sinh
+    - em có thể xem thông tin tuyển sinh ở đâu
+    - xem thông tin tuyển sinh ở đâu
+    - trang xét tuyển của trường là gì
+    - link trang web xét tuyển của trường là gì
+    - trang thong tin tuyen sinh
+    - trang thong tin xet tuyen
+    - trang web tuyen sinh
+    - trang web xet tuyen
+    - website tuyen sinh
+    - website xet tuyen
+
+- intent: kytucxa
+  examples: |
+    - APD có ký túc xá không ạ
+    - ký túc xá ở APD
+    - không biết ở APD có ký túc xá không
+    - ký túc xá APD
+    - ký túc xá
+    - ký túc xá ở tòa nào
+    - ký túc xá APD ở tòa nào
+    - trường mình có ký túc xá không ạ
+    - ký túc xá ở trường mình có gần trường không ạ
+    - ký túc xá có ở xa trường không
+    - ký túc xá APD ở đâu
+    - thông tin của ký túc xá
+    - thông tin về ký túc xá APD
+    - ký túc xá APD thế nào
+    - ở ký túc xá có tiện không
+    - các thông tin liên quan đến ký túc xá APD
+    - ký túc xá APD đáp ứng chỗ ở bao nhiêu sinh viên
+    - slot ký túc xá APD là bao nhiêu
+    - ký túc xá đảm bảo chỗ ở cho bao nhiêu sinh viên
+    - khoảng bao nhiêu sinh viên ở được ký túc xá
+    - ktx
+    - cơ sở vật chất ở ktx như nào
+    - cơ sở vật chất của ký túc xá APD ra sao
+    - sức chứa ký túc xá APD là bao nhiêu sinh viên
+    - ở ký túc xá có bình nóng lạnh không
+    - ký túc xá APD có bình nóng lạnh hay không
+    - có bảo vệ canh ở ký túc xá không
+    - ktx có bảo vệ canh trực không
+    - ở ký túc xá APD có bảo đảm an toàn cho sinh viên không
+    - sắp tới ở ký túc xá không biết có bảo vệ ở ký túc không ạ
+
+    - em là tân sinh viên thì đăng ký ktx ra sao
+    - em là tân sinh viên thì đăng ký ktx thế nào
+    - đăng ký vào ktx
+    - làm cách nào để đăng ký vào ký túc xá
+    - em là tân sinh viên, em muốn đăng ký ký túc xá thì làm thế nào ạ
+    - em sắp học ở trường mình cho em hỏi em muốn đăng ký ký túc xá thì làm thế nào ạ
+    - cách thức đăng ký vào ký túc xá APD
+    - có những cách nào đăng ký vào ký túc xá APD
+    - thông tin về đăng ký nội trú ở APD
+    - muốn ở ký túc xá APD thì làm thế nào
+    - cách thức làm đơn đăng ký vào ký túc xá
+    - tân sinh viên đăng ký vào ktx như nào
+    - muốn ở ký túc xá thì làm đơn thế nào
+    - thông báo về làm đơn đăng ký vào ktx
+    - thời gian đăng ký vào ký túc xá ra sao
+    - thông tin về thời gian đăng ký vào ký túc xá
+    - có link đăng ký vào ktx không
+    - có đăng ký làm đơn online vào ktx được không
+    - đăng ký online ktx
+    - em là sinh viên k14 đăng ký vào ktx như thế nào
+    - k14 đăng ký ktx ra sao
+    - k14 có được đăng ký vào ở nội trú hay không
+
+    - ký túc xá mở cửa lúc mấy giờ và mấy giờ đóng cửa thế ạ
+    - giờ đóng cửa của ký túc xá
+    - giờ ký túc xá đóng cửa
+    - ký túc xá có đóng cửa muộn không
+    - giờ muộn nhất của ký túc xá
+    - tầm mấy giờ ký túc xá đóng cửa thế ạ
+    - em hay về muộn cho em hỏi khi nào ktx đóng cửa v ạ
+    - ký túc xá mở cửa cho sinh viên đến lúc nào
+    - sinh viên được vào muộn nhất ktx lúc nào
+    - mấy giờ ktx mở cửa
+    - giờ ký túc xá mở cửa
+    - mấy giờ sáng ký túc xá mở cửa thế ạ
+    - giờ mở cửa cho sinh viên vào ký túc xá
+    - sáng mgio ktx mở cửa cho sinh viên v ạ
+    - khoảng mấy giờ ký túc xá bắt đầu mở cửa thế ạ
+    - thông tin về giờ mở của và đóng cửa của ký túc xá
+    - khoảng mấy giờ ký túc xá đóng cửa và mở cửa
+    - thông tin về giờ giấc hoạt động của ký túc xá
+    - cho tôi thông tin về thời gian hoạt động của ký túc xá
+    - cho em biết thông tin về thời gian mở cửa và đóng cửa của ký túc xá với ạ
+    - giờ giấc đóng mở của ở ký túc xá
+
+
+    - có những vật dụng nào được mang vào ký túc xá
+    - những vật dụng được mang theo vào ký túc xá
+    - vật dụng sinh hoạt được mang vào ktx
+    - được mang đồ dùng sinh hoạt nào vào ktx
+    - ký túc xá cho mang gì vào sinh hoạt hàng ngày
+    - em là sinh k14 cần chuẩn bị những gì mang vào ktx
+    - có thể mang những gì vào ký túc xá thế ạ
+    - mang ấm siêu tốc vào ký túc xá được không ạ
+    - có được mang ấm siêu tốc vào ký túc xá không ạ
+    - theo nội quy ở ký túc xá có được mang ấm siêu tốc vào ký túc xá không
+    - ký túc xá có cho phép đem ấm siêu tốc vào ký túc không
+    - ấm siêu tốc có được mang vào ký túc xá không
+    - có được mang thức ăn ở ngoài vào ký túc xá không
+    - đồ ăn bên ngoài có được mang vào ký túc xá không
+    - đồ ăn đặt bên ngoài được mang vào ký túc xá không
+    - đồ ăn bố mẹ mang xuống có được để trong ký túc xá không
+    - có được mang cơm vào ký túc xá không
+    - có được mang mấy sấy tóc vào ký túc xá không ạ
+    - con gái có được mang mấy sấy tóc vào ký túc xá hay không
+    - em là k14 sắp tới ở ký túc xá không biết là em có được mang mấy sấy tóc vào không
+    - Ký túc xá APD có cho phép sinh viên sử dụng mấy sấy tóc không
+    - nội quy ký túc xá có cho phép sinh viên sử dụng máy sấy tóc không
+
+
+    - quy định của ký túc xá APD
+    - văn bản quy định về ký túc xá APD
+    - file PDF về quy định ký túc xá APD
+    - các quy định của ký túc xá ở APD
+    - thông tin về nội quy ký túc xá APD
+    - những quy định chung của ký túc xá
+    - các quy định của ký túc xá
+    - cho em biết nội quy ở ký túc xá với
+    - các nội quy ở ký túc xá APD
+    - ký túc xá APD có những nội quy gì
+    - những quy định ở ký túc xá APD
+    - quy định về thẻ nội trú
+    - khi ở ký túc xá có được phát thẻ không ạ
+    - thẻ ký túc xá được phát khi nào
+    - có thẻ ra vào ký túc xá không ạ
+    - em là tân sinh viên khi vào ký túc có cần thẻ không ạ
+
+    - ky tuc xá APD có điều hòa không
+    - ktx có điều hòa không
+    - điều hòa ktx APD
+    - ở ký túc có lắp điều hòa không
+    - các phòng ở ktx có lắp điều hòa chưa
+    - ký túc xá có điều hòa cho ngày hè nóng không
+    - vào mùa hè có được sử dụng điều hòa tại ký túc không
+    - điều hòa đã được lắp đặt ở ký túc xá chưa
+    - cho em hỏi là ký túc có lắp điều hòa không
+    - em là tân sinh viên, không biết ở ký túc đã có điều hòa chưa
+
+
+    - ký túc xá có những loại phòng nào
+    - có bao nhiêu loại phòng ở ký túc xá
+    - các phòng ở ký túc xá như nào
+    - thông tin về các phòng ở ký túc xá
+    - ký túc xá APD có phòng to không
+    - một phòng ở ký túc xá ở được bao nhiêu sinh viên
+    - số lượng sinh viên ở một phòng ký túc xá
+    - một phòng được ở tối đa bao nhiêu sinh viên
+    - bình thường một phòng ở ký túc xá được ở mấy sinh viên
+    -  một phòng ký túc xá có bao nhiêu sinh viên được ở
+    - mỗi phòng có tủ để đồ riêng cho sinh viên không
+    - có tủ để đồ riêng cho sinh viên ở không
+    - em định đăng ký vào ký túc xá và có thắc mắc là ký túc xá có tủ để đồ riêng không
+    - mỗi phòng ký túc xá có tủ để đồ riêng hay không
+    - cho em hỏi là mỗi phòng ký túc xá đề có tủ để đồ riêng đúng không ạ
+    - tủ để đồ riêng
+    - phòng ký túc xá APD
+
+
+    - giá dịch vụ ký túc xá thế nào
+    - khi ở tại ký túc xá cần phải trả những khoản phí nào
+    - các khoản phí khi ở tại ký túc xá APD
+    - những khoản chi trả ở ký túc xá APD ra sao
+    - dịch tại ký túc xá ra sao
+    - nghe nói chi phí ở ký túc xá rẻ lắm
+    - bảng giá dịch vụ ở ký túc xá ra sao
+    - các mức giá ở ký túc
+    - khi đăng ký thành công vào ký túc xá cần đóng bao nhiêu tiền
+    - khi ở ký túc xá phải nộp bao nhiêu tiền
+    - các khoản tiền phải nộp khi ở ký túc xá APD
+    - khoản phí chi trả khi ở ký túc xá
+    - ký túc xá sẽ thu những khoản nào của sinh viên nội trú
+    - em là tân sinh viên không biết ở ký túc xá sẽ phải đóng khoản gì
+
+
+    - hiện nay ở ký túc xá có mặt giặt cho sinh viên không
+    - em là tân sinh viên trường mình không biết ở ký túc xá có máy giặt không ạ
+    - ở ký túc xá APD hiện tại có máy giặt không ạ
+    - không biết ở APD có máy giặt cho sinh viên không
+    - em là tân sinh viên không biết ở ký túc xá có máy giặt không vì trời mùa nồm quần áo rất khó khô
+    - ký túc xá APD hiện tại có trang bị máy giặt cho sinh viên không
+    - không biết ở ký túc xá APD hiện đã trang bị máy giặt cho sinh viên chưa
+    - ký túc xá có dịch vụ giặt là không
+    - máy giặt trong ký túc xá
+    - hiện tại có máy giặt trong ký túc xá hay chưa
+    - vào mùa nồm ở ký túc có mặt giặt cho sinh viên không
+
+
+    - em có thể đăng ký vào ở ký túc xá trong bao lâu
+    - thời hạn hợp đồng ở ký túc xá là bao lâu
+    - ở ký túc đến lúc nào thì phải chuyển ra
+    - khi hợp đồng hết hạn có được gia hạn hợp đồng ở ký túc xá hay không
+    - thời gian có hiệu lực của hợp đồng ký túc xá là bao lâu
+    - hiệu lực của hợp đồng đăng ký ở nội trú
+    - thông tin về hiệu lực của hợp đồng ký túc xá
+    - gia hạn hợp đồng ký túc xá thế nào
+    - em là tân sinh viên không biết gia hạn hợp đồng ký túc xá ra sao
+    - cách thức gia hạn hợp đồng ký túc xá thế nào
+    - muốn gia hạn hợp đồng ở ký túc xá em nên làm cách nào
+    - tân sinh viên như bọn em được ở ký túc xá đến lúc nào
+    - gia hạn hợp đồng ký túc xá có khó không
+    - em là sinh viên mới có thắc mắc là làm thế nào để được tiếp tục ở ký túc xá
+    - làm thế nào để được tiếp tục ở ký túc xá
+    - có cách nào để những sinh viên hết hạn được ở ký túc xá không
+    - có những loại hợp đồng ký túc xá nào
+    - khoảng thời gian sinh viên được ở ký túc xá là bao lâu
+    - sinh viên được ở ký túc xá trong bao lâu
+    - em không rõ vấn đề sinh viên được ở bao lâu trong ký túc xá
+
+
+    - cho em hỏi link fb thông báo các vấn đề ở ký túc xá APD
+    - link fb của ktx APD
+    - em không biết link fb của ký túc xá giúp em với ạ
+    - ký túc xá APD có nhóm facebook không ạ
+    - gửi cho em link fb của ký túc xá trường mình với ạ
+    - những vấn đề quan trọng ở ký túc xá được nêu ở đâu thế ạ
+    - những thông tin thông báo của ký túc xá được up lên đâu ạ
+    - em là tân sinh viên nên chưa có link facebook ký túc xá trường mình ạ
+    - link fb ktx APD
+    - thông tin những vấn đề quan trọng của ký túc xá được đăng ở đâu thế ạ
+    - các thông báo ở ký túc xá được đăng lên fanpage hay hội nhóm nào không ạ
+
+
+    - ký túc xá APD có ưu tiên xét tuyển những sinh thuộc diện chính sách không
+    - sinh viên thuộc diện chính sách có được ưu tiên ở ký túc xá hay không
+    - những sinh viên thuộc diện chính sách hoặc hoàn cảnh khó khăn có được ưu tiên làm hợp đồng không
+    - sinh viên có hoàn cảnh đặc biệt có được ưu tiên ở ký túc xá không
+    - em là sinh viên thuộc diện chính sách nên có được ưu tiên ở ký túc xá không ạ
+    - em là tân sinh viên nhà xa có được ở ký túc xá không ạ
+    - nhà em có hoàn cảnh khó khăn em có được ưu tiên ở ký túc xá không ạ
+    - gia đình em thuộc diện hộ nghèo thì có được ưu tiên vào ký túc xá ở không ạ
+    - sinh việc thuộc diện hộ nghèo và hoàn cảnh đặc biệt có được ưu tiên trong việc làm đơn đăng ký ktx không ạ
+    - thứ tự ưu tiên khi duyệt đơn đăng ký ktx tại APD
+
+
+    - em đi làm về muộn sau 11h có được vào ký túc xá không ạ
+    - đi làm thêm về muộn có vào được ký túc không thế ạ
+    - em có thắc mắc đó là đi làm về muộn thì còn có được vào ký túc không ạ
+    - theo em biết là 11h ký túc xá đóng cửa thì sau 11h em có được vào ký túc xá không ạ
+    - nếu đi làm về muộn sau giờ đóng cửa của ký túc xá em có được vào không ạ
+    - về quá muộn có được vào ký túc xá không ạ
+    - nếu đi làm thêm quá giờ mở cửa quy định của ký túc xá em có được vào không
+    - em là tân sinh viên không biết về tới ký túc sau giờ đóng cửa em có được vào trong ký túc không
+    - về quá trễ bởi vì đi làm thêm em có được vào ký túc không ạ
+
+- intent: ask_dang_ky_tin_chi
+  examples: |
+    - trang web đăng ký tín của APD là gì
+    - có web đăng ký tín không
+    - cho xem web đăng ký tín chỉ với
+    - cho hỏi trang web đăng ký tín chỉ
+    - có trang web đăng ký tín không
+    - gửi tôi đường link trang web đăng ký tín chỉ APD
+    - sinh viên đăng ký học bằng trang web nào
+    - gửi tôi trang tín chỉ apd
+    - trang tín chỉ APD
+    - cho xem cái trang tín chỉ với
+    - website đăng ký môn học là gì
+    - show cái web đăng ký tín xem nào
+    - đăng ký tín chỉ
+    - đường dẫn tới trang đăng ký tín của APD
+    - cho xin cái đường link đăng ký tín chỉ của APD cái nhỉ
+    - ném cái đường link web đăng ký tín đây
+
+- intent: ask_thoi_gian_hoc_trong_ngay
+  examples: |
+    - Thời gian học trong ngày của APD
+    - thời gian tiết học như nào thế nhỉ
+    - buổi sáng có mấy tiết
+    - buổi chiều có mấy tiết
+    - cho xem cái thời gian học nào
+    - tiết muộn nhất của ngày học là tiết nào
+    - tiết đầu bắt đầu vào mấy giờ
+    - chưa rõ thời gian học của APD thế nào nhỉ
+    - thời gian học trong ngày của APD thế nào
+    - cho tao xem lịch học của APD
+    - sắp học rồi mà chưa biết thời gian tiết học như thế nào
+    - trường không có qui định thời gian về tiết học à
+    - show cái thời gian học đi
+    - thời gian của mỗi tiết học ra sao 
+    - các tiết học buổi sáng
+    - các tiết học buổi chiều
+    - thời gian đi học có cố định không
+    - chưa hiểu rõ các tiết trong lịch học lắm  
+    - cho mình xem thời gian cụ thể của từng tiết học với ạ
+    - thời gian vào học của apd mùa hè và mùa đông có gì thay đổi không thế
+    - cho mình biết lịch học của APD để mình sắp xếp thời gian đi học vơ
+    - tiết học của APD có khác gì so với các trường đại học khác
+
+- intent: ask_de_xe
+  examples: |
+    - cho mình hỏi đi học ở APD thì để xe ở đâu được nhỉ
+    - trường có chỗ để xe cho sinh viên không
+    - đi xe máy có tiện để xe không
+    - nhà mình ở xa không biết chỗ để xe ở trường có tiện nghi không
+    - nhà xe trường mình ở đâu thế ạ
+    - có chỗ để xe không
+    - đi học gửi xe ở đâu
+    - có người trông xe không
+    - cho minh thông tin về chỗ để xe trường mình với
+    - để xe trường mình có đảm bảo an toàn không
+    - chỗ để xe có thuận tiện cho việc lấy và để xe không
+    - nhà để xe
+    - để xe qua đêm ở apd được không
+    - có hầm để xe không
+    - đi xe ô tô có chỗ để không
+    - đi ô tô đỗ ở đâu
+    - lấy vé xe ở đâu
+    - có chỗ để xe riêng cho SH không
+    - chỗ để xe có đảm bảo phòng cháy chữa cháy không
+    - chỗ để xe có lối thoát hiểm không
+    - để xe ở ký túc xá ra sao
+
+    - thẻ tháng 
+    - thẻ ngày
+    - giá vé tháng
+    - giá vé để xe ngày trong ngày
+    - làm sao để đăng ký thẻ tháng vậy
+    - vé xe ra sao
+    - có thẻ để xe theo ngày không
+    - có thẻ để xe thep tháng không ý nhỉ
+    - giá vé xe ở apd như nào so với các trường khác
+    - apd ở xa nội thành thế vé xe giá như nào
+    - khi làm vé xe có cần nhớ thông tin của xe không
+    - đăng ký vé tháng có cần giấy tờ xe không
+    - làm vé tháng
+    - có cần đăng ký xe để làm thẻ tháng không
+    - tiền cọc vé xe ra sao
+    - tiền cọc vé xe có giá như thế nào
+    - có mất tiền cọc vé tháng không
+    - đăng ký thẻ tháng ở đâu
+    - làm thẻ tháng cần lưu ý những gì
+    - quy trình làm thẻ tháng xe
+    - làm thẻ tháng có lấy luôn được không
+    - làm thẻ tháng có mất nhiều thời gian không
+    - đợi bao lâu có thể lấy được vé xe tháng
+    
+
+
+    - nếu làm mất vé xe thì làm thế nào
+    - rơi mất vé xử lý ra sao
+    - mất vé xe
+    - rơi mất vé xe thì làm thế nào
+    - rơi mất thẻ tháng thì làm thế nào
+    - mất vé xe có cần đền không
+    - rơi vé xe
+
+- intent: ask_bus_19
+  examples: |
+    - trường mình xa vậy có bus nào đi đến gần trường không
+    - xe bus đi vào trong trường là tuyến nào
+    - tuyến nào đi đến được apd
+    - bắt xe bus chuyến nào để đi học
+    - xe bus có đón sinh viên trong trường không
+    - xe bus 19 đi những đâu
+    - nhà xa nên bắt tuyến bus nào để đi học tại APD
+    - xe bus nào đưa sinh viên vào trong APD
+    - xe bus tới APD
+    - xe bus vào APD có đi vào nội thành không
+    - bắt bus 19 ở những đoạn nào
+    - rất thắc mắc là tuyến xe bus 19 có vào trong APD không
+    - đi học về có những tuyến bus nào ở APD để về
+    - ở ký túc xá APD đi chuyến bus nào là tiện nhất
+    - xe bus 19 ở APD hoạt động từ mấy giờ và chuyến cuối là mấy giờ
+    - bắt được tuyến xe bus 19 trên đoạn đường nào
+    - xe bus đi học tại APD
+    - giá vé tuyến 19 ra sao
+    - bao nhiêu tiền một vé bus tuyến 19
+    - để đi bus 19 cần giả bao nhiêu tiền vé
+    - tiền vé xe bus 19
+
+- intent: ask_thu_vien
+  examples: |
+    - APD có thư viện không
+    - thư viện APD thế nào
+    - vào thư viện có cần thẻ sinh viên không
+    - mượn sách hay giáo trình ở thư viện cần có thẻ sinh viên không
+    - thư viện APD có rộng không
+    - thư viện APD 
+    - không biết thư viện APD ra sao
+    - cho tôi thông tin về thư viện APD
+    - thư viện của APD
+    - thư viện APD ra sao
+    - APD có thư viện mới chưa 
+    - cho tôi tham khảo thông tin về thư viện APD với
+    - không mang thẻ sinh viên có được vào thư viện không
+    - thư viện APD ở tòa nào
+    - làm sao để tìm thư viện APD
+    - thư viện APD ở chỗ nào thế
+    - thời gian mở thư viện APD
+    - thư viện mở cửa trong các khung giờ nào
+    - các ngày thư viện mở trong tuần
+    - thư viện mở cửa lúc mấy giờ
+    - thư viện đóng cửa lúc mấy giờ
+    - thư viện có mở đêm không
+    - khung giờ thư viện hoạt động
+
+- intent: dung_tai_lieu_thi
+  examples: |
+    - thi kết thúc học phần có đước sử dụng tài liệu không
+    - ở APD khi thi kết thúc học phần có cho phép sinh viên đem tài liệu vào không
+    - có được đem tài liệu vào phòng thi không
+    - sinh viên được phép sử dụng tài liệu để làm bài thi không
+    - được dùng tài liệu trong phòng thi không
+    - vào thi rồi có được sử dụng tài liệu k
+    - làm thế nào để biết được môn học của mình có được sử dụng tài liệu không
+    - có thông báo gì về việc sử dụng tài liệu thi kết thúc học phần không
+    - sử dụng tài liệu có vi phạm qui chế thi không
+
+- intent: co_so_vat_chat
+  examples: |
+    - canteen của APD
+    - căng tin của APD
+    - APD có căng tin không
+    - APD có canteen không
+    - đồ ăn của căng tin thế nào giá ra sao
+    - canteen có bán đồ ăn đảm bảo chất lượng không
+    - chất lượng đồ ăn canteen ra sao
+    - đồ ăn ở canteen có ngon không
+    - thực đơn bữa ăn hàng ngày ở căng tin ra sao
+    - bao tiền suất cơm ở căng tin
+    - một suất cơm căng tin có những gì
+    - ngoài cơm ra căng tin có bán gì nữa không
+    - căng tin mở cửa từ lúc nào
+    - ở căng tin có bán đồ ăn vặt không
+    - canteen có bán cà phê và các loại nước ép không
+    - đồ ăn ở canteen bán có đảm bảo vệ sinh an toàn thực phẩm không
+    - xuất cơm ở canteen có những mức giá nào
+    - ở canteen có bán đồ da dụng không
+    - ngoài bán đồ ăn ra canteen có bán các đồ phục vụ sinh hoạt hàng ngày không
+    - mức giá bán ở canteen có chênh lệch nhiều so với bên ngoài không
+    - thời gian canteen mở cửa
+    - khi nào căng tin đóng cửa
+    - cangteen APD hoạt động khoảng thời gian nào
+    - chất lượng đồ ăn có đảm bảo không
+    - đồ ăn sáng ở cangteen có những gì
+    - buổi sáng có bán đồ ăn sáng cho sinh viên không
+    - có bán đồ giải khát không
+    - dịch vụ ở canteen ra sao
+
+
+    - APD đã xây xong chưa
+    - cơ sở vật chất của APD như thế nào
+    - APD có cơ sở vật chất hiện đại không
+    - có những tòa học nào
+    - có thang máy phục vụ việc di chuyển không
+    - cơ sở vật chất có đáp ứng nhu cầu giảng dạy không
+    - cơ sở vật chất APD ra sao
+    - các tòa nhà của APD đã bắt đầu hoạt động chưa
+    - trường đã hoàn tất và sử dụng các cơ sở vật chất chưa
+    - thông tin về cơ sở vật chất của APD
+    - có lối thoát hiểm không
+    - ở các tòa nhà có lối thoát hiểm đảm bảo an toàn không
+    - mức hoàn thiện của cơ sở vật chất apd
+    - phòng học của APD thế nào
+    - thông tin về các phòng học của APD
+    - trường có điều hòa vào mùa hè không
+    - apd có các hội trường lớn không
+    - hội trường APD
+    - thiết bị ở apd có hiện đại không
+
+- intent: ask_kts
+  examples: |
+    - kinh tế số
+    - học kinh tế số
+    - mức điểm chuẩn của kinh tế số là gì
+    - học kinh tế số cần có nền toàn tốt không
+    - không giỏi lập trình có học được kts không
+    - các chuyên nghành của kts
+    - kts có phải là nghành học hot không
+    - học kinh tế số có thể làm công việc gì
+    - kinh tế số học những gì
+    - kinh tế số là nghành học liên quan tới gì
+    - kinh tế số có nặng về kinh tế không
+    - kinh tế số có nặng về lập trình không
+    - không giỏi tin học có học được kinh tế số không
+    - điểm chuẩn kinh tế số có cao không
+    - điểm chuẩn kinh tế số là khoảng bao nhiêu
+    - nghành kinh tế số có lấy điểm chuẩn cao không
+    - những khối có thể thi vào kinh tế số
+    - chỉ tiêu của kinh tế số thế nào
+    - lộ trình học của kinh tế số
+    - mã nghành kinh tế số là gì
+    - mã nghành kinh tế số
+    - cho mình xem mã nghành kinh tế số
+    - thông tin mã nghành kinh tế số của APD
+    - mã nghành học của kts APD là gì
+    - năm nay chỉ tiêu của kinh tế số là bao nhiêu sinh viên
+    - chỉ tiêu sinh viên của khoa kinh tế số
+    - các chuyên nghành kinh tế số
+    - kinh tế số có những chuyên nghành gì
+    - nghành học của khoa kinh tế số
+
+- intent: ask_ptts
+  examples: |
+    - có bao nhiêu phương thức tuyển sinh
+    - những phương thức tuyển sinh của khoa 
+    -  có mấy phương thức xét tuyển
+    - cách thức tuyển sinh 
+    - có thể xét tuyển bằng những phương thức nào
+    - phương thức tuyển sinh 
+    - năm 2023-2024 có những phương thức tuyển sinh nào
+    - hình thức tuyển sinh của khoa kinh tế số năm nay
+    - phương thức tuyển sinh số năm nay
+    - thông tin của phương thức tuyển sinh 
+    - phương thức tuyển sinh năm nay ra sao
+    - giới thiệu các phương thức tuyển sinh
+    - các cách xét tuyển
+    - các cách xt
+    - cách xét tuyển
+    - thông tin xét tuyển
+    - thông tin xt
+    - cho em xin thông tin về cách xét tuyển năm nay
+    - năm nay xét tuyển thế nào
+    - cách xét tuyển năm nay thế nào
+    - năm nay xét tuyển ra sao ạ
+    - hình thức xét tuyển 2023
+    - các cách xét tuyển 2023
+    - cho hỏi về cách xét tuyển năm nay
+    - những cách xét tuyển năm nay
+    - các cách tuyển sinh
+    - cách tuyển sinh
+    - thông tin tuyển sinh
+    - cho em xin thông tin về cách tuyển sinh năm nay
+    - năm nay tuyển sinh thế nào
+    - cách xt năm nay
+    - cách tuyển sinh năm nay thế nào
+    - năm nay tuyển sinh ra sao ạ
+    - hình thức tuyển sinh 2023
+    - các cách tuyển sinh 2023
+    - cho hỏi về cách tuyển sinh năm nay
+    - những cách tuyển sinh năm nay
+    - năm nay trường có những cách tuyển sinh nào
+    - năm nay trường có những cách xét tuyển nào
+    - cách tuyển sinh 2023
+    - cách xét tuyển 2023
+    - trường mình tuyển sinh như thế nào
+    - trường mình xét tuyển ntn
+    - thông tin tuyển sinh trường Đại học APD
+    - cach tuyen sinh
+    - cach tuyen sinh nam nay
+    - cach xet tuyen
+    - cach xet tuy
+    - thong tin tuyen sinh
+    - thong tin xet tuyen
+    
+    - cách xét tuyển thứ nhất là thế nào
+    - tuyển sinh cách 1 là sao
+    - xét tuyển bằng điểm thi THPT quốc gia là như thế nào
+    - xét tuyển bằng kết quả thi tốt nghiệp THPT là như thế nào
+    - giải thích giúp e cách 1 với
+    - điểm thi thpt quốc gia là sao ạ
+    - điểm thi tốt nghiệp THPT
+    - cách tuyển sinh 1
+    - cách tuyển sinh thứ nhất
+    - cách xét tuyển 1
+    - cách xét tuyển thứ nhất
+    - Điểm thi THPT quốc gia năm 2023
+    - Điểm thi TN THPT
+    - phương thức 1
+    - phuong thuc 1
+    - cách thứ nhất
+    - điểm thi tốt nghiệp
+    - diem thi tot nghiep
+    - cach tuyen sinh thu nhat
+    - cach tuyen sinh 1
+    
+    - cách xét tuyển thứ hai là thế nào
+    - tuyển sinh cách 2 là sao
+    - xét bằng điểm tốt nghiệp THPT là như thế nào
+    - xét tuyển dựa trên kết quả học tập THPT theo các tổ hợp môn
+    - giải thích giúp e cụ thể cách 2 với
+    - điểm xét tốt nghiệp THPT là sao ạ
+    - Điểm xét tốt nghiệp THPT
+    - cách tuyển sinh 2
+    - cách tuyển sinh thứ hai
+    - cách xét tuyển 2
+    - cách xét tuyển thứ hai
+    - Điểm xét THPT Quốc gia năm 2023
+    - điểm xét TN THPT
+    - phương thức 2
+    - phuong thuc 2
+    - cách thứ hai
+    - điểm xét tốt nghiệp
+    - diem xet tot nghiep
+    - cach tuyen sinh thu hai
+    - cach tuyen sinh 2
+
+    - cách xét tuyển thứ 3 là như thế nào
+    - tuyển sinh cách 3 là sao
+    - xét bằng điểm thi đánh giá năng lực Đại học Quốc gia Hà Nội 2023 là như thế nào
+    - giải thích cụ thể giúp em cách 3 với
+    - Điểm thi đánh giá năng lực Đh quốc gia Hà Nội năm 2023 là sao ạ
+    - Điểm thi ĐHQGHN
+    - cách tuyển sinh 3
+    - cách tuyển sinh thứ ba
+    - cách xét tuyển 3
+    - cách xét tuyển thứ ba
+    - điểm thi đánh giá năng lực năm 2023
+    - điểm thi ĐHQGHN
+    - phương thức 3
+    - phuong thuc 3
+    - cách thứ ba
+    - điểm thi đánh giá năng lực
+    - cach tuyen sinh thu ba
+    - cach tuyen sinh 3
+    - diem thi danh gia nang luc
+    
+    - cách xét tuyển thứ 4 là như thế nào
+    - tuyển sinh cách 4 là sao
+    - xét bằng cách xét tuyển thằng là như thế nào
+    - giải thích cụ thể giúp e cách 4 với
+    - xét tuyển thẳng là sao ạ
+    - thế nào thì được xét tuyển thẳng ạ
+    - nằm trong diện nào thì có thể xét tuyển thẳng
+    - làm sao để được xét tuyển thẳng
+    - khi nào thì e được xét tuyển thẳng
+    - ai mới được xét tuyển thẳng
+    - xét tuyển cách 4 là sao
+    - còn cách tuyển sinh thứ 4 là sao
+    - Xét tuyển thẳng
+    - phương thức 4
+    - phuong thuc 4
+    - cách thứ tư
+    - cách thứ bốn
+    - cách xét tuyển thứ 4
+    - cách tuyển sinh thứ 4
+    - cach tuyen sinh thu tu
+    - cach tuyen sinh 4
+    - xet tuyen thang
+    
+    - cách xét tuyển thứ 5 là như thế nào ạ
+    - xét tuyển kết hợp là như nào ạ
+    - xét tuyển kết hợp là sao
+    - xet tuyen ket hop nhu nao 
+    - xét tuyển bằng chứng chỉ tiếng anh 
+    - xét tuyển bằng kết quả đạt giải trong kỳ thi học sinh giỏi cấp tỉnh/ thành phố và kết quả học tập THPT
+    - kết hợp giữa chứng chỉ năng lực quốc tế (ACT, A-level, SAT) và kết quả học tập THPT
+    - Kết hợp giữa chứng chỉ ngoại ngữ quốc tế (IELTS, TOEIC, TOEFL..) và kết quả học tập THPT
+    - xet tuyen sinh 5
+
+- intent: ask_to_hop_xt
+  examples: |
+    - các tổ hợp xét tuyển 
+    - tổ hợp xét tuyển A00
+    - A00
+    - các môn học của tổ hợp A00
+    - tổ hợp xét tuyển A00
+    - A00 có những môn học nào
+    - các tổ hợp môn trong khối A00
+    - A1 có những môn nào
+    - A1 là tổ hộp môn nào
+    - tổ hợp xét tuyển A1
+    - những môn học trong tổ hợp A1
+    - khối A1 gồm những môn nào
+    - A1
+    - D01
+    - tổ hợp xét tuyển D01
+    - các môn học của tổ hợp xét tuyển D01
+    - D01 có những môn học nào
+    - C01
+    - tổ hợp C01 gồm môn nào
+    - các môn học trong tổ hợp xét tuyển C01
+
+- intent: ask_ptts_kts_tuyen_thang
+  examples: |
+    - điều kiện tuyển thẳng là gì
+    - làm thế nào để được tuyển thẳng vào kts
+    - chỉ tiêu tuyển thẳng
+    - chỉ tiêu phương thức tuyển thẳng
+    - học sinh đạt giải quốc gia có được tuyển thẳng không
+    - sinh viên trong quy chế tuyển sinh của bộ giáo dục và đạo tạo có tuyển thằng không
+    - phương thức tuyển thẳng của kts
+    - cần có những chỉ tiêu gì để được tuyển thẳng vào khoa kts
+    - khoa kts có phuương thức tuyển không
+    - cách thức tuyển thẳng của kinh tế số
+    - những điều kiện tuyển thẳng của kinh tế số
+    - chỉ tiêu tuyển thẳng của kinh tế số là bao nhiêu
+    - phương thức tuyển thẳng chiếm bao nhiêu trong tổng số chỉ tiêu
+    - chỉ tiêu theo phương thức xét tuyển riêng
+    - chỉ tiêu xét tuyển riêng ra sao
+
+- intent: ask_ptts_kts_tuyen_danh_gia_nang_luc
+  examples: |
+    - khoa kinh tế số có cách xét tuyển theo bài thi đánh giá năng lực không
+    - thông tin về bài thi đánh giá năng lực của khoa kts
+    - những đối tượng được xét tuyển dựa trên đánh giá năng lực của khoa kinh tế số 
+    - thông tin về cách xét tuyển bằng đánh giá năng lực của khoa kinh tế số
+    - bài thi đánh giá năng lực của khoa kinh tế số như nào
+    - phương thức xét tuyển bằng bài thi đánh gia năng lực của khoa kinh tế số
+    - khoa kinh tế số dùng bài thi đánh giá năng lực nào để xét tuyển
+    - ngưỡng điểm trúng tuyển bằng hình thức đánh giá năng lực của khoa kinh tế số
+    - đạt bao nhiêu điểm để trúng tuyển bằng hình thức đánh giá năng lực của khoa kinh tế số
+    
+
+- intent: ask_ptts_kts_hsg
+  examples: |
+    - có giải học sinh giỏi cấp tỉnh có được tuyển vào kinh tế số không 
+    - nếu có giải học sinh giỏi cấp tỉnh thì xét tuyển vào kinh tế số như nào
+    - những giải học sinh giỏi cấp nào được tuyển vào kinh tế số
+    - giải ba học sinh giỏi cấp tỉnh có được xét tuyển vào kinh tế số không
+    - giải nhì học sinh giỏi cấp tỉnh có được xét tuyển vào kinh tế số không
+    - giải nhất học sinh giỏi cấp tỉnh có được xét tuyển vào kinh tế số không
+    - ngoài giải học sinh giỏi cấp tỉnh cần có điệu kiện gì xét tuyển không
+    - những điều kiện xét tuyển đối với học sinh có giải học sinh giỏi cấp tỉnh
+    - học sinh giỏi tổ hợp các môn nào được xét tuyển
+    - có giải học sinh giỏi các môn nào thì được xét tuyển vào kinh tế số
+    - giấy chứng nhận đạt giải trong kỳ thi Học sinh giỏi cấp Tỉnh thì xét tuyển vào kinh tế số thế nào
+    - giấy chứng nhận đạt giải trong kỳ thi học sinh giỏi xét tuyển vào kinh tế số theo hình thức nào
+    - đạt giải học sinh giỏi cấp tỉnh
+
+- intent: ask_ptts_kts_hoc_ba
+  examples: |
+    - dùng học bạ để xét tuyển vào nghành kinh tế số được không
+    - dùng học bạ để xét tuyển được vào kinh tế số không
+    - cách thức xét tuyển bằng học bạ vào nghành kinh tế số
+    - điểm trung bình học bạ để xét tuyển vào kinh tế số là bao nhiêu
+    - đối tượng xét tuyển bằng phương thức học bạ của kinh tế số
+    - những đối tượng nào được xét tuyển học bạ của khoa kinh tế số
+    - xét điểm trung bình cộng năm lớp nào
+    - khoa kinh tế số xét điểm trung bình cộng của những năm lớp mấy
+    - điểm xét tuyển học bạ khoa kinh tế số được xác định như nào
+    - xét tuyển học bạ của kinh tế số được tính như nào
+    - cách thức tính điểm học bạ của khoa kinh tế số
+    - xét tuyển học bạ kinh tế số
+    - dùng học bạ xét tuyển kinh tế số
+    - học bạ cấp 3 xét tuyển vào khoa kinh tế số
+    - học bạ cần đạt được điều kiện nào để xét tuyển vào kts
+
+- intent: ask_ptts_kts_cc
+  examples: |
+    - có IELTS 6.5 có được xét tuyển vào kinh tế số không
+    - có IELTS 6.0 có được xét tuyển vào kinh tế số không
+    - IELTS bao nhiêu thì được xét tuyển vào kts
+    - cần đạt bao nhiêu IELTS để được tuyển thẳng vào kinh tế số
+    - có chứng chỉ tiếng anh nào thì được xét tuyển vào kinh tế số
+    - những chứng chỉ tiếng anh để xét tuyển vào kinh tế số
+    - được bao nhiêu SAT thì trúng tuyển kinh tế số
+    - SAT cần đạt bao nhiêu để trúng tuyển vào kinh tế số
+    - 1000 điểm chứng chỉ SAT có được xét tuyển vào kinh tế số không
+    - chứng chỉ ACT trên 25 điểm có được xét tuyển vào kinh tế số không
+    - chứng chỉ ACT cần đạt bao nhiêu để xét tuyển vào kinh tế số
+    - dùng chứng chỉ A level xét tuyển vào kinh tế số được không và cần bao nhiêu điểm
+    - có chứng chỉ A level được xét tuyển vào kinh tế số hay không
+    - thời hạn xét tuyển chứng chỉ IELTS của kinh tế số
+    - thời hạn xét tuyển chứng chỉ A level của kinh tế số
+    - thời hạn xét tuyển chứng chỉ ACT của kinh tế số
+    - IELTS dưới 2 năm có dùng để xét tuyển được không
+    - SAT dưới 3 năm có dùng để xét tuyển được không
+    - ACT  dưới 3 năm có dùng để xét tuyển được không
+    - A level dưới 3 năm có dùng để xét tuyển được không
+
+- intent: ask_dll
+  examples: |
+    - cơ hội việc làm của nghành dữ liệu lớn
+    - học dữ liệu lớn ra trường được làm ở lĩnh vực nào
+    - các chức vụ có thể làm khi học dữ liệu lớn
+    - các role của có liên quan tới dữ liệu lớn
+    - xin việc trong nghành dữ liệu lớn có dễ không
+    - học big data xong có xin việc dễ không
+    - nhu cầu tuyển dụng của nghành dữ liệu lớn
+    - học bigdata làm được những gì
+    - những công việc có thể làm khi ra trườngs
+    - học dữ liệu lớn có khó không
+    - mục tiêu đào tạo của nghành dữ liệu lớn là gì
+    - mục tiêu đào tạo của nghành dữ liệu lớn là gì
+    - học dữ lớn là học những nền tảng kiến thức nào
+    - học phân tích dữ liệu có cơ hội việc làm nào
+    - là một sinh viên sau khi ra trường khi tốt nghiệp em sẽ có những cơ hội làm việc nào
+    - cơ hội làm việc sau khi tốt nghiệp phân tích dữ liệu trong kinh tế và kinh doanh
+    - big data
+    - dll
+
+
+    - mức lương làm việc trong nghành dữ liệu
+    - em là tân sinh viên không biết mức lương sau khi tốt nghiệp nghành dữ liệu lớn là bao nhiêu
+    - em muốn biết mức lương của việc làm sau khi tốt nghiệp
+    - mức lương đi làm sau khi tốt nghiệp là bao nhiêu
+    - mức lương của một DATA ANALYST sau khi tốt nghiệp
+    - mức lương của DATA ANALYST trung bình là bao nhiêu
+    - nếu làm vị trí DATA ANALYST mức lương ra sao
+    - nếu em là DATA ANALYST thì mức lương sẽ là bao nhiêu một tháng
+    - làm da được bao nhiêu một tháng
+    - mức lương của một DA là bao nhiêu
+    - DATA SCIENTIST có mức lương bao nhiêu
+    - DATA SCIENTIST có mức lương thế nào
+    - với vị trí DATA SCIENTIST thì mức lương sẽ là bao nhiêu
+    - nếu tốt nghiệp và làm DATA SCIENTIST thì sẽ nhận được mức lương bao nhiêu
+    - mức lương khi làm việc ở nghành dll
+
+
+    - không có kiến thức lập trình học big data có khó không
+    - học dữ liệu lớn có nặng về toán không
+    - học dữ liệu lớn có nặng về công nghệ thông tin không
+    - big data có liên quan nhiều đến code không
+    - cần những nền tảng nào để học phân tích dữ liệu lớn
+    - em có ý định học chuyên nghành này thì cần những nền tảng na
+    - những tố chất của một sinh viên học phân tích dữ liệu
+    - học phần tích dữ liệu thì em cần những nền tảng nào
+    - những tố chất phù hợp với phân tích dữ liệu
+    - học về dữ liệu cần có những nền tảng cụ thể nào ạ
+
+
+- intent: ask_tg_ho_so
+  examples: |
+    - thời gian nộp hồ sơ của kinh tế số
+    - thời gian nộp hồ sơ
+    - thôn tin về thời gian nộp hồ sơ vào kinh tế số
+    - hạn nộp hồ sơ vào khoa kts là bao giờ
+    - cụ thể về thời gian tiếp nhận hồ sơ
+    - thông tin về thời gian nhận hồ sơ của kinh tế số
+    - bao giờ là hạn nộp hồ sơ vào kinh tế số
+    - thời gian nộp hồ sơ và thông báo kết quả xét tuyển của kts
+    - khi nào có thông báo xét tuyển của kinh tế số
+    - thời gian thông báo xét tuyển của kinh tế số
+    - khi nào có kết quả xét tuyển của kinh tế số
+    - chi tiết về thời gian thông báo xét tuyển
+    - kết quả xét tuyển thông báo khi nào
+    - thời gian biết được thông báo xét tuyển
+    - sau bao nhiêu tháng có kết quả xét tuyển
+
+- intent: ask_hinh_thuc_dky_xt
+  examples: |
+    - có hình thức đăng ký xét tuyển online không
+    - hình thức đăng ký xét tuyển online như nào
+    - cách để xét tuyển online
+    - có đường link đăng ký xét tuyển online không
+    - đường link đăng ký là gì
+    - có đường link đăng ký xét tuyển trực tuyến không
+    - cách đăng ký xét tuyển vào kinh tế số
+    - làm thể nào để đăng ký xét tuyển
+    - gửi tôi đường link đăng ký online
+    - muốn đăng ký xét tuyển online làm như nào
+    - cách thức đăng ký xét tuyển online
+
+- intent: ask_ho_so_xt
+  examples: |
+    - hồ sơ xét tuyển vào kinh tế số bao gồm những gì
+    - cần những giấy tờ nào để làm hồ sơ xét tuyển trực tuyến
+    - hồ sơ xét tuyển có cần học bạ không
+    - học bạ bản sao có cần công chứng không
+    - làm hồ sơ xét tuyển cần học bạ có công chứng hay không
+    - làm hồ sơ trực tuyến có cần học bạ không
+    - làm hồ sơ trực tuyến cần chuẩn bị những gì
+    - những thứ cần chuẩn bị để làm hồ sơ trực tuyến
+    - làm hồ sơ xét tuyển bằng chứng chỉ tiếng anh cần có những gì
+    - xét tuyển bằng hình thức đánh giá năng lực cần chuẩn bị giấy tờ gì
+    - xét tuyển bằng hình thức giải thưởng học sinh giỏi cần những giấy tờ gì
+    - học bạ bản chính hay công chứng
+    - có cần học bạ bản gốc không
+    - hồ sơ xét tuyển cần có những gì
+    - làm hồ sơ xét tuyển cần chuẩn bị những gì
+    - hồ sơ của đối tượng ưu tiên
+    - làm hồ sơ xét tuyển thuộc đối tượng ưu tiên gồm những gì
+    - đối tượng ưu tiên làm hồ sơ xét tuyển như nào
+    - đối tượng ưu tiên thì cần chuẩn bị những gì để làm hồ sơ xét tuyển
+    - thông tin về hồ sơ xét tuyển
+
+- intent: ask_hp_kts
+  examples: |
+    - học phí của kinh tế số là bao nhiêu
+    - 1 tín là bao nhiêu tiền
+    - 1 tín chỉ tương đương bao nhiêu tiền
+    - 1 tín chỉ được quy định bao nhiêu tiền
+    - 1 tín chỉ có đắt không
+    - thông tin về học phí của kinh tế số
+    - một năm học kinh tế số mất khoảng bao nhiêu
+    - học phí một năm học kinh tế số mất bao nhiêu
+    - mất bao nhiêu khi học một năm tại khoa kinh tế số
+    - học phí ra sao
+    - học phí 1 tín
+    - học phí một năm
+    - chương trình đại học hệ chuẩn của khoa kinh tế số bao nhiêu tiền 1 tín chỉ
+    - không biết 1 tín chỉ của khoa kinh tế số bao nhiêu
+
+- intent: ask_cc_dau_ra
+  examples: |
+    - đầu ra của khoa kinh tế số
+    - đầu ra của khoa kinh tế số cần những chứng chỉ gì
+    - có cần chứng chỉ gì để đáp ứng đầu ra của kinh tế số không
+    - có cần chứng chỉ tiếng anh để đáp ứng đầu ra khoa kinh tế số không
+    - chứng chỉ tiếng anh có cần thiết để đáp ứng đầu ra không
+    - chứng chỉ tin học đáp ứng đầu ra của khoa kinh tế số
+    - những chứng chỉ tin học nào đáp ứng đầu ra
+    - chứng chỉ đáp ứng chuẩn đầu ra
+    - đáp ứng chuẩn đầu ra cần chứng chỉ tin học nào
+    - mức điểm chứng chỉ tin học đáp ứng đầu ra
+    - cần đạt bao nhiêu điểm ic3 để đáp ứng đầu ra
+    - thông tin về chuẩn đầu ra chứng chỉ tin học
+    - có những chứng chỉ tiếng anh nào đáp ứng chuẩn đầu ra
+    - đáp ứng chuẩn đầu ra cần có chứng chỉ tiếng anh nào
+    - thi chứng chỉ tiếng anh nào có thể đáp ứng chuẩn đầu ra
+    - thi ielts bao nhiêu đáp ứng chuẩn đầu ra
+    - thi chứng chỉ toeic đạt bao nhiêu đáp ứng đầu ra
+    - thi chứng chỉ chứng chỉ toeic có đáp ứng chuẩn đầu ra hay không
+    - có chứng chỉ toefl có đáp ứng đầu ra không
+    - dùng chứng chỉ toefl bao nhiêu để đáp ứng chuẩn đầu ra
+
+- intent: ask_mos
+  examples: |
+    - cần đạt bao nhiêu điểm chứng chỉ mos để đáp ứng đầu ra
+    - cần đạt tối thiểu bao nhiêu điểm chứng chỉ mos để đáp ứng đầu ra
+    - số điểm chứng chỉ mos đáp ứng đầu ra
+    - để đáp ứng chuẩn đầu ra cần đạt bao nhiêu điểm chứng chỉ mos
+    - chứng chỉ tin học mos là gì
+    - mos là gì
+    - thông tin về chứng chỉ mos
+    - mos có bao nhiêu phần thi
+    - những phần thi của mos
+    - chứng chỉ tin học mos là gì
+    - được bao nhiêu điểm chứng chỉ mos để đáp ứng chuẩn đầu ra
+    - chứng chỉ mos do bên nào cung cấp
+    - thi mos là thi những công cụ nào
+    - excel có phải 1 bài thi trong chứng chỉ mos không
+    - thi mos có cần phải thi excel hay không
+    - thi mos có cần thi world hay không
+    - mức độ chứng chỉ mos cần đạt
+    - chứng chỉ mos ở cấp độ nào thì đáp ứng chuẩn đầu ra
+    - thông tin chi tiết các điểm cần đạt ở mỗi phần thi chứng chỉ mos
+    - điểm cụ thể cần đạt ở các phần thi mos
+    - thời hạn của chứng chỉ mos
+    - chứng chỉ mos có hiệu lực trong bao nhiêu lâu
+    - thi mos 2013 có được không
+    - thi mos phiên bản năm nào đáp ứng chuẩn đầu ra
+
+- intent: ask_ic3
+  examples: |
+    - chứng chỉ tin học ic3 là gì
+    - thông tin về chứng chỉ tin học ic3
+    - ic3 là gì
+    - ic3 là chứng chỉ tin học gì
+    - ic3 liên quan tới gì
+    - các phần thi của chứng chi tin học ic3
+    - ic3 có những phần thi nào
+    - thi chứng chỉ ic3 sẽ phải thi bao nhiêu phần
+    - cần đạt bao nhiêu điểm chứng chỉ ic3 để đạt chuẩn đầu ra
+    - đầu ra chứng chỉ ic3 cần bao nhiêu điểm
+    - chứng chỉ ic3 do bên nào cung cấp
+    - thông tin điểm từng phần thi chứng chỉ ic3 để đạt chuẩn đầu ra
+    - thời hạn chứng chỉ ic3 là bao lâu
+    - thông tin về thời hạn chứng chỉ ic3
+
+- intent: quy_doi_mos
+  examples: |
+    - Cách thức quy đổi điểm học phần khi có mos
+    - quy đổi mos như thế nào
+    - các thang điểm chứng chỉ mos có thể quy đổi
+    - có chứng chỉ mos rồi có cần học học phần tin học đại cương không
+    - có mos rồi có được miễn học phần tin học đại cương không
+    - có mos 1000 được quy đổi điểm như nào
+    - có mos 800 quy đổi sang tin học đại cương được bao nhiêu
+    - hình thức quy đổi mos sang điểm học phần tin học đại cương thế nào
+    - có dùng kết qua thi mos để quy đổi sang học phần tin học đại cương được không
+    - dùng kết quả chứng chỉ mos quy đổi sang học phần tương đương
+    - các quy định quy đổi ở mỗi thang điểm chứng chỉ mos
+    - thông tin về các thang quy đổi điểm chứng chỉ mos
+    - điểm học phần được quy đổi từ chứng chỉ mos tính như nào
+    - cách tính điểm học phần thi tin học đại cương được quy đổi từ mos như nào
+    - có chứng chỉ mos có miễn thi học phần tin học đại cương hay không
+
+- intent: quy_doi_ic3
+  examples: |
+    - cách thức quy đổi điểm học phần khi có ic3
+    - quy đổi ic3 như thế nào
+    - các thang điểm chứng chỉ ic3 có thể quy đổi
+    - có chứng chỉ ic3 rồi cần phải học học phần tin học đại cương không
+    - có ic3 rồi có được miễn tin học đại cương không
+    - có ic3 1000 quy đổi được bao nhiêu điểm học phần tin học
+    - có ic3 800 quy đổi sang điểm học phần tin học đại cương bao nhiêu
+    - hình thức quy đổi ic3 sang điểm học phần tin học đại cương thế nào
+    - có dùng kết quả thi ic3 quy đổi sang học phần tương đương không
+    - các quy định quy đổi điểm chứng chỉ ic3 sang học phần tin học đại cương
+    - thông tin về các thang điểm quy đổi điểm chứng chỉ ic3
+    - cách tính điểm học phần thi tin học đại cương được quy đổi từ ic3 như thế nào
+    - có chứng chỉ ic3 có miễn thi học phần tin học đại cương hay không
+
+- intent: ask_qt_mien_hoc_tin_hoc
+  examples: |
+    - Cho em hỏi làm thế nào để miễn thi học phần tin học
+    - quy trình làm đơn miễn thi học phần tin học khi có chứng chỉ tin học
+    - khi có chứng chỉ mos rồi thì làm như nào để xét chuẩn đầu ra
+    - khi có chứng chỉ tin học rồi thì làm thế nào để xét chuẩn đầu ra
+    - thời gian làm đơn xét tuyển đầu ra tin học
+    - làm thế nào để làm đơn xét tuyển chuẩn đầu ra tin học
+    - có chứng chỉ tin học rồi làm thế nào để xét chuẩn đầu ra
+    - có chứng chỉ mos rồi em cần phải làm gì để xét chuẩn đầu ra
+    - có chứng chỉ ic3 rồi em cần phải làm gì để xét chuẩn đầu ra
+    - có chứng chỉ tin học trước khi học có xét được chuẩn đầu ra không
+    - thông tin về quy trình và thông báo làm đơn xét chuẩn đầu ra và quy đổi học phần tin học
+    - APD xét chuẩn đầu ra tin học bằng cách nào
+    - làm đơn quy đổi điểm học phần tin học tại APD như nào
+    - làm đơn xét chuẩn đầu ra tin học
+    - có cách nào để xét chuẩn đầu ra tin học
+    - làm đơn quy đổi học phần tin học bằng cách nào
+    - làm đơn quy xét chuẩn đầu ra tin học bằng cách nào
+#hệ đào tạo thường:
+- intent: ask_TOEFL_ITP
+  examples: |
+    - chứng chỉ tiếng anh TOEFL ITP là gì
+    - thông tin về chứng chỉ tiếng anh TOEFL ITP
+    - thi chứng chỉ TOEFL ITP bao nhiêu kỹ năng
+    - chuẩn đầu ra học viện yêu cầu chứng chỉ TOEFL ITP bao nhiêu kỹ năng
+    - thi chứng chỉ TOEFL ITP những kỹ năng nào
+    - để đáp ứng chuẩn đầu ra của học viện cần thi TOEFL ITP những kỹ năng nào
+    - chứng chỉ TOEFL ITP cần đạt ngưỡng điểm nào để đáp ứng chuẩn đầu ra
+    - chứng chỉ TOEFL ITP thi những kỹ năng nào
+    - thi chứng chỉ TOEFL ITP bao gồm kỹ năng nào
+    - chuẩn đầu ra của APD cần chứng chỉ TOEFL ITP bao nhiêu kỹ năng
+    - ngưỡng điểm đáp ứng chuẩn đầu TOEFL ITP tại APD là bao nhiêu
+    - chứng chỉ TOEFL ITP bao nhiêu điểm là đáp ứng chuẩn đầu ra
+    - cần đạt bao nhiêu điểm TOEFL ITP để đáp ứng chuẩn đầu ra
+    - chuẩn đầu ra của học viện là bao nhiêu điểm chứng chỉ TOEFL ITP
+    - thi TOEFL ITP có nằm trong chuẩn đầu ra của học viện không
+    - TOEFL ITP có là chứng chỉ nằm trong chuẩn đầu ra không
+    - chuẩn đầu ra của học viện về chứng chỉ TOEFL ITP
+    - thông tin chuẩn đầu ra của TOEFL ITP
+    - hết hạn chứng chỉ TOEFL ITP có được xét chuẩn đầu ra không
+    - hiện tại mình có chứng TOEFL ITP quá 2 năm có được xét chuẩn đầu ra không
+    - chứng chỉ TOEFL ITP có thời hạn trong bao lâu
+    - chứng chỉ TOEFL ITP
+    - chứng chỉ TOEFL ITP còn hạn có được xét chuẩn đầu ra khi năm nhất không
+    - thời gian thi của chứng chỉ TOEFL ITP là bao nhiêu
+    - TOEFL ITP thi trong thời gian bao nhiêu phút
+
+- intent: ask_TOEFL_iBT
+  examples: |
+    - chứng chỉ TOEFL iBT là chứng chỉ gì
+    - thông tin về chứng chỉ tiếng anh TOEFL iBT
+    - thi chứng chỉ TOEFL iBT những kỹ năng nào để đáp ứng chuẩn đầu ra
+    - thi chứng chỉ TOEFL iBT bao nhiêu kỹ năng để đáp ứng chuẩn đầu ra
+    - thi chứng chỉ TOEFL iBT những kỹ năng nào
+    - chứng chỉ TOEFL iBT bao nhiêu điểm để đáp ứng chuẩn đầu ra
+    - chuẩn đầu ra của APD về chứng chỉ TOEFL iBT ở mức điểm nào và bao nhiêu kỹ năng
+    - thi chứng chỉ TOEFL iBT có đáp ứng chuẩn đầu ra không
+    - chuẩn đầu ra của học viện yêu cầu mức điểm bao nhiêu
+    - TOEFL iBT có là chứng chỉ chuẩn đầu ra tiếng anh của học viện không
+    - chuẩn đầu ra của học viện về chứng chỉ TOEFL iBT
+    - thông tin chuẩn đầu ra của chứng chỉ tiếng anh TOEFL iBT
+    - thi chứng chỉ TOEFL iBT những kỹ năng nào
+    - cần đạt bao nhiêu điểm chứng chỉ TOEFL iBT để đáp ứng đầu ra
+    - yêu cầu đạt bao nhiêu điểm chứng chỉ TOEFL iBT để đáp ứng chuẩn đầu ra
+    - TOEFL iBT
+    - chứng chỉ TOEFL iBT là gì
+    - TOEFL iBT là gì
+    - TOEFL iBT có thời hạn trong bao lâu
+    - TOEFL iBT có hạn bao nhiêu năm
+    - bằng TOEFL iBT hết hiệu lực có được xét chuẩn đầu ra không
+    - TOEFL iBT đã hết hạn có được xét chuẩn đầu ra không
+    - có chứng chỉ TOEFL iBT có được xét chuẩn ở năm nhất không
+
+- intent: ask_TOEIC
+  examples: |
+    - TOEIC
+    - chứng chỉ tiếng anh TOEIC là gì
+    - TOEIC là chứng chỉ gì
+    - thông tin về chứng chỉ TOEIC
+    - chuẩn đầu ra tại APD yêu cầu bao nhiêu điểm TOEIC
+    - chứng chỉ TOEIC đạt bao nhiêu điểm thì đáp ứng yêu cầu đầu ra tại APD
+    - cần đạt bao nhiêu điểm chứng chỉ TOEIC để đáp ứng chuẩn đầu ra
+    - thi chứng chỉ TOEIC cần đạt bao nhiêu điểm
+    - TOEIC bao nhiêu điểm đáp ứng chuẩn yêu cầu về đầu ra tại APD
+    - yêu cầu đầu ra tại APD yêu cầu TOEIC bao nhiêu điểm
+    - đầu ra của APD đối với TOEIC là bao nhiêu điểm
+    - đầu ra của APD với chứng chỉ TOEIC có khó không
+    - cụ thể về điểm chứng chỉ TOEIC đạt yêu cầu đầu ra
+    - thông tin về chuẩn đầu chứng chỉ TOEIC của APD
+    - thông tin về đầu ra TOEIC
+    - chứng chỉ TOEIC có những kỹ năng nào
+    - cần thi chứng chỉ TOEIC bao nhiêu kỹ năng để đáp ứng chuẩn đầu ra
+    - thi TOEIC bao nhiêu điểm và kỹ năng nào để xét tốt nghiệp
+    - có chứng chỉ TOEIC rồi có được xét chuẩn đầu ra tại năm 1 không
+    - xét chuẩn đầu ra ở năm 1 khi có TOEIC được không
+    - chứng chỉ TOEIC quá hạn có được xét chuẩn đầu ra không
+    - chứng TOEIC quá 2 năm có được xét chuẩn đầu ra không
+
+- intent: ask_IELTS
+  examples: |
+    - IELTS
+    - chứng chỉ IELTS
+    - chuẩn đầu ra chứng chỉ IELTS
+    - ở APD chuẩn đầu ra IELTS như thế nào
+    - yêu cầu chuẩn đầu ra của APD với chứng chỉ IELTS
+    - yêu cầu đầu ra tại APD về IELTS có khó không
+    - chuẩn đầu ra của APD về IELTS như thế nào
+    - thông tin về đầu ra IELTS
+    - thông tin về chuẩn đầu ra tại APD với IELTS
+    - thông tin về điểm chứng chỉ IELTS đạt yêu cầu đầu ra
+    - IELTS cần đạt bao nhiêu chấm để đạt yêu cầu đầu ra tại APD
+    - chuẩn đầu ra của APD yêu cầu bao nhiêu điểm IELTS
+    - chứng chỉ IELTS như nào đạt chuẩn đầu ra tại APD
+    - thi IELTS cần đạt mức điểm nào để đáp ứng yêu cầu đầu ra
+    - thông tin cụ thể về chuẩn đầu ra của APD về IELTS
+    - IELTS với mức điểm nào đáp ứng chuẩn đầu ra
+    - có bằng IELTS ở năm nhất có được xét chuẩn đầu ra luôn không
+    - có IELTS khi mới học năm nhất có được xét chuẩn đầu ra hay chưa
+
+- intent: ask_Cambridge
+  examples: |
+    - chứng chỉ Cambridge
+    - chứng chỉ tiếng anh Cambridge là gì
+    - thông tin về chứng chỉ Cambridge
+    - chuẩn đầu ra học viện về chứng chỉ Cambridge như nào
+    - thông tin về chuẩn đầu ra tại APD về Cambridge
+    - thông tin về điểm đạt yêu cầu chuẩn đầu ra đối với Cambridge
+    - thông tin về đầu ra Cambridge tại APD
+    - thông tin cụ thể về chuẩn đầu ra của APD với Cambridge
+    - chuẩn đầu ra của APD về Cambridge có khó không
+    - Cambridge cần đạt bao nhiêu điểm để đáp ứng chuẩn đầu ra
+    - yêu cầu chuẩn đầu ra của APD về Cambridge
+    - đạt bao nhiêu điểm Cambridge thì đáp ứng yêu cầu về đầu ra của APD
+    - cho em hỏi mức điểm nào đủ yêu cầu chuẩn đầu ra đối với chứng chỉ Cambridge
+    - mức điểm Cambridge tối thiếu đáp ứng chuẩn đầu ra tại APD
+    - cần đạt bao nhiêu điểm Cambridge để đủ điều kiện đầu ra
+
+- intent: ask_Vstep
+  examples: |
+    - VSTEP
+    - VSTEP là gì
+    - chứng chỉ VSTEP
+    - thông tin về chứng chỉ VSTEP
+    - VSTEP là chứng chỉ gì
+    - các mức độ của VSTEP ra sao
+    - thông tin về các mức độ của VSTEP
+    - cụ thể các cấp độ chứng chỉ VSTEP
+    - VSTEP có những cấp độ nào
+    - chuẩn đầu ra của VSTEP yêu cầu VSTEP cấp độ nào
+    - chứng chỉ VSTEP cấp độ nào đạt yêu cầu đầu ra
+    - cần có chứng chỉ VSTEP cấp mấy để đạt yêu cầu đầu ra
+    - VSTEP có là chứng chỉ đạt chuẩn đầu ra ở APD không
+    - VSTEP có phải là một trong những chứng chỉ tiếng anh đạt đầu ra ở APD không
+    - cần đạt bao nhiêu điểm VSTEP để đáp ứng yêu cầu đầu ra
+    - yêu cầu đầu ra ở APD cần bao nhiêu điểm VSTEP
+    - phải đạt mức điểm nào mới đảm bảo chuẩn đầu ra của chứng chỉ VSTEP
+    - các cấp độ của chứng chỉ VSTEP
+
+- intent: ask_Aptis_ESOL
+  examples: |
+    - Aptis ESOL
+    - Aptis ESOL là gì
+    - chứng chỉ Aptis ESOL
+    - chứng chỉ Aptis ESOL là gì
+    - thông tin về chứng chỉ Aptis ESOL
+    - các thông tin về chứng chỉ Aptis ESOL
+    - chứng chỉ Aptis ESOL có đáp ứng chuẩn đầu ra tại APD không
+    - ở APD có yêu cầu đầu ra chứng chỉ Aptis ESOL không
+    - Aptis ESOL có phải là chứng chỉ đầu ra ở APD không
+    - thông tin về đầu ra chứng chỉ Aptis ESOL tại APD
+    - yêu cầu của APD về chứng chỉ đầu ra Aptis ESOL
+    - chứng chỉ Aptis ESOL cấp độ nào thì đạt chuẩn đầu ra tại APD
+    - cấp độ chứng chỉ Aptis ESOL đạt chuẩn đầu ra
+    - mức độ Aptis ESOL nào đạt yêu cầu đầu ra
+    - chứng chỉ Aptis ESOL cấp độ nào được xét đầu ra
+
+- intent: quy_doi_TOEIC
+  examples: |
+    - quy đổi TOEIC
+    - các thang điểm quy đổi TOEIC
+    - có bằng TOEIC rồi thì quy đổi sang các học phần thế nào
+    - mức điểm các học phần tiếng anh được quy đổi từ TOEIC
+    - có bằng TOEIC thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có được dùng TOEIC quy đổi điểm các học phần tiếng anh không
+    - mức điểm các học phần tiếng anh được quy đổi thế nào khi có bằng TOEIC
+    - TOEIC 450 quy đổi ra các học phần tiếng anh cơ bản ra sao
+    - TOEIC 455 quy đổi ra các học phần tiếng anh cơ bản ra sao
+    - TOEIC 460 quy đổi ra các học phần tiếng anh cơ bản ra sao
+    - TOEIC 465 quy đổi ra các học phần tiếng anh cơ bản ra sao
+    - TOEIC hơn 450 quy đổi ra tương đương với bao nhiêu điểm học phần
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có TOEIC bao nhiêu điểm
+    - thông tin các mức quy đổi điểm học phần tương đương với bằng TOEIC
+    - có TOEIC rồi có được miễn thi các học phần tiếng anh không
+    - các thang điểm quy đổi chứng chỉ TOEIC sang các học phần tương đương
+
+- intent: quy_doi_IELTS
+  examples: |
+    - quy đổi IELTS
+    - các thang điểm quy đổi chứng chỉ IELTS
+    - có bằng IELTS rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có bằng IELTS rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm các học phần tiếng anh được quy đổi từ IELTS
+    - có bằng IELTS thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có được dùng chứng chỉ IELTS để quy đổi điểm các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng IELTS
+    - IELTS 4.5 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - IELTS 5.0 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - IELTS 5.5 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - IELTS 6.0 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có IELTS bao nhiêu
+    - thông tin các mức quy đổi điểm học phần tương đương với bằng IELTS
+    - các thang điểm quy đổi chứng chỉ IELTS sang các học phần tương đương
+
+- intent: quy_doi_TOEFL_ITP
+  examples: |
+    - quy đổi TOEFL ITP
+    - các thang điểm quy đổi chứng chỉ TOEFL ITP
+    - có chứng chỉ TOEFL ITP rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có chứng chỉ TOEFL ITP rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm các học phần tiếng anh được quy đổi từ TOEFL ITP
+    - có bằng TOEFL ITP thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có được dùng chứng chỉ TOEFL ITP để quy đổi điểm các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng IELTS
+    - TOEFL ITP 450 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL ITP 455 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL ITP 457 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL ITP 460 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL ITP 466 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL ITP 470 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có TOEFL ITP bao nhiêu
+    - thông tin các mức quy đổi điểm học phần tương đương với bằng TOEFL ITP
+    - các thang điểm quy đổi chứng chỉ TOEFL ITP sang các học phần tương đương
+
+- intent: quy_doi_TOEFL_iBT
+  examples: |
+    - quy đổi TOEFL iBT
+    - các thang điểm quy đổi chứng chỉ TOEFL iBT
+    - có chứng chỉ TOEFL iBT rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có chứng chỉ TOEFL iBT rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm quy đổi các học phần tiếng anh quy đổi từ TOEFL iBT
+    - có bằng TOEFL iBT thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có được dùng chứng TOEFL iBT để quy đổi điểm các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng TOEFL iBT
+    - TOEFL iBT 45 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL iBT 46 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL iBT 48 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL iBT 50 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - TOEFL iBT 55 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có TOEFL iBT bao nhiêu
+    - thông tin các mức quy đổi điểm học phần tương đướng với bằng TOEFL iBT
+    - cac thang điểm quy đổi chứng chỉ TOEFL iBT sang các học phần tương đương
+
+- intent: quy_doi_Cambridge
+  examples: |
+    - quy đổi Cambridge
+    - các thang điểm quy đổi chứng chỉ Cambridge
+    - có chứng chỉ Cambridge rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có chứng chỉ Cambridge rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm quy đổi các học phần tiếng anh quy đổi từ Cambridge
+    - có bằng Cambridge thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có được dùng chứng chỉ Cambridge để quy đổi điểm các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng Cambridge
+    - Cambridge 150 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Cambridge 140 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Cambridge 144 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Cambridge 146 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Cambridge 148 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có Cambridge bao nhiêu
+    - thông tin các mức quy đổi điểm học phần tương đương với bằng Cambridge
+    - các thang điểm quy đổi chứng chỉ Cambridge sang các học phần tương đương
+
+- intent: quy_doi_Vstep
+  examples: |
+    - quy đổi Vstep
+    - các thang điểm quy đổi chứng chỉ Vstep
+    - có chứng chỉ Vstep rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có chứng chỉ Vstep rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm quy đổi các học phần tiếng anh quy đổi từ Vstep
+    - có bằng Vstep thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có bằng Vstep thì mức điểm tương đướng với các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng Vstep
+    - Vstep 4.0 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Vstep 4.5 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Vstep 5.0 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Vstep B1 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Vstep B2 quy đổi các học phần tiếng anh được bao nhiêu điểm
+    - Vstep C1 quy đổi các học phần tiêếng anh được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có Vstep cấp độ nào
+    - thông tin các mức quy đổi điểm học phần tương đương với bằng Vstep
+    - các thang điểm quy đổi chứng chỉ Vstep sang các học phần tương đương
+
+- intent: quy_doi_AptisESOL
+  examples: |
+    - quy đổi Aptis ESOL
+    - các thang điểm quy đổi chứng chỉ Aptis ESOL
+    - có chứng chỉ Aptis ESOL rồi thì quy đổi sang các học phần tiếng anh ra sao
+    - có chứng chỉ Aptis ESOL rồi thì quy đổi sang các học phần tiếng anh thế nào
+    - mức điểm quy đổi các học phần tiếng anh quy đổi từ Aptis ESOL
+    - có bằng Aptis ESOL thì mức điểm tương đương với các học phần tiếng anh ra sao
+    - có bằng Aptis ESOL thì mức điểm tương đương với các học phần tương đương không
+    - mức điểm học phần tương đương được quy đổi ra sao khi có bằng Aptis ESOL
+    - Aptis ESOL B1 quy đổi được bao nhiêu điểm
+    - Aptis ESOL B2 quy đổi được bao nhiêu điểm
+    - nếu muốn đạt điểm tối đa các học phần tiếng anh thì cần có Aptis ESOL cấp độ nào
+    - thông tin các mức điểm quy đổi điểm học phần tương đương với bằng Aptis ESOL
+    - các thang điểm quy đổi chứng chỉ Aptis ESOL sang các học phần tương đương
+
+- intent: ask_quy_doi_ta
+  examples: |
+    - có bằng tiếng anh rồi thì quy đổi điểm thế nào
+    - có bằng tiếng anh chuẩn đầu ra thì làm thế nào để làm đơn
+    - có app trường làm đơn quy đổi điểm tiếng anh không
+    - có app trường làm đơn chuẩn đầu ra tiếng anh không
+    - các bước làm đơn quy đổi và chuẩn đầu ra tiếng anh tại APD
+    - tại APD làm đơn chuẩn đầu ra tiếng anh thế nào
+    - tại APD làm đơn quy đổi tiếng anh thế nào
+    - cách thức APD xét chuẩn đầu ra tiếng anh
+    - cách thức làm đơn quy đổi tiếng anh sang các học phần tiếng anh
+    - có làm đơn quy đổi tiếng anh online được không
+    - có làm đơn chuẩn đầu ra tiếng anh online được không
+    - em có chứng chỉ TOEFL ITP rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ TOEFL iBT rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ TOEIC rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ IELTS rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ Cambridge rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ Vstep rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+    - em có chứng chỉ Aptis ESOL rồi làm thế nào để làm đơn quy đổi và chuẩn đầu ra
+
+- intent: xep_lich_hoc
+  examples: |
+    - việc đăng ký các môn học sinh viên có thể tự đăng ký được không ạ
+    - em là tân sinh viên không biết các môn học trường tự đăng ký hay sinh viên phải tự đăng ký thế ạ
+    - lịch học là do học viện tự xếp hay do sinh viên chủ động đăng ký thế ạ
+    - sinh viên có phải chủ động đăng ký lịch học không ạ
+    - em là tân sinh viên không biết đăng ký lịch học ở trường mình thế nào ạ
+    - cho em hỏi việc đăng ký lịch học ở APD như thế nào ạ
+    - em là tấn sinh viên không biết đăng ký tín chỉ
+    - các môn học do bên học viện tự đăng ký hay là em phải chủ động đăng ký thế ạ
+    - em chưa đăng ký tín bao giờ, em nên đăng ký những môn học nào đầu tiên thế ạ
+    - sinh viên có phải tự chủ động đăng ký thêm tín chỉ không ạ
+    - những môn bắt buộc phải học thì mình tự đăng ký trên trang tín hay là nhà tường đăng ký cho thế ạ
+    - việc đăng ký tín chỉ là do sinh tự chủ động đăng ký đúng không ạ
+    - đăng ký tín chỉ như thế nào ạ
+    - đăng ký các môn học diễn ra như thế nào ạ
+    - những môn học là do sinh viên chủ động đăng ký hay học viện đăng ký cho thế ạ
+    - có được hủy đăng ký môn học không ạ
+    - em là tân sinh viên đang có thắc mắc về đăng ký tín tại APD
+
+- intent: ask_clb
+  examples: |
+    - Trường mình có bao nhiêu câu lạc bộ
+    - em là tân sinh viên không biết trường mình có bao nhiêu câu lạc bộ
+    - Có bao nhiêu CLB trong trường
+    - các câu lạc bộ của APD
+    - Trường mình có những câu lạc bộ nào
+    - ở trường có những câu lạc bộ nào sinh viên có thể tham gia
+    - những câu lạc bộ sinh viên có thể tham gia
+    - câu lạc bộ sinh viên được tham gia
+    - em là tân sinh viên không biết trường có những câu lạc bộ nào
+    - cho em thống kê các câu lạc bộ trong trường được không ạ
+    - tổng cộng trường mình có bao nhiêu câu lạc bộ thế ạ
+    - các câu lạc bộ vẫn hoạt động ở trường mình
+    - cho em xem danh sách tất cả các câu lạc bộ ở trường mình với ạ
+    - những câu lạc bộ ở trường mình
+    - tại APD có những câu lạc bộ nào
+
+- intent: ask_clb_TA
+  examples: |
+    - cho e thông tin về CLB Tiếng Anh APD - AEC đc ko ạ
+    - e có sở thích học tiếng anh thì nên tham gia câu lạc bộ nào
+    - trường mình có clb tiếng anh không ạ
+    - e rất thích học tiếng anh không biết trường mình có clb tiếng anh không ạ
+    - câu lạc bộ tiếng anh
+    - thông tin về câu lạc bộ tiếng anh
+    - em muốn biết thêm về câu lạc bộ tiếng anh
+    - giới thiệu cho em về câu lạc bộ tiếng anh với
+    - câu lạc bộ tiếng anh
+    - cho em xin email của clb tiếng anh với ạ
+    - giới thiệu về câu lạc bộ tiếng anh
+    - câu lạc bộ tiêng anh còn hoạt động không
+
+- intent: ask_clb_tt
+  examples: |
+    - cho e xin thông tin CLB Truyền Thông APD - ACC
+    - e thích làm truyền thông thì nên tham gia clb nào ạ
+    - e thích làm truyền thông thì nên tham gia clb nào ạ
+    - trường mình có clb truyền thông không
+    - em muốn tham gia câu lạc bộ truyền thông
+    - câu lạc bộ truyền thông
+    - em muốn có thêm thông tin về câu lạc bộ truyền thông
+    - câu lạc bộ truyền thông APD
+    - em muốn có thêm thông tin về clb truyển thông
+
+- intent: ask_clb_bong_da
+  examples: |
+    - Cho e xin thông tin về CLB Bóng đá APD
+    - e thấy trường mình có sân bóng không biết là có câu lạc bộ không ạ
+    - e rất thích môn thể thao vua, và muốn gia nhập clb bóng đá trường mình. Có thể cho e thêm thông tin được không ạ
+    - giới thiệu cho em về clb bóng đá không ạ
+    - em rất thích chơi bóng đá
+    - clb bóng đá
+    - bóng đá
+    - em muốn biết thêm thông tin về clb bóng đá
+    - câu lạc bộ bóng đá còn hoạt động không
+
+- intent: ask_AVSC
+  examples: |
+    - Cho e xin thông tin về CLB Sinh viên Tình Nguyện APD - AVSC
+    - e rất thích làm những công việc thiện nguyện thì nên tham gia clb nào ạ
+    - có câu lạc bộ nào thường xuyên có những chiến dịch làm từ thiện, giúp trả e vùng cao ko ạ
+    - có thông tin về clb tình nguyện không ạ
+    - em muốn biết thêm thôn tin về clb tình nguyện
+    - câu lạc bộ tình nguyện của APD
+    - em muốn có thêm thông tin về clb tình nguyện
+    - phương thức liên lạc với clb tình nguyện APD
+
+- intent: ask_clb_br
+  examples: |
+    - cho e xin thông tin về CLB Bóng Rổ - APD Basketball
+    - trường mình có clb bóng rổ ko ạ
+    - cho e xin link facebook của clb bóng rổ trường mình ạ
+    - em muốn thêm thông tin về câu lạc bộ bóng rổ
+    - cho em thông tin về các hoạt động của câu lạc bộ bóng rổ với ạ
+    - câu lạc bộ bóng rổ APD
+    - em muốn biết về các hoạt động bóng rổ
+
+- intent: ask_clb_nha_dau_tu_tre
+  examples: |
+    - cho e xin thông tin về CLB Nhà đầu tư trẻ APD - AIYC
+    - e muốn tìm những người có đam mê đầu tư chứng khoán. trường mình có clb nào giúp kết nối những người có cùng đam mê này ko ạ
+    - e học Chuyên ngành Đầu tư của khoa kinh tế, e muốn tìm 1 clb phù hợp với ngành học của mình ạ
+    - em muốn có cái nhìn về đầu tư nên tham gia câu lạc bộ nào ạ
+    - là tân sinh viên có hứng thú với đầu tư thì nên vào clb nào ạ
+    - em muốn chơi chứng khoán thì nên join clb nào ạ
+    - em muốn có góc nhìn cụ thể về đầu tư thì tham gia clb nào
+    - em muốn tìm hiểu thêm về clb AYIC
+
+- intent: ask_clb_nckh
+  examples: |
+    - e muốn biết thêm thông tin về CLB Sinh Viên Nghiên Cứu Khoa Học APD - ASRE
+    - e nghe nói sinh viên năm 2 có thể tham gia nghiên cứu khoa học. h e năm nhất thì e muốn tham gia 1 câu lạc bộ hay 1 hội nhóm có sở thích NCHK để năm 2 e có thêm kinh nghiệm ạ
+    - cho em thông tin thêm về câu lạc bộ nghiên cứu khoa học với ạ
+    - thông tin liên quan đến câu lạc bộ nghiên cứu khoa học
+    - câu lạc bộ nghiên cứu khoa học
+    - em muốn vào một câu lạc bộ chuyên về nghiên cứu thì nên vào đâu ạ
+    - câu lạc bộ về nghiên cứu
+
+- intent: ask_APD_BSC
+  examples: |
+    - CLB Kỹ Năng Kinh Doanh APD APD- BSC
+    - e muốn tham gia 1 câu lạc bộ giúp phát triển kỹ năng kinh doanh thì nên chon clb nào ạ
+    - e học khoa quản trị kinh doanh thì nên tham gia clb nào cho phù hợp với ngành học của mình ạ
+    - em muốn có góc nhìn về kinh doanh nên tham gia clb nào ạ
+    - câu lạc bộ cho em trải nghiệm về kinh doanh
+    - em có đam mê về kinh doanh nên học hỏi câu lạc bộ nào
+    - clb về kinh doanh
+    - câu lạc bộ về kỹ năng kinh doanh của APD
+    - em muốn có thêm thôn tin về clb kỹ năng kinh doanh
+
+- intent: ask_AIVC
+  examples: |
+    - cho e xin thông tin về CLB Tình nguyện viên quốc tế (APD International Volunteers Club)
+    - em muốn biết thêm thông tin về câu lạc bộ tình nguyện viên quốc tế
+    - thông tin về câu lạc bộ tình nguyện quốc tế
+    - những hoạt động của câu lạc bộ tình nguyện viên quốc tế
+    - thông tin liên qua tới câu lạc bộ tình nguyện viên quốc tế
+    - em muốn xem thêm thông tin về câu lạc bộ tình nguyện viên quốc tế
+    - những thông tin liên quan tới câu lạc bộ tình nguyện viên quốc tế
+    - em muốn có thêm thông tin liên hệ của câu lạc bộ tình nguyện viên quốc tế
+    - thông tin liên hệ câu lạc bộ tình nguyện viên quốc tế là gì
+
+- intent: ask_qly_dtu
+  examples: |
+    - có thể cho e biết thông tin về CLB Nhà quản lý và Tư vấn Đấu thầu APD đc ko ạ
+    - cho em thêm thông tin về câu lạc bộ quản lý và Tư vấn Đấu thầu APD với ạ
+    - em muốn có thêm thông tin liên lạc của câu lạc bộ quản lý và Tư vấn Đấu thầu APD
+    - e học Chuyên ngành Đấu thầu và quản lý dự án thì nên tham gia clb nào để phù hợp với ngành học của mình ạ
+    - em muốn xem thêm thông tin về câu lạc bộ quản lý và Tư vấn Đấu thầu
+    - câu lạc bộ quản lý và Tư vấn Đấu thầu
+    - thông tin liên hệ của câu lạc bộ quản lý và Tư vấn Đấu thầu
+
+- intent: ask_ABC
+  examples: |
+    - cho e biết thêm về Câu Lạc Bộ Sách APD - ABC đc ko ạ
+    - e rất thích đọc sách thì nên tham gia clb nào ạ
+    - trường mình có clb đọc sách ko ạ, e muốn có thể trao đổi cũng như có thể biết thêm nhiều cuốn sách hay
+    - cho em thêm thông tin về câu lạc bộ sách APD với
+    - em muốn thêm thông tin về clb sách
+    - cho em xem thêm thông tin về câu lạc bộ sách APD
+    - em muốn biết thêm về clb sách APD
+    - cho em thêm thông tin liên lạc của clb sách với ạ
+    - em là tân sinh viên em muốn tham khảm thêm thông tin của clb sách ạ
+    - em muốn c thêm thông tin liên lạc của clb sách
+    - cho em thêm thông tin của câu lạc bộ sách
+    - ABC
+    - câu lạc bộ sách
+    - câu lạc bộ sách APD
+
+- intent: ask_ict
+  examples: |
+    - hay cho tôi bt thông tin về CLB Công nghệ thông tin và Truyền thông - ICT
+    - e học khoa kinh tế số, có clb nào của khoa ko ạ
+    - có câu lạc bộ nào liên quan đến lĩnh vực công nghệ ko ạ
+    - có câu lạc bộ nào về công nghệ không ạ
+    - cho em thêm thông tin của câu lạc bộ truyền thông và công nghệ với ạ
+    - em muốn thêm các thông tin liên quan tới câu lạc bộ ict
+    - câu lạc bộ ict là câu lạc bộ gì
+    - câu lạc bộ truyền thông và công nghệ là câu lạc bộ gì thế ạ
+    - cho em các thông tin về clb ict
+    - ict
+    - truyền thông và công nghệ
+    - em muốn xem thêm thông tin về câu lạc bộ ict
+    - em muốn có thông tin của câu lạc bộ ICT
+    - cho em xem thêm thông tin của câu lạc bộ ICT với ạ
+
+- intent: ask_AMC
+  examples: |
+    - cho e biết thêm thông tin về CLB Võ Tổng Hợp APD - AMC
+    - em muốn biết thêm thông tin về câu lạc bộ võ
+    - cho em xem thêm thông tin của câu lạc bộ võ trường mình với ạ
+    - em muốn biết thêm các thông tin liên quan của câu lạc bộ võ
+    - em muốn biết thông tin liên lạc của câu lạc bộ võ
+    - câu lạc bộ võ
+    - câu lạc bộ AMC
+    - AMC
+    - em muốn xem thêm thông tin của câu lạc bộ võ
+    - em muốn biết các hoạt động của câu lạc bộ võ ạ
+
+- intent: ask_YAA
+  examples: |
+    - cho e biết thêm thông tin về CLB Kế toán Kiểm toán trẻ APD - YAA
+    - em muốn biết thêm thông tin về câu lạc bộ kế toán kiểm toán trẻ
+    - cho em xem thêm thông tin của câu lạc bộ kế toán kiểm toán trẻ
+    - YAA
+    - em muốn biết thêm thông tin về YAA
+    - YAA là câu lạc bộ nào thế ạ
+    - cho em xem thêm thông tin liên quan của câu lạc bộ kế toán kiểm toán với ạ
+    - câu lạc bộ YAA của khoa kế kiểm đúng không ạ
+    - câu lạc bộ của khoa kế toán kiểm toán
+    - em muốn biết thêm thông tin liên quan tới YAA
+    - em muốn có thêm thông tin về câu lạc bộ kế toán kiểm toán trẻ
+    - em muốn biết thông tin liên hệ của câu lạc bộ YAA
+    - cho em thông tin liên lạc của câu lạc bộ YAA với
+
+- intent: ask_SMC
+  examples: |
+    - cho e biết thêm thông tin về CLB STARTUP & MARKETING - SMC
+    - em muốn biết thêm thông tin liên quan về SMC
+    - em muốn có thêm thông tin về SMC
+    - SMC
+    - STARTUP & MARKETING
+    - startup & marketing
+    - cho em biết về câu lạc bộ STARTUP & MARKETING
+    - em muốn biết các thông tin liên quan tới STARTUP & MARKETING
+    - em muốn biết thêm các thông tin liên quan tới SMC
+    - cho em xem các thông liên quan tới SMC
+    - em muốn có những cái nhìn về startup
+    - các thông tin liên quan tới SMC
+    - các thông tin liên quan tới clb STARTUP & MARKETING
+
+- intent: ask_CMA
+  examples: |
+    - cho e biết thêm thông tin về CLB Thanh niên vận động hiến máu Học viện Chính sách và Phát triển
+    - cho em biết thông tin về câu lạc bộ thanh niên vận động hiến máu
+    - cho em biết thông tin về câu lạc bộ CMA
+    - cho em thêm thông tin về câu lạc bộ CMA
+    - em muốn có thêm thông tin liên quan tới CMA
+    - CMA
+    - Thanh niên vận động hiến máu
+    - câu lạc bộ thanh niên vận động hiến máu
+    - các thông tin liên quan tới câu lạc bộ hiến máu
+    - các thông tin liên quan tới CMA
+    - em muốn có thông tin liên lạc CMA
+    - em muốn xem thông tin liên lạc của CMA
+    - em muốn có thêm thông tin liên quan tới CMA
+    - thông tin liên lạc của CMA
+
+- intent: ask_AIC
+  examples: |
+    - cho e thông tin về CLB Nhạc cụ APD - AIC
+    - e có khả năng ca hát, không biết trường mình có clb nào giúp e có thể thỏa mãn sở thích của e ko ạ
+    - trường mình có câu lạc bộ âm nhạc ko ạ, e biết đánh đàn và rất thích hát
+    - trường mình có clb ca nhạc ko ạ
+    - trường mình có clb ca nhạc ko ạ
+    - trường mình có clb âm nhạc ko ạ
+    - em muốn có thêm thông tin của câu lạc bộ AIC
+    - AIC
+    - câu lạc bộ âm nhạc
+    - câu lạc bộ về nhạc cụ của APD
+    - câu lạc bộ nhạc cụ
+    - em muốn có các thông tin liên quan tới câu lạc bộ AIC
+    - em muốn có thêm các thông tin của câu lạc bộ AIC
+    - các thông tin của AIC
+    - em muốn xem thêm các thông tin của câu lạc bộ AIC
+    - em muốn biết các thông tin của câu lạc bộ AIC
+    - thông tin liên lạc của AIC
+    - em muốn có các thông tin liên lạc của AIC
+
+- intent: ask_YJAC
+  examples: |
+    - e muốn biết thêm về CLB Luật gia trẻ APD (YJAC)
+    - e học khoa luật kinh tế thì nên tham gia clb nào cho phù hợp với ngành học của mình ạ
+    - câu lạc bộ liên quan tới luật
+    - câu lạc bộ YJAC
+    - YJAC
+    - câu lạc bộ luật gia trẻ APD
+    - luật gia trẻ
+    - em muốn có thêm thông tin của câu lạc bộ YJAC
+    - em muốn xem thêm thông tin của câu lạc bộ luật gia trẻ
+    - em muốn biết thêm thông tin của câu lạc bộ YJAC
+    - các thông tin liên quan tới YJAC
+    - các thông tin liên quan tới câu lạc bộ luật gia trẻ
+    - em muốn xem các thông tin liên quan tới YJAC
+    - em muốn biết các thông tin liên lạc của YJAC
+    - thông tin liên lạc của YJAC
+    - thông tin liên lạc của câu lạc bộ luật gia trẻ
+    - các thông tin liên hệ của câu lạc bộ luật gia trẻ
+
+- intent: ask_ADC
+  examples: |
+    - có thể cho mình biết thêm về CLB Nhảy APD (ADC)
+    - trường mình có clb biểu diễn văn nghệ không ạ
+    - trường minh có clb nhảy không ạ
+    - e muốn làm dancer thì tham gia clb nào ạ
+    - e thích nhảy nhón để quay tik tok thì nên tham gia clb nào ạ
+    - em là tân sinh viên và muốn biết thêm các thông tin về clb nhảy
+    - em muốn xem thêm thông tin về câu lạc bộ ADC
+    - ADC
+    - câu lạc bộ nhay của APD
+    - câu lạc bộ
+    - em muốn biết thêm thôn tin về câu lạc bộ nhảy
+    - cho em thêm thông tin về câu lạc bộ nhảy APD
+    - cho em xem thông của câu lạc bộ ADC
+    - cho em các thông tin của câu lạc bộ ADC
+    - cho em xem các thông tin liên quan tới câu lạc bộ nhảy
+    - các thông tin liên quan tới câu lạc bộ nhảy
+    - các thông tin về câu lạc bộ ADC
+    - thông tin liên hệ của câu lạc bộ ADC
+    - em muốn biết các thông tin liên hệ của ADC
+    - thông tin liên lạc của câu lạc bộ ADC
+    - cho em thông tin liên hệ của ADC
+
+- intent: ask_APDLifeSkillsClub
+  examples: |
+    - cho e biết thêm thông tin về CLB Kỹ Năng Sống APD
+    - e khá nút nhát và muốn tham ra 1 câu lạc bộ giúp e tự tin lê, phát triển kỹ năng sống
+    - e muốn thâm gia 1 câu lạc bộ giúp có thêm kỹ năng xã hội ạ
+    - các thông tin của câu lạc bộ kỹ năng sống
+    - thông tin của câu lạc bộ kỹ năng sống APD
+    - kỹ năng sống
+    - câu lạc bộ kỹ năng sống
+    - cho em xem các thông tin liên quan tới câu lạc bộ kỹ năng sống
+    - cho em biết thêm các thông tin liên quan tới câu lạc bộ kỹ năng sống
+    - cho em thông tin của câu lạc bộ kỹ năng sống
+    - em muốn có thêm thông tin của câu lạc bộ kỹ năng sống
+    - em muốn xem thêm các thông tin liên quan tới câu lạc bộ kỹ năng sống
+    - thông tin liên quan tới câu lạc bộ kỹ năng sống
+    - thông tin liện hệ của câu lạc bộ kỹ năng sống
+    - các thông tin liên hệ của câu lạc bộ kỹ năng sống
+    - cho em các thông tin liên hệ của câu lạc bộ kỹ năng sống
+    - cho em thông tin liên lạc của câu lạc bộ kỹ năng sống
+
+- intent: ask_cocau_tcochuc
+  examples: |
+    - cơ cấu tổ chức của học viện như thế nào
+    - học viện A được cơ cấu tổ chức như thế nào
+    - hiện tại APD có cơ cấu tổ chức ra sao
+    - ở APD có những phòng chức năng nào
+    - em muốn biết các phòng ban của học viện
+    - hiện nay APD có cơ cấu tổ chức ra sao
+    - em muốn xem cơ cấu tổ chức của APD
+    - học viện chính sách và phát triển có những phòng ban nào
+    - em muốn có thông tin về cơ cấu tổ chức của APD
+    - em muốn xem thông tin về cơ cấu tổ chức hiện tại của APD
+    - cơ cấu tổ chức hiện tại của APD ra sao
+    - cho tôi xem cơ cấu tổ chức của APD
+    - cơ cấu tổ chức của học viện
+    - thông tin liên quan tới cơ cấu tổ chức của học viện chính sách và phát triển
+
+- intent: ask_quoc_phong
+  examples: |
+    - đi học quốc phòng an ninh
+    - trường đi học quốc phòng an ninh ở đâu
+    - đi học quốc phòng trong bao lâu
+    - học quốc phòng có xa Hà Nội không
+    - đi học quốc phòng ở tỉnh nào
+    - đi học quốc phòng ở trường nào
+    - đi quân sự ở đâu
+    - đi quân sự trong bao nhiêu ngày
+    - đi quân sự có xa không
+    - trường cho sinh viên đi quân sự ở chỗ nào
+    - thời gian học quốc phòng trong bao lâu
+    - em muốn biết về thời gian học quốc phòng của trường mình

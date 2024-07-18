@@ -1,0 +1,993 @@
+version: "3.1"
+
+intents:
+  - quy_doi_thang4
+  - ask_ct_tinh_thang4
+  - ask_muc_khen_thuong_hoc_bongdt
+  - ask_cai_thien
+  - ask_hoc_lai
+  - ask_tc_kts
+  - ask_van_phong_kts
+  - ask_hotline_kts
+  - ask_APD_toc
+  - ask_hđ_nk
+  - ask_tham_quan_dn
+  - ask_chuong_trinh_hoc_dll
+  - ask_chuong_trinh_hoc_ktkds
+  - ask_thi_dau_vao
+  - ask_chuong_trinh_hop_tac
+  - ask_APD
+  - ask_nghanh_dt
+  - ask_nghanh_clc
+  - ask_dao_tao_ts
+  - chào
+  - tạm biệt
+  - ma_tuyen_sinh
+  - so_luong_chi_tieu
+  - cao_dang
+  - ask_ability
+  - thankyou
+  - khen
+  - che
+  - ask_have_hold_an_exam
+  - ask_admissions_online
+  - ask_main_link
+  - ask_admissions_link
+  - kytucxa
+  - ask_dang_ky_tin_chi
+  - ask_thoi_gian_hoc_trong_ngay
+  - ask_de_xe
+  - ask_bus_19
+  - ask_thu_vien
+  - dung_tai_lieu_thi
+  - co_so_vat_chat
+  - ask_kts
+  - ask_ptts
+  - ask_to_hop_xt
+  - ask_ptts_kts_tuyen_thang
+  - ask_ptts_kts_tuyen_danh_gia_nang_luc
+  - ask_ptts_kts_hsg
+  - ask_ptts_kts_hoc_ba
+  - ask_ptts_kts_cc
+  - ask_dll
+  - ask_tg_ho_so
+  - ask_hinh_thuc_dky_xt
+  - ask_ho_so_xt
+  - ask_hp_kts
+  - ask_cc_dau_ra
+  - ask_mos
+  - ask_ic3
+  - quy_doi_mos
+  - quy_doi_ic3
+  - ask_qt_mien_hoc_tin_hoc
+  - ask_TOEFL_ITP
+  - ask_TOEFL_iBT
+  - ask_TOEIC
+  - ask_IELTS
+  - ask_Cambridge
+  - ask_Vstep
+  - ask_Aptis_ESOL
+  - quy_doi_TOEIC
+  - quy_doi_IELTS
+  - quy_doi_TOEFL_ITP
+  - quy_doi_TOEFL_iBT
+  - quy_doi_Cambridge
+  - quy_doi_Vstep
+  - quy_doi_AptisESOL
+  - ask_quy_doi_ta
+  - xep_lich_hoc
+  - ask_clb
+  - ask_clb_TA
+  - ask_clb_tt
+  - ask_clb_bong_da
+  - ask_AVSC
+  - ask_clb_br
+  - ask_clb_nha_dau_tu_tre
+  - ask_clb_nckh
+  - ask_APD_BSC
+  - ask_AIVC
+  - ask_qly_dtu
+  - ask_ABC
+  - ask_ict
+  - ask_AMC
+  - ask_YAA
+  - ask_SMC
+  - ask_CMA
+  - ask_AIC
+  - ask_YJAC
+  - ask_ADC
+  - ask_APDLifeSkillsClub
+  - ask_cocau_tcochuc
+  - ask_quoc_phong
+entities:
+  - user_name
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_name
+
+responses:
+  utter_quy_doi_thang4:
+    - text: "Thang điểm được quy đổi từ thang điểm 10 sang thang điểm và thang điểm chữ như sau:
+                  \n +) Từ 8.5 đến 10 quy đổi sang thang điểm 4 sẽ tương đương là 4.0 và sang thang điểm chữ là A
+                  \n +) Từ 7.8 đến 8.4 quy đổi sang thang điểm 4 sẽ tương đương là 3.5 và sang thang điểm chữ là B+
+                  \n +) Từ 7.0 đến 7.7 quy đổi sang thang điểm 4 sẽ tương đương là 3.0 và sang thang điểm chữ là B
+                  \n +) Từ 6.3 đến 6.9 quy đổi sang thang điểm 4 sẽ tương đương là 2.5 và sang thang điểm chữ là C+
+                  \n +) Từ 5.5 đến 6.2 quy đổi sang thang điểm 4 sẽ tương đương là 2.0 và sang thang điểm chữ là C
+                  \n +) Từ 4.8 đến 5.4 quy đổi sang thang điểm 4 sẽ tương đương là 1.5 và thang điểm chữ là D+
+                  \n +) Từ 4.0 đến 4.7 quy đổi sang thang điểm 4 sẽ tương đương là 1.0 và sang thang điểm chữ là D
+                  \n +) Từ dưới 4.0 quy đổi sang thang điểm 4 sẽ tương đương là 0.0 và sang thang điểm chữ là F"
+
+  utter_ask_ct_tinh_thang4:
+    - text: "Điểm trung bình cộng hệ 4 xét học bổng được tính như sau: Tổng(tổng kết học phần hệ 4 từng học phần * số tín chỉ từng học phần)/ Tổng số tín chỉ 1 kỳ.
+              \n lưu ý: điểm học phần không tính các học phần tiếng anh cơ bản 1, các học phần giáo dục thể chất"
+
+  utter_ask_muc_khen_thuong_hoc_bongdt:
+    - text: " Số lượng sinh viên đạt học bổng trong một lớp chuyên nghành là 8% (Số sinh viên này được lấy từ cao xuống thấp và đủ điều kiện). Hiện tại ở APD có 3 xếp loại học bổng với điều kiện xét tuyển như sau:
+                \n +) Học bổng loại xuất sắc: Điểm học tập tối thiếu một kỳ là 3.6 và điểm rèn luyện tối thiểu là 90 điểm cùng với 2 ngày công tác xã hội. Thêm vào đó là tất cả các điểm thành phần không được dưới 5
+                \n +) Học bổng loại giỏi: Điểm học tập tối thiếu một kỳ là 3.2 và điểm rèn luyện tối thiểu là 80 điểm cùng với 2 ngày công tác xã hội. Thêm vào đó là tất cả các điểm thành phần không được dưới 5
+                \n +) Học bổng loại khá: Điểm học tập tối thiếu một kỳ là 2.5 và điểm rèn luyện tối thiểu là 70 điểm cùng với 2 ngày công tác xã hội. Thêm vào đó là tất cả các điểm thành phần không được dưới 5
+              \n Lưu ý: điểm học phần không tính các học phần tiếng anh cơ bản 1, các học phần giáo dục thể chất
+              \n Mức khen thưởng học bổng hệ đại trà:
+                \n +) Học bổng loại xuất sắc được khen thưởng như sau: Học phí 1 tín kỳ đó * 15 tín * 1.5
+                \n +) Học bổng loại giỏi được khen thưởng như sau: Học phí 1 tín kỳ đó * 15 tín * 1.2
+                \n +) Học bổng loại khá được khen thưởng như sau: Học phí 1 tín kỳ đó * 15 tín * 1.0"
+
+  utter_ask_cai_thien:
+    - text: "Ở APD có cho phép sinh học cải thiện/nâng điểm. Khi bạn có nhu cầu học cải thiện/nâng điểm bạn chỉ cần đăng ký tín trên trang tín chỉ của APD, đầu mỗi kỳ học sẽ mở các lớp học phần cho khóa dưới bạn có thể chủ động đăng ký học. Về học phí, nếu như bạn cải thiện/nâng điểm thì sẽ phải đóng học phí  1 tín chỉ đúng với kỳ học đó nhân với số tín chỉ môn học đó."
+
+  utter_ask_hoc_lai:
+    - text: "Ở APD nếu như điểm tổng kết học phần của bạn dưới 4.0/10 điểm thì bạn sẽ phải bắt buộc học lại học phần đó. Về học phí thì hiện tại nếu như bạn học lại học phần đó bạn sẽ phải đóng tiền 1 tín chỉ kỳ đó nhân với số tín chỉ của học phần đó. Trong trường hợp nếu như số tín học lại chiếm 5% trên tổng số tín tốt nghiệp là bạn sẽ bị hạ bằng tốt nghiệp một bậc"
+
+  utter_ask_tc_kts:
+    - text: "Hiện nay, theo như chương trình đào tạo của khoa kinh tế số bạn cần đạt tối thiểu 140 tín chỉ mới đáp ứng được yêu cầu đầu ra."
+
+  utter_ask_van_phong_kts:
+    - text: "Văn phòng khoa kinh tế số ở P901-903 tòa A tại APD"
+
+  utter_ask_hotline_kts:
+    - text: "Để tiện các trao đổi vấn đề liên quan đây là Hotline/zalo của 2 thầy khoa kinh tế số:
+            \n Thầy Tú: 0912426326
+            \n Thầy Trường: 0982239982"
+
+  utter_ask_APD_toc:
+    - text: "APD TỘC là chương trình mà Đoàn Thanh Niên Học viện Chính sách và Phát triển tổ chức thường niên để chào đón các tân sinh viên trước khi bước vào năm học mới và dành cho tất cả sinh viên trong học viện. Với không khí sôi động trẻ trung và nhiều màu sắc của chương trình đã để lại những ấn tượng đặc biệt trong lòng các bạn sinh viên toàn Học viện. Mỗi năm, ban tổ chức sẽ đưa ra 1 chủ đề và các đội chơi sẽ hóa thân vào 1 tộc phù hợp với chủ đề đó. Vềội dung chương trình gồm có:
+                \n 2.1 Phần thi ấn tượng tộc:
+                    \n +) Mở đầu là phần thi “Ấn tượng tộc”, phần thi này đã thể hiện được màu sắc của các tộc và sự chuẩn bị kỹ càng các tác phẩm ảnh dự thi theo hình thức trực tuyến. Qua phần thi này, hình ảnh của các tộc đã truyền tải đến với mọi người cá tính, ấn tượng riêng được thể hiện qua những bức ảnh mang màu sắc riêng của của tộc.
+                \n 2.2 Phần thi Diễn hoạt cảnh & Diễu hành, và vòng thi Teamwork
+                    \n +) Phần thi này đã giúp các tộc có cơ hội thể hiện, tái hiện câu chuyện của nhân vật đại diện cho tộc. Không chỉ vậy, còn thể hiện sự sáng tạo trong phần diễn hoạt cảnh của các tộc. Phần thi Teamwork cùng các trò chơi độc đáo, nâng cao tinh thần đoàn kết, gắn kết giữa các thành viên trong Tộc.
+                \n 2.3 Phần thi Battle Dance
+                    \n +) Phần thi được mong chờ nhất và cũng là phần thi được các tộc chuẩn bị công phu nhất chính là phần thi Battle dance. Tại đây, các tộc sẽ thể hiện tài năng của mình. Phần thi “Battle dance” luôn diễn ra với những năng lượng bùng nổ, nhiệt huyết đến từ các Tộc. Từ những mùa Tộc trở về trước, “Battle dance” luôn là phần thi hồi hộp, kịch tính nhưng cũng không kém phần máu lửa, hấp dẫn.
+                \n 2.4 Phần thi nhảy Flashmob
+                    \n Đặc biệt năm 2023 xuất hiện lần đầu tại “APD Tộc 2023: Fairytale Land”, Flashmob chính là phần thi đã mang đến những tiết mục với sự đồng đều, phối hợp ăn ý của các thành viên. Không chỉ vậy, tại phần thi này còn có sự tương tác, giao lưu giữa thầy cô của Học viện qua những tiết mục thú vị, mang đến sự gần gũi với sinh viên."
+
+  utter_ask_hđ_nk:
+    - text: "Khoa kinh tế số, Học viện Chính sách và phát triển thường xuyên tổ chức những hoạt động ngoại khóa dành cho sinh viên như:
+                \n -Tham gia câu lạc bộ của khoa (ICT Club)
+                \n -Tổ chức nghiên cứu khoa học thường niên
+                \n -Tổ chức các cuộc thi như Talented Young Leader, hay giải bóng đá tứ hùng của Khoa KTS
+                \n -Tổ chức các chuyến đi trải nghiệm doanh nghiệp, các trường đại học, địa danh nổi tiếng, trung tâm đổi mới sáng tạo quốc gia,...
+                \n -Thường xuyên mời các doanh nghiệp, những người nổi tiếng về hội thảo, giao lưu với sinh viên
+                \n -Tổ chức đi dã ngoại cho sinh viên như đi Ba Vì Natural Lodge
+              Những hoạt động ý nghĩa này giúp cho sinh viên để có thêm kiến thức, trải nghiệm, và gắn kết hơn
+              \n 10 sự kiện tiêu biểu của khoa kinh tế số trong năm 2023:
+                \n 1) Công tác đào tạo và nghiên cứu khoa học của khoa Kinh tế số ngày càng được khẳng định với xã hội khi điểm trúng tuyển đầu vào ngành Kinh tế số theo hình thức xét điểm thi THPT Quốc gia là 24,9 điểm, đứng vị trí thứ 3 của Học viện.
+                \n 2) Sinh viên khóa 10 – lứa sinh viên đầu tiên do các thầy cô khoa Kinh tế số rèn rũa trong 4 năm dưới mái trường APD chính thức tốt nghiệp. Đây là những “sản phẩm” để tiếp thị với thị trường lao động Việt Nam. Dù có thể những “viên gạch” đầu tiên này vẫn còn những chập chững nhất định trong công cuộc tìm kiếm vị trí việc làm sau khi tốt nghiệp nhưng sẽ bắt đầu định hình nên một nền móng nhất định của lĩnh vực “phân tích dữ liệu kinh doanh” tại Việt Nam.
+                \n 3) Hoạt động hướng nghiệp cho sinh viên ngành Kinh tế số thông qua chuỗi sự kiện mời chuyên gia đến nói chuyện chuyên đề, chia sẻ các kỹ năng nghề nghiệp cần thiết cũng như việc trải nghiệm môi trường làm việc thực tế tại Doanh nghiệp
+                \n 4) Tổ chức thành công các cuộc thi Olympic Toán học và Vô địch tin học văn phòng APD năm 2023 để chọn đội tuyển đi thi cấp Quốc gia. Trong đó, đoàn đi thi Olympic toán Quốc gia năm 2023 đạt 02 giải khuyến khích môn Đại số và Giải tích của sinh viên Tưởng Thị Hiên, lớp PTDL13, khoa Kinh tế số.
+                \n 5) Hoạt động sinh viên NCKH các cấp hàng năm được khoa Kinh tế số chú trọng, trong đó có 19 đề tài dự thi cấp Khoa để chọn ra đề tài xuất sắc nhất dự thi cấp Học viện. Kết quả đề tài do sinh viên Nguyễn Thu Phương, lớp KTDL11 làm nhóm trưởng đạt giải khuyến khích cấp Học viện.
+                \n 6) Hoạt động kết nối, gắn kết đầu khóa cho sinh viên K14 tại Ecopark là một hoạt động thường niên dành cho tân sinh viên của khoa Kinh tế số. Thông qua hoạt động chào đón tân sinh viên này sẽ giúp các bạn thêm yêu quý và tin tưởng hơn “gia đình mới” của mình để gắn bó suốt 4 năm thanh xuân tươi đẹp.
+                \n 7) Hoạt động thiện nguyện tại xã Chiềng Yên, huyện Vân Hồ, tỉnh Sơn La. Với các hoạt động ý nghĩa như trồng tặng cây xanh, dọn sạch môi trường, tặng sách vở đồ dùng học tập cho học sinh tại Bản Phụ mẫu đã góp phần tăng cường trách nhiệm xã hội của mỗi sinh viên khoa Kinh tế số
+                \n 8) Đại hội LCĐ khoa kinh tế số nhiệm kỳ 2023 – 2025 để bầu ra Ban chấp hành khóa mới gồm có 7 thành viên là những cán bộ đoàn ưu tú nhất của khoa Kinh tế số nhằm dẫn dắt phong trào thanh niên, sinh viên của Khoa ngày càng đi lên.
+                \n 9) Đạt giải 3 phong trào Báo tường kỷ niệm ngày Nhà giáo Việt Nam. Với bài thuyết trình xuất sắc của bạn Nguyễn Minh Đức, sinh viên lớp KTKDS12 về ý nghĩa nội dung trong tờ báo tường của Khoa đã được Ban giám khảo tấm tắc khen ngợi. Tiếc là không có hạng mục giải thưởng về thuyết trình nếu không thì ngôi vị số 1 trong hạng mục này đã thuộc về khoa Kinh tế số.
+                \n 10) Khoa Kinh tế số chuyển về ngôi nhà mới tại phòng 901 và 903 nhà A đàng hoàng hơn, to đẹp hơn. Ngôi nhà mới này sẽ là tiền đề để khoa Kinh tế số phát huy được hệ sinh thái đào tạo về chuyển đổi số, kinh tế & kinh doanh số nhằm thực hiện thành công chiến lược phát triển trong 10 năm tới."
+
+  utter_ask_tham_quan_dn:
+    - text: "Hàng năm khoa kinh tế số thường xuyên tổ chức những chuyển đi tham quan, trải nghiệp tại các doanh nghiệp để sinh viên có thêm sự hiểu biết, môi trường làm việc trong doanh nghiệp. Dưới đây là một số những doanh nghiệp mà khoa kinh tế số đã tổ chức cho sinh viên đi thực tế:
+                \n - Ngày 08/12/2022 khoa Kinh Tế Số đã tổ chức cho các bạn sinh viên K12 chuyến đi thực tế tham quan doanh nghiệp - Ngân hàng Việt Á kết hợp dã ngoại trải nghiệm tại Ecopark, Hưng yên
+                \n - Ngày 6/05/2022 lớp Big Data K10 đã có buổi tham quan thực tế tại doanh nghiệp NewCa cùng với các thầy cô ở Khoa Kinh tế số. Với môi trường làm việc hiện đại và chuyên nghiệp như công ty NewCa, lớp đã có những trải nghiệm mới mẻ và bổ ích để phục vụ cho môi trường làm việc sau này của các bạn sau khi ra trường
+                \n - Ngày 23/12, sinh viên lớp DLL12 đã có trải nghiệm đầy bổ ích tại Công ty TNHH Giải pháp Phân tích Dữ liệu Insight Data. Tại đây các bạn sinh viên có cơ hội được tham quan môi trường làm việc của các phòng ban, tìm hiểu về quy trình làm việc, các công cụ và kỹ thuật sử dụng trong phân tích dữ liệu"
+
+  utter_ask_chuong_trinh_hoc_dll:
+    - text: "Sau đây là các môn học trong chương trình đạo tạo của chuyên ngành Phân tích dữ liệu lớn trong kinh tế và kinh doanh:
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Chuyên ngành (Bắt buộc): 
+              \n +) Công nghệ tài chính: 3 tín
+              \n +) Học máy và trí tuệ nhân tạo: 3 tín
+              \n +) Khai phá dữ liệu cho phân tích kinh doanh: 3 tín
+              \n +) Quản trị dữ liệu lớn với Apache Spark: 3 tín
+              \n +) Phân tích dữ liệu lớn với R: 3 tín
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Cơ sở ngành (Bắt buộc):
+              \n +) Chính sách công: 3 tín
+              \n +) Dữ liệu lớn trong kinh tế và kinh doanh: 3 tín
+              \n +) Kinh tế lượng: 3 tín
+              \n +) Lập trình căn bản: 3 tín
+              \n +) Lý thuyết kinh tế số: 2 tín
+              \n +) Lý thuyết Tài chính tiền tệ: 3 tín
+              \n +) Marketing căn bản: 3 tín
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Ngành (Bắt buộc):
+              \n +) Chuyên đề thực tế: 2 tín
+              \n +) Hệ quản trị cơ sở dữ liệu: 3 tín
+              \n +) Pháp luật kinh tế: 3 tín
+              \n +) Quản trị marketing: 3 tín
+              \n +) Tài chính doanh nghiệp: 3 tín
+              \n +) Thương mại điện tử: 3 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Chuyên ngành (Bắt buộc):
+              \n +) Các mô hình kinh doanh số: 3 tín
+              \n +) Chuyển đổi số: 3 tín
+              \n +) Khoa học quản lý: 2 tín
+              \n +) Logic Toán: 2 tín
+              \n +) Marketing số: 3 tín
+              \n +) Phân tích và dự báo kinh tế vĩ mô: 3 tín
+              \n +) Quản trị rủi ro: 3 tín
+              \n +) Quản trị tổ chức sự kiện: 3 tín
+              \n +) Truyền thông đa phương tiện: 2 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Cơ sở ngành (Bắt buộc):
+              \n +) Cơ sở của khoa học dữ liệu: 3 tín
+              \n +) Kinh tế đầu tư: 3 tín
+              \n +) Nguyên lý kế toán: 3 tín
+              \n +) Nguyên lý thống kê kinh tế: 3 tín
+              \n +) Kinh tế quốc tế: 3 tín
+              \n +) Quản trị học: 3 tín
+              \n +) Thương mại quốc tế: 3 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Ngành (Bắt buộc):
+              \n +) Kế toán tài chính: 3 tín
+              \n +) Khởi nghiệp đổi mới sáng tạo: 3 tín
+              \n +) Nhập môn lập trình phân tích dữ liệu với Python: 3 tín
+              \n +) Phân tích báo cáo tài chính: 3 tín
+              \n +) Phân tích chuỗi thời gian trong tài chính: 3 tín
+              \n +) Phân tích thống kê nhiều chiều: 3 tín
+              \n +) Thị trường chứng khoán: 3 tín
+              \n +) Toán tài chính: 3 tín
+              \n +) Phân tích kỹ thuật trong đầu tư: 3 tín
+            \n Giáo dục đại cương (Bắt buộc): 
+              \n +) Chủ nghĩa xã hội khoa học: 2 tín
+              \n +) Kinh tế Chính trị Mác - Lênin: 2 tín
+              \n +) Kinh tế vi mô 1: 3 tín
+              \n +) Kinh tế vĩ mô 1: 3 tín
+              \n +) Lịch sử Đảng cộng sản Việt Nam: 2 tín
+              \n +) Lý thuyết xác suất và thống kê toán: 3 tín
+              \n +) Phương pháp nghiên cứu khoa học: 3 tín
+              \n +) Tiếng Anh cơ bản 2: 3 tín
+              \n +) Tiếng Anh cơ bản 3: 3 tín
+              \n +) Tiếng Anh cơ bản 4: 3 tín
+              \n +) Tin học đại cương: 3 tín
+              \n +) Toán cao cấp: 3 tín
+              \n +) Triết học Mác - Lênin: 3 tín
+              \n +) Tư tưởng Hồ Chí Minh: 2 tín
+              \n +) Pháp luật đại cương: 3 tín
+            \n Giáo dục quốc phòng (Bắt buộc):
+              \n +) Giáo dục quốc phòng: 8 tín
+            \n Giáo dục thể chất (Bắt buộc):
+              \n +) Giáo dục thể chất 1: 2 tín
+              \n +) Giáo dục thể chất 2: 2 tín
+              \n +) Giáo dục thể chất 3: 2 tín
+            \n Không tính điểm (Bắt buộc):
+              \n +) Tiếng Anh cơ bản 1: 3 tín
+            \n 	Thực tập và Khoá luận tốt nghiệp (Bắt buộc):
+              \n Khóa luận tốt nghiệp: 6 tín
+              \n Thực tập tốt nghiệp: 4 tín"
+
+  utter_ask_chuong_trinh_hoc_ktkds:
+    - text: "Sau đây là các môn học trong chương trình đạo tạo của chuyên ngành Kinh tế và kinh doanh số:
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Chuyên ngành (Bắt buộc): 
+              \n +) Chuyển đổi số: 3 tín
+              \n +) Công nghệ tài chính: 3 tín
+              \n +) Digital Marketing: 3 tín
+              \n +) Luật thương mạ: 3 tín
+              \n +) Thiết kế website thương mại điện tử: 3 tín
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Cơ sở ngành (Bắt buộc):
+              \n +) Chính sách công: 3 tín
+              \n +) Dữ liệu lớn trong kinh tế và kinh doanh: 3 tín
+              \n +) Kinh tế lượng: 3 tín
+              \n +) Lập trình căn bản: 3 tín
+              \n +) Lý thuyết kinh tế số: 2 tín
+              \n +) Lý thuyết Tài chính tiền tệ: 3 tín
+              \n +) Marketing căn bản: 3 tín
+            \n Giáo dục chuyên nghiệp (Bắt buộc) - Ngành (Bắt buộc):
+              \n +) Chuyên đề thực tế: 2 tín
+              \n +) Hệ quản trị cơ sở dữ liệu: 3 tín
+              \n +) Pháp luật kinh tế: 3 tín
+              \n +) Quản trị marketing: 3 tín
+              \n +) Tài chính doanh nghiệp: 3 tín
+              \n +) Thương mại điện tử: 3 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Chuyên ngành (Bắt buộc):
+              \n +) An toàn và bảo mật thương mại điện tử: 3 tín
+              \n +) Các mô hình kinh doanh số: 3 tín
+              \n +) Khoa học quản lý: 2 tín
+              \n +) Nghiên cứu thị trường: 2 tín
+              \n +) Quản trị rủi ro: 3 tín
+              \n +) Quản trị tổ chức sự kiện: 3 tín
+              \n +) Truyền thông đa phương tiện: 2 tín
+              \n +) Nghiên cứu thị trường: 3 tín
+              \n +) Quản trị chuỗi cung ứng: 3 tín
+              \n +) Quản trị nhân lực: 3 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Cơ sở ngành (Bắt buộc):
+              \n +) Kinh tế đầu tư: 3 tín
+              \n +) Nguyên lý kế toán: 3 tín
+              \n +) Nguyên lý thống kê kinh tế: 3 tín
+              \n +) Quan hệ công chúng: 3 tín
+              \n +) Kinh tế quốc tế: 3 tín
+              \n +) Quản trị học: 3 tín
+              \n +) Thương mại quốc tế: 3 tín
+            \n Giáo dục chuyên nghiệp (Lựa chọn) - Ngành (Bắt buộc):
+              \n +) Kế toán tài chính: 3 tín
+              \n +) Khởi nghiệp đổi mới sáng tạo: 3 tín
+              \n +) Mạng máy tính và truyền thông số: 3 tín
+              \n +) Phân tích báo cáo tài chính: 3 tín
+              \n +) Thanh toán điện tử: 3 tín
+              \n +) Thị trường chứng khoán: 3 tín
+              \n +) Hệ thống thông tin quản lý: 3 tín
+            \n Giáo dục đại cương (Bắt buộc): 
+              \n +) Chủ nghĩa xã hội khoa học: 2 tín
+              \n +) Kinh tế Chính trị Mác - Lênin: 2 tín
+              \n +) Kinh tế vi mô 1: 3 tín
+              \n +) Kinh tế vĩ mô 1: 3 tín
+              \n +) Lịch sử Đảng cộng sản Việt Nam: 2 tín
+              \n +) Lý thuyết xác suất và thống kê toán: 3 tín
+              \n +) Phương pháp nghiên cứu khoa học: 3 tín
+              \n +) Tiếng Anh cơ bản 2: 3 tín
+              \n +) Tiếng Anh cơ bản 3: 3 tín
+              \n +) Tiếng Anh cơ bản 4: 3 tín
+              \n +) Tin học đại cương: 3 tín
+              \n +) Toán cao cấp: 3 tín
+              \n +) Triết học Mác - Lênin: 3 tín
+              \n +) Tư tưởng Hồ Chí Minh: 2 tín
+              \n +) Pháp luật đại cương: 3 tín
+            \n Giáo dục quốc phòng (Bắt buộc):
+              \n +) Giáo dục quốc phòng: 8 tín
+            \n Giáo dục thể chất (Bắt buộc):
+              \n +) Giáo dục thể chất 1: 2 tín
+              \n +) Giáo dục thể chất 2: 2 tín
+              \n +) Giáo dục thể chất 3: 2 tín
+            \n Không tính điểm (Bắt buộc):
+              \n +) Tiếng Anh cơ bản 1: 3 tín
+            \n 	Thực tập và Khoá luận tốt nghiệp (Bắt buộc):
+              \n Khóa luận tốt nghiệp: 6 tín
+              \n Thực tập tốt nghiệp: 4 tín"
+
+  utter_ask_thi_dau_vao:
+    - text: "Tất cả các sinh viên khi mới nhập học ở APD đều phải làm bài thi đánh giá năng lực tiếng anh đầu vào. Nội dung đề thi đánh giá năng lực tiếng anh đầu vào gồm kỹ năng với thang điểm 900, với các bạn đạt từ 450 điểm trở lên sẽ được học thẳng lên học phần tiếng anh cơ bản 2, đối với những bạn sinh viên dưới 450 điểm sẽ phải học tiếng anh cơ bản 1"
+
+  utter_ask_chuong_trinh_hop_tac:
+    - text: "Trong xu thế hội nhập quốc tế, Học viện đang triển khai nhiều chương trình hợp tác với các tổ chức quốc tế như: Đại học Indiana, Đại học Purdure, Đại học Portland, Đại học tổng hợp bang California (Hoa Kỳ), Đại học Middlesex, Đại học Loughborough, Học viện ngoại giao London (Vương quốc Anh); Đại học Quốc tế Nhật Bản - IUJ, Viện Nghiên cứu chính sách công GRIPS (Nhật Bản); Đại học Nantes, Đại học Rennes 1; Đại học Rouen, Đại học Paris 1 Pantheon – Sorbonne, Trường Hành chính công quốc gia – ENA (Pháp); Đại học Southern Cross (Úc); Đại học tổng hợp Rome 2 (Ý), Học viện Anh ngữ EV (Philippines); Đại học Lausanse (Thụy Sỹ); Đại học MESSI (Nga), Đại học UTA (Phần Lan); Đại học Quốc gia Seoul (Hàn Quốc); Trường Chính sách công Lý Quang Diệu (Singapore)…các tổ chức quốc tế như: KOICA, USAID, Đại sứ Hoa Kỳ tại Việt Nam, Ngân hàng Thế giới tại Việt Nam, …"
+
+  utter_ask_APD:
+    - text: "Học viện Chính sách và Phát triển được thành lập theo Quyết định số 10/QĐ-TTg ngày 04/01/2008 của Thủ tướng Chính phủ, là trường Đại học công lập thuộc hệ thống giáo dục quốc dân. Về tổ chức, Học viện trực thuộc Bộ Kế hoạch và Đầu tư - cơ quan của Chính phủ, thực hiện chức năng quản lý nhà nước về kế hoạch, đầu tư phát triển và thống kê, bao gồm: tham mưu tổng hợp về chiến lược, kế hoạch phát triển kinh tế - xã hội của cả nước; quy hoạch phát triển, cơ chế, chính sách quản lý kinh tế chung và một số lĩnh vực cụ thể; đầu tư trong nước, đầu tư của nước ngoài vào Việt Nam và đầu tư của Việt Nam ra nước ngoài; khu kinh tế (bao gồm cả khu công nghiệp, khu kinh tế cửa khẩu, khu công nghệ cao và các loại hình khu kinh tế khác); quản lý nguồn hỗ trợ phát triển chính thức và viện trợ phi chính phủ nước ngoài; đấu thầu; thành lập, phát triển doanh nghiệp và khu vực kinh tế tập thể, hợp tác xã; thống kê; quản lý nhà nước các dịch vụ công trong các ngành, lĩnh vực thuộc phạm vi quản lý của Bộ theo quy định của pháp luật. Học viện đã được công nhận đạt tiêu chuẩn chất lượng giáo dục của Bộ Giáo dục và Đào tạo và 03 ngành đào tạo đại học đạt chuẩn kiểm định chất lượng. Là cơ sở đào tạo sau Đại học trong lĩnh vực chính sách phát triển, kinh tế và quản lý, Học viện định hướng trở thành trường đại học có uy tín trong hệ thống giáo dục quốc dân về đào tạo, nghiên cứu khoa học, tư vấn và phản biện chính sách vĩ mô. Học viện Chính sách và Phát triển tiến hành tổ chức đào tạo 100% các chương trình đào tạo hệ đại học chính quy theo hệ thống tín chỉ cho sinh viên. Quy mô đào tạo hiện nay: Gần 4.000 sinh viên và 150 học viên trình độ Thạc sĩ. Đội ngũ cán bộ, giảng viên cơ hữu của Học viện bao gồm Nhà giáo ưu tú, các Phó Giáo sư, Tiến sỹ, Thạc sỹ được đào tạo tại các trường Đại học uy tín ở Việt Nam và nước ngoài. Để nâng cao tính thực tiễn trong đào tạo, Học viện đã mời các chuyên gia từ các Cơ quan quản lý Nhà nước, Viện nghiên cứu, các doanh nghiệp, giảng viên từ các Trường đại học danh tiếng trong và ngoài nước tham gia giảng dạy. Trụ sở đào tạo chính của Học viện tọa lạc tại Khu đô thị Nam An Khánh, Huyện Hoài Đức, Hà Nội với quy mô diện tích 5ha, học viện có sức chứa 8.000 – 10.000 sinh viên đang theo học tại đây. Với cơ sở vật chất kỹ thuật, trang thiết bị hiện đại, hạ tầng công nghệ thông tin, truyền thông, học liệu và những điều kiện vật chất, thiết bị khác đảm bảo chất lượng sẽ thỏa mãn đầy đủ nhu cầu về môi trường học tập, nghiên cứu, sinh hoạt của giảng viên và sinh viên."
+
+  utter_ask_nghanh_dt:
+    - text: "Hiện tại, Học viện có 10 ngành và 19 chuyên ngành đào tạo hệ đại trà:
+                \n +) 1. Ngành Kinh tế: (1) Chuyên ngành Kinh tê đầu tư (chất lượng cao); (2) Chuyên ngành Đấu thầu và quản lý dự án; (3) Chuyên ngành Quản lý nguồn nhân lực.
+                \n +) 2. Ngành Kinh tế phát triển: (1) Chuyên ngành Kinh tế phát triển; (2) Chuyên ngành Kế hoạch phát triển.
+                \n +) 3. Ngành Kinh tế quốc tế: (1) Chuyên ngành Thương mại quốc tế và Logistics (chất lượng cao); (2) Chuyên ngành Kinh tế đối ngoại (chất lượng cao giảng dạy bằng tiếng Anh); (3) Chuyên ngành Kinh tế đối ngoại.
+                \n +) 4. Ngành Kinh tế số: (1) Chuyên ngành Kinh tế và kinh doanh số; (2) Chuyên ngành Phân tích dữ liệu lớn trong Kinh tế và Kinh doanh (Big Data).
+                \n +) 5. Ngành Kế toán: (1) Chuyên ngành Kế toán – Kiểm toán.
+                \n +) 6. Ngành Luật Kinh tế: (1) Chuyên ngành Luật Đầu tư - Kinh doanh.
+                \n +) 7. Ngành Quản lý Nhà nước: (1) Chuyên ngành Quản lý công.
+                \n +) 8. Ngành Quản trị kinh doanh: (1) Chuyên ngành Quản trị doanh nghiệp ; (2) Chuyên ngành Quản trị Marketing; (3)Chuyên ngành Quản trị kinh doanh du lịch.
+                \n +) 9. Ngành Tài chính – Ngân hàng: (1) Chuyên ngành Tài chính (chất lượng cao giảng dạy bằng tiếng Anh); (2) Chuyên ngành Tài chính; (3) Chuyên ngành Ngân hàng.
+                \n +) 10. Ngôn ngữ Anh: (1) Chuyên ngành Tiếng anh Kinh tế và Kinh doanh."
+
+  utter_ask_nghanh_clc:
+    - text: "Hiện nay ở APD có 2 ngành gồm 3 chuyên ngành đào tạo chuẩn quốc tế:
+                \n +) 1. Ngành Kinh tế quốc tế: Chuyên ngành Kinh tế đối ngoại.
+                \n +) 2. Ngành Tài chính – Ngân hàng: Chuyên ngành Tài chính; Chuyên ngành Đầu tư."
+
+  utter_ask_dao_tao_ts:
+    - text: "Hiện nay ở APD có đào tạo sau đại học trình độ Thạc sỹ có 06 chuyên ngành:
+                \n +) 1. Chính sách công.
+                \n +) 2. Tài chính – Ngân hàng
+                \n +) 3. Kinh tế quốc tế
+                \n +) 4. Kinh tế phát triển
+                \n +) 5. Quản trị kinh doanh
+                \n +) 6. Kinh tế quản lý công (Chương trình liên kết đào tạo với trường Đại học Rennes 1 – Pháp)"
+
+  utter_greet:
+    - text: "Xin chào bạn!\nBạn có thắc mắc gì thì cho mình biết nhé, minh sẽ giúp đỡ bạn !\n^_^"
+
+  utter_goodbye:
+    - text: "Nếu có thêm thắc mắc gì cứ cho min biết nhé mình sẽ giúp đỡ bạn <3, chúc bạn một ngày vui vẻ"
+    - text: "Bạn còn gì vướng mắc thì cho mình biết nhé, have a great day"
+
+
+
+  utter_ma_tuyen_sinh:
+    - text: "Mã tuyển sinh của trường Học viện Chính sách và Phát triển là: HCP"
+
+  utter_so_luong_chi_tieu:
+    - text: "Chỉ tiêu tuyển sinh năm nay là 1650 sinh viên bạn à."
+
+  utter_cao_dang:
+    - text: "Học viện Chính sách và Phát triển không tuyển sinh cao đẳng {name} à.\n\nBạn có thể tham khảo các ngành khác có điểm thấp hơn nhé."
+
+  utter_ask_ability:
+    - text: "Mình có thể giải đáp các thắc mắc về vấn đề tuyển sinh cho {name}."
+
+  utter_noworries:
+    - text: "Mình luôn sẵn lòng giúp đỡ {name} bất cứ lúc nào ạ ^^"
+
+  utter_happy:
+    - text: "Hì hì, bạn khen quá lời rồi ạ.\nRất vui vì giúp đỡ được bạn ^_^"
+
+  utter_sorry:
+    - text: "Mình xin lỗi vì đã không giúp gì được cho bạn :("
+
+  utter_hold_an_exam:
+    - text: "Rất tiếc là Học viện Chính sách và Phát triển không tổ chức kỳ thi riêng bạn à."
+
+  utter_admissions_online:
+    - text: "Học viện Chính sách và Phát triển có cho phép đăng ký online.\n{name} có thể tham khảo cách đăng ký xét tuyển dưới đây:
+                \n- Bước 1: Đăng ký online
+                \n- Bước 2: Gửi hồ sơ
+                \n- Bước 3: Chuyển khoản lệ phí"
+
+  utter_ask_main_link:
+    - text: "Đây là trang chủ của APD: http://apd.edu.vn/"
+
+  utter_ask_admissions_link:
+    - text: "Đây là trang tuyển sinh của APD: http://apd.edu.vn/tuyen-sinh-1"
+
+  utter_kytucxa:
+    - text: "APD hiện tại có ký túc xá ký túc xá APD ở trong trường nhé và là tòa D. Cơ sở vật chất của ký tú xá APD hiện đại, tiện nghi có nóng lạnh và wifi đảm bảo chỗ ở cho khoảng 700 sinh viên và đảm bảo an toàn về các quy định phòng cháy chữa cháy, ở ký túc luôn có bảo vệ canh trực để đảm bảo an toàn cho sinh viên. Muốn ở ký túc xá bạn cần làm đơn đăng ký nhé, đơn đăng ký sẽ được mở theo đợt và sẽ có thông báo. Về thông báo đăng ký ktx bạn xem thông tin ở đường dẫn: http://apd.edu.vn/tin-tu-hoc-vien/-/asset_publisher/kas0boHG03DG/content/id/1698956. Ký túc xá sẽ được mở vào lúc 5h sáng và đóng cửa vào lúc 11h đêm. Các vật dụng sinh hoạt hàng ngày bạn có thể đem vào ký túc xá bao gồm chăn, màn, chiếu, đệm,... còn liên quan tới thiết bị điện thì mỗi phòng chỉ được phép mang 1-2 bình siêu tốc đun nước nóng, quạt điện, mấy sấy tóc và laptop học tập. Để đảm bảo vệ sinh chung bạn không được mang thức ăn ở bên ngoài vào ký túc để ăn, chỉ được phép mang những thực phẩm khô và bánh kẹo vào ký túc xá APD. Bạn có thể tham khảo một số các quy định của ký túc xá ở đây nhé: http://apd.edu.vn/documents/20884/0/Qd+894.pdf/f618961c-7ecb-1592-8609-9b51e25c844c?t=1607587183551 . Hiện tại một số phòng đặc biệt (khu chuyên gia) sẽ được lắp điều hòa. Hiện nay, ở ký túc xá APD có 2 loại phòng. Phòng 6 người có đủ không gian sinh hoạt cho 6 sinh viên ở. Phòng 12 người là phòng rộng hơn đảm bảo việc sinh hoạt của 12 sinh viên. Mỗi phòng đều trang bị quạt trần và tủ để đồ riêng cho mỗi sinh viên khi đến ở. Đây là một số các khoản tiền bạn sẽ phải đóng khi ở ký túc xá:
+              \n SV thuộc diện Chính sách: 150.000 VNĐ/tháng
+              \n SV không thuộc diện Chính sách: 250.000 VNĐ/tháng
+              \n Tiền dịch vụ: 100.000 VNĐ/tháng (bao gồm wifi và phí dọn phòng hàng tuần)
+              \n Tiền cọc: 250.000 VNĐ
+              \n Tiền điện và tiền nước sẽ được thu tùy vào số mỗi phòng sử dụng
+             \n khoản tiền trên chưa bao gồm cả phí gửi xe. Đăng ký vé tháng gửi xe ở tầng 2 tòa hiệu bộ, phí gửi xe là 70k/tháng và 50k tiền cọc thẻ. Bạn nên đăng kí vào khung giờ hành chính nhé. Hiện nay ở ký túc xá chưa có máy giặt, bạn có thể đem ra bên ngoài giặt đồ nhé. Về vấn đề thời gian ở ký túc xá, bạn có thể làm hợp đồng 3 tháng hoặc hợp đồng 6 tháng. Nếu hết hợp đồng bạn có thể gia hạn tiếp cho đến hết năm 2 là bạn bắt buộc phải thanh lý hợp đồng và chuyển ra ngoài, tuy nhiên nếu bạn trong diện ưu tiên hoặc hoàn cảnh đặc biệt sẽ tiếp tục được gia hạn hợp đồng nhé. Ký túc xá sẽ ưu tiên xét đơn đăng ký của những bạn sinh viên trong diện chính sách hoặc sinh viên có hoàn cảnh đặc biệt
+            \n Về sau 11h tức giờ đóng cửa ở ký túc xá bạn sẽ không được vào trong ký túc nữa. Nếu bạn đi làm về muộn bạn cần làm đơn xin về muộn, đây là form đơn bạn tham khảo nhé: http://apd.edu.vn/c%C3%A1c-bi%E1%BB%83u-m%E1%BA%ABu-li%C3%AAn-quan/-/asset_publisher/WU9pTWym7tId/content/id/819269?_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_WU9pTWym7tId_redirect=http%3A%2F%2Fapd.edu.vn%2Fc%25C3%25A1c-bi%25E1%25BB%2583u-m%25E1%25BA%25ABu-li%25C3%25AAn-quan%3Fp_p_id%3Dcom_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_WU9pTWym7tId%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_WU9pTWym7tId_cur%3D0%26p_r_p_resetCur%3Dfalse%26_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_WU9pTWym7tId_assetEntryId%3D819269
+            \n Đây là link facebook của ký túc xá APD: https://www.facebook.com/groups/204345531291201"
+
+  utter_ask_dang_ky_tin_chi:
+    - text: "Đây là trang web đăng ký tín của APD: http://tinchi.apd.edu.vn/cmcsoft.iu.web.info/Login.aspx"
+
+  utter_ask_thoi_gian_hoc_trong_ngay:
+    - text: "Thời khóa biểu của APD sẽ có thay đổi sao cho phù hợp với giảng viên và sinh viên nhất, hiện nay thời gian các tiết học tại APD bao gồm:
+              \n Buổi sáng: Tiết 1: từ 7h30 đến 8h20
+                         \n Tiết 2: từ 8h25 đến 9h15
+                         \n Tiết 3: từ 9h20 đến 10h10
+                         \n Tiết 4: từ 10h15 đến 11h15
+                         \n Tiết 5: từ 11h10 đến 12h00
+              B\n uổi chiều: Tiết 6: từ 13h00 đến 13h50
+                          \n Tiết 7: từ 13h55 đến 14h45
+                          \n Tiết 8: từ 14h45 đến 16h30
+                          \n Tiết 9: từ 15h45 đến 16h35
+                          \n Tiết 10: từ 16h40 đến 17h30
+            \n Trên đây là thời khóa biểu của APD, giữa các tiết sẽ có 5 phút ra chơi nhé"
+
+  utter_ask_de_xe:
+    - text: "APD có cả hầm để xe và nhà để xe đáp ứng đủ nhu cầu cho các loại phương tiện di chuyển cho giảng viên và sinh viên và các bạn ở ký túc xá, chỗ để xe đáp ứng đủ quy tắc phòng cháy chữa cháy, khi đến APD các bạn đi qua bốt bảo vệ để lấy vé. Chỗ để xe luôn có bảo vệ canh trực và soát vé và có lối thoát hiểm để đảm bảo an toàn cho sinh viên và giảng viên bạn cứ yên tâm mà đi học nhé. APD có hầm gửi xe cho phép sinh viên để xe cả ban ngày lẫn ban đêm và có bảo vệ canh trực. Ở APD có những mức giá để xe sau:
+              \n - Với xe đạp và xe đạp điện: Giá vé lượt là 3k, để qua đêm là 10k, giá vé tháng là 45k/xe một tháng
+              \n - Với xe máy và xe máy điện: Giá vé lượt là 3k,để qua đêm là 10k, giá vé tháng là 70k/xe một tháng
+              \n - Với ô tô: giá vé tháng là 500k/xe một tháng
+              \n Đối với thẻ tháng bạn sẽ phải đóng thêm 50k tiền cọc thẻ xe. Để làm vé xe tháng bạn lên tòa hiệu bộ tầng 2 vào giờ hành chính để làm thủ tục đăng ký thẻ tháng, trong quá trình đăng ký thẻ bạn cần nhớ tên xe và biển số xe nhé. Khi hoàn tất thủ tục bạn sẽ nhận được thẻ tháng
+              \n Trong trường hợp nếu như bị mất vé xe thì cần báo ngay cho bảo vệ. Với thẻ lượt bạn sẽ phải đền 50k/vé đối với thẻ tháng bạn sẽ mất 50k tiền cọc"
+
+  utter_ask_bus_19:
+    - text: "Hiện nay APD có xe bus tuyến 19 đi vào trong trường nên bạn yên tâm nhé. Tuyến bus này có lộ trình như sau:
+              \n Học viện Chính sách và Phát triển - đường nội bộ Khu đô thị Sudico - đường nội bộ Khu đô thị Nam An Khánh - Lê Trọng Tấn (Hà Đông) - Tố Hữu - Vạn Phúc (Hà Đông) - Chu Văn An (Hà Đông) - Quang Trung (Hà Đông) - Trần Phú (Hà Đông) - Nguyễn Trãi - Ngã Tư Sở - Trường Chinh - Ngã tư Vọng - Đại La - Minh Khai - Vĩnh Tuy - quay đầu tại nút giao Vĩnh Tuy và đường dẫn lên đê Nguyễn Khoái - Vĩnh Tuy - Minh Khai - Nguyễn Khoái - Trần Khánh Dư (đường dưới) - Trần Khánh Dư (đường trên) - Trần Khánh Dư (Bãi đỗ xe Trần Khánh Dư)
+            \n Hiện nay tuyến bus này hoạt động từ 5h đến 21h các ngày trong tuần với giá vé hiện tại là 8000VNĐ/lượt. Bạn cũng có thể tham khảo thêm thông tin ở website này https://moovitapp.com/index/vi/ph%C6%B0%C6%A1ng_ti%E1%BB%87n_c%C3%B4ng_c%E1%BB%99ng-line-19-H%C3%A0_N%E1%BB%99i-2921-1597502-17099479-0"
+
+  utter_ask_thu_vien:
+    - text: "Thư viện APD ở tầng 6 tòa hiệu bộ. Thời gian mở cửa từ 8h-11h30 và 13h30-17h từ thứ 2 đến thứ 6 hàng tuần, thư viện sẽ đóng cửa vào thứ 7 và chủ nhật cũng như các ngày lễ, tết. Lưu ý, phòng mượn tầng 6 nghỉ phục vụ để sắp xếp lại sách vào chiều thứ 6 hàng tuần. Để mượn tài liệu ở thư viện bạn cần có thẻ sinh viên. Bạn có thể xem không gian thư viện ở bài viết này: https://www.facebook.com/HocvienCSPT/posts/pfbid01BU6utbbxKi6B6pf8S6yPg8ttPzmm52CixqNJTAz77ktfmuGy1zyHrvfY8L6rSRQl"
+
+  utter_dung_tai_lieu_thi:
+    - text: "Hiện nay ở APD về qui tắc thì không được phép sử dụng tài liệu trong quá trình làm bài thi kết thúc học phần, tuy nhiên với một số môn đặc biệt bạn có thể sử dụng tài liệu để thi. Thông thường ở buổi cuối các bạn sẽ được giảng viên thông báo lại về qui chế thi và việc sử dụng tài liệu trong khi làm bài thi kết thúc học phần"
+
+  utter_co_so_vat_chat:
+    - text: "Hiện nay APD đang gấp rút hoàn thiện và đưa vào sử dụng các tòa nhà. Ở APD có các trang thiết bị hiện đại đáp ứng nhu cầu của giảng viên và sinh viên được trang bị từ các phòng học cho tới các hội trường lớn với sức chứa hơn 1000 người. Các tòa nhà đang hoạt động hiện nay là tòa C và tòa D. Mỗi tòa đều đáp ứng đủ các quy tắc an toàn và có lối thoát hiểm. APD có canteen phục vụ sinh viên giảng viên 3 bữa sáng, chiều và tối vào các ngày trong tuần, ngoài ra canteen còn bán các đồ ăn vặt, các đồ dùng hàng ngày. Ngoài bán cơm, canteen còn bán các loại bánh bao, bánh mì, bún. Về chất lượng đồ ăn thì luôn đạt tiêu chuẩn an toàn thực phẩm và giá bán rẻ phù hợp với sinh viên. Các suất cơm ở canteen đều có đầy đủ chất dinh dưỡng với 4-5 món mặn tùy vào từng mức giá của suất cơm và món rau cũng như nước canh. Thêm vào đó canteen cũng thường xuyên thay đổi thực đơn để đảm bảo sự phong phú cho sinh viên và giảng viên. Hiện nay ở canteen cũng có quầy pha chế phục vụ các loại cà phê và các loại nước ép giá hợp lý với chất lượng tốt. Bạn có thể ghé cateen vào lúc 6h-21h các ngày trong tuần."
+
+  utter_ask_kts:
+    - text: "Kinh tế số có mà nghành 7310109, là nghành học ứng dụng những công nghệ hiện đại phục vụ trong lĩnh vực kinh tế và kinh doanh. Hiện nay kinh tế số có 2 chuyên nghành đào tạo chính:
+              \n - Phân tích dữ liệu lớn trong Kinh tế và Kinh doanh: Đây là nghành học sử dụng những công nghệ hiện đại áp dụng vào viêc phân tích dữ liệu để đưa ra những cơ sở cho quyết định kinh doanh đạt hiệu quả
+              \n - Kinh tế kinh doanh số: Đây là nghành học áp dụng việc sử dụng công nghệ để đạt hiệu quả kinh doanh cao hơn
+            \n Với năm 2023 điểm chuẩn của nghành kinh tế số là: 24,6 điểm (xét tuyển bằng kết quả thi THPT) và 26,0 điểm (Xét tuyển tổ hợp 3 môn theo học bạ THPT) với chỉ tiêu 140 sinh viên trên cả nước. Kinh tế số xét kết quả thi những tổ hợp xét tuyển: A00,A1,D01,C01. Nếu như bạn định học nghành này mà không có nền tảng về lập trình hay toán không tốt bạn vẫn sẽ có thể học được nghành này.
+             \n Bài viết về 2 chuyên nghành của khoa kinh tế số: http://apd.edu.vn/cac-chuong-trinh-dao-tao6/-/asset_publisher/oZMtrdKOuKAe/content/id/505595"
+
+  utter_ask_ptts:
+    - text: "Năm nay khoa kinh tế số có 3 phương thức tuyển sinh sau:
+              \n - 1.Phương thức tuyển thẳng (1% tổng chỉ tiêu)
+              \n - 2.Xét tuyển theo phương thức tuyển sinh (54% tổng chỉ tiêu) (phương thức xét tuyển này gồm: Xét tuyển dựa trên kết quả bài thi đánh giá năng lực, xét tuyển kết hợp dựa theo giấy chứng nhận đạt giải trong kỳ thi Học sinh giỏi cấp Tỉnh kết hợp với học lực THPT, xét tuyển kết hợp dựa theo chứng chỉ quốc tế và học lực THPT, xét tuyển dựa trên kết quả học tập THPT
+              \n - 3.Xét tuyển theo kết quả thi tốt nghiệp THPT năm 2023 (45% tổng chỉ tiêu)"
+  utter_ask_to_hop_xt:
+    - text: "Các tổ hợp xét tuyển của khoa kinh tế số:
+            \n - A00: Toán, Vật lý, Hóa học
+            \n - A1: Toán, Vật lý, Tiếng Anh
+            \n - D01:  Toán, Ngữ Văn, Tiếng Anh
+            \n - C01:  Toán, Vật lý, Ngữ Văn"
+
+  utter_ask_ptts_kts_tuyen_thang:
+    - text: "Những thí sinh thuộc các đối tượng xét tuyển thẳng theo quy định trong Quy chế tuyển sinh của Bộ Giáo dục và Đào tạo (Các học sinh đạt giải Quốc gia một trong số các môn thuộc Tổ hợp xét tuyển), phương thức này chiếm 1% tổng chỉ tiêu"
+
+  utter_ask_ptts_kts_tuyen_danh_gia_nang_luc:
+    - text: "xét tuyển dựa theo bài thi đánh giá năng lực của khoa kinh tế số gồm:
+             \n Đối tượng 1: Thí sinh học tại các trường THPT có kết quả bài thi đánh giá năng lực của Đại học Quốc gia Hà Nội năm 2023 đạt ngưỡng từ 75 điểm trở lên.
+             \n Đối tượng 2: Thí sinh học tại các trường THPT có kết quả bài thi đánh giá tư duy của Đại học Bách khoa Hà Nội năm 2023 đạt ngưỡng từ 60 điểm trở lên."
+
+  utter_ask_ptts_kts_hsg:
+    - text: "Xét tuyển dựa trên giấy chứng nhận đạt giải học sinh giỏi cấp tỉnh kết hợp với học lực: Đối tượng: Thí sinh học tại các trường THPT có điểm trung bình chung học tập lớp 12 đạt từ 7,5 trở lên và có đạt giải Nhất, Nhì, Ba tại các kỳ thi học sinh giỏi cấp Tỉnh các môn thuộc tổ hợp xét tuyển(A00,A1,D01,C01) của ngành Kinh tế số."
+
+  utter_ask_ptts_kts_hoc_ba:
+    - text: "- Đối tượng: Thí sinh học tại các trường THPT trên cả nước (bao gồm cả các trường chuyên) có điểm trung bình cộng 4 học kỳ của 03 môn thuộc tổ hợp xét tuyển (gồm năm học lớp 11 và lớp 12) đạt từ 7,5 trở lên.
+             \n - Cách thức xét tuyển: xét theo điểm từ trên cao xuống thấp cho đến hết chỉ tiêu xét tuyển.  Điểm xét tuyển (ĐXT) được xác định như sau: ĐXT = (Môn 1 + Môn 2 + Môn 3) + điểm ưu tiên (nếu có) 
+             \n trong đó các môn 1, môn 2, môn 3 là điểm trung bình cộng theo học kỳ tổ hợp xét tuyển  A00,A1,D01,C01"
+
+  utter_ask_ptts_kts_cc:
+    - text: "Hiện nay kinh tế số có xét tuyển dựa trên chứng chỉ tiếng anh và học lực THPT như sau:
+              \n - Đối tượng 1: Thí sinh học tại các trường THPT có điểm trung bình chung học tập lớp 12 đạt từ 7,5 trở lên và có chứng chỉ Tiếng Anh quốc tế trong thời hạn 2 năm (tính đến ngày xét tuyển): đạt IELTS 5.0 trở lên hoặc tương đương.
+              \n -  Đối tượng 2: Thí sinh học tại các trường THPT có điểm TBCHT lớp 12 đạt từ 7,5 trở lên và có chứng chỉ năng lực quốc tế trong thời hạn 3 năm (tính đến ngày xét tuyển): SAT từ 1000 điểm trở lên hoặc ACT từ 25 điểm trở lên hoặc A-Level từ 70 điểm trở lên."
+
+  utter_ask_dll:
+    - text: "Mục tiêu chung: đào tạo cử nhân phân tích dữ liệu lớn trong kinh tế và kinh doanh có kiến thức cơ bản về kinh tế, kinh doanh và công nghệ thông tin; có kiến thức chuyên sâu về việc sử dụng công cụ phân tích dữ liệu để giải quyết các vấn đề trong kinh tế và kinh doanh, nắm bắt được xu hướng chuyển đổi số của các tổ chức và doanh nghiệp trong thời đại số; có tư duy nghiên cứu độc lập và kỹ năng làm việc nhóm; có năng lực tự học bổ sung kiến thức, nâng cao trình độ chuyên môn thích nghi với sự thay đổi của môi trường làm việc.
+             \n Về kiến thức:
+              \n + Có kiến thức cơ bản về dữ liệu và khai phá dữ liệu, nắm được các nguyên lý kinh tế - kinh doanh cơ bản của nền kinh tế và doanh nghiệp, đặc biệt là các doanh nghiệp thuộc các ngành tài chính, ngân hàng, marketing hay doanh nghiệp công nghệ trong nền kinh tế số;
+              \n + Có sự hiểu biết về các nghiệp vụ liên quan đến kinh tế và kinh doanh trong môi trường toàn cầu hóa và các nền tảng công nghệ hỗ trợ cho hoạt động kinh doanh trong bối cảnh của cuộc cách mạng công nghiệp 4.0. Sử dụng thành thạo các công cụ phân tích dữ liệu phổ biến như Python, SQL và các phần mềm Excel, Power BI hoặc Tableau để thiết lập các báo cáo nhằm hỗ trợ ra quyết định kinh doanh;
+              \n + Hiểu rõ về các mô hình kinh doanh số, hệ sinh thái kinh tế số để tư vấn, triển khai chuyển đổi số nhằm tối ưu hóa các hoạt động của các cơ quan, tổ chức, doanh nghiệp.
+            \n Vị trí và nơi làm việc sau khi tốt nghiệp:
+            \n Các cơ quan Nhà nước thuộc Bộ, Ban, Ngành từ Trung ương tới Địa phương
+              \n - Khi mới tốt nghiệp:
+                \n + Nhân viên thống kê, thu thập dữ liệu cho cơ quan, tổ chức.
+                \n + Nhân viên truy vấn dữ liệu, tổng hợp và phân tích dữ liệu
+                \n + Nhân viên quản lý các Hệ quản trị dữ liệu của tổ chức
+              \n - Khi có 10 năm kinh nghiệm:
+                \n + Kỹ sư dữ liệu (Data Engineer)
+                \n + Chuyên gia Phân tích dữ liệu (Data Analyst)
+              \n Mô tả công việc: 
+                \n + Chịu trách nhiệm thu thập dữ liệu, mô tả dữ liệu, phát triển các công cụ thống kê để suy luận và thực hiện việc kiểm chứng các giả thuyết theo yêu cầu của công việc.
+                \n + Kết hợp giữa các kỹ năng phân tích dữ liệu và nghệ thuật truyền thông để biến những con số và thông tin khô khan trở thành câu chuyện hấp dẫn và dễ hiểu (trực quan hóa dữ liệu trên các công cụ như Tableau, PowerBI, Google Data Studio,…).
+                \n + Quản lý, vận hành một cách trơn tru các hệ thống quản lý dữ liệu của cơ quan, tổ chức như Oracle, MySQL, SQL Server,…
+                \n + Thực hiện các phân tích chuyên sâu và trình bày dữ liệu để hỗ trợ lãnh đạo đơn vị ra quyết định quan trọng.
+                \n + Xây dựng hệ thống lưu trữ, quản lý dữ liệu, tối ưu hóa hiệu suất và đảm bảo tính toàn vẹn của dữ liệu.
+            \n Các loại hình doanh nghiệp như Công ty cổ phần, Ngân hàng, Tập đoàn kinh tế, Công tư chứng khoán, Công ty công nghệ, Công ty kinh doanh thương mại,…
+              \n - Khi mới tốt nghiệp:
+                \n + Chuyên viên phân tích dữ liệu kinh doanh của doanh nghiệp
+                \n + Chuyên viên lập trình Python, lập trình R
+                \n + Chuyên viên quản trị cơ sở dữ liệu
+              \n - Khi có 10 năm kinh nghiệm
+                \n + Chuyên gia quản lý dữ liệu lớn (Big Data Manager)
+                \n + Kỹ sư Học máy (Machine Learning Engineer)
+                \n + Giám đốc dữ liệu (Chief Data Officers-CDO)
+              \n Mô tả công việc: 
+                \n + Sử dụng các công cụ như Data Mining, Tableau, PowerBI, Pyhton, R để triển khai phân tích các dữ liệu kinh doanh của doanh nghiệp theo yêu cầu của cấp trên.
+                \n + Xây dựng hệ thống báo cáo quản trị, báo cáo kinh doanh, truy xuất dữ liệu để tối ưu hóa hoạt động kinh doanh của doanh nghiệp. Sau đó sử dụng các dữ liệu đó để xác định xu hướng và tạo mô hình dự đoán những gì có thể xảy ra trong tương lai đối với sản phẩm, dịch vụ của công ty.
+                \n + Tham gia xây dựng các chiến dịch kinh doanh của doanh nghiệp, đo lường hiệu quả các chiến dịch kinh doanh bằng báo cáo phân tích.
+                \n + Chịu trách nhiệm quản lý, xử lý và phân tích dữ liệu lớn để hỗ trợ cho việc ra quyết định của doanh nghiệp.
+                \n + Xây dựng thiết kế các kiến trúc tích hợp dữ liệu, phân tích dữ liệu cũng như các cấu phần trong nền tảng datalake, data warehouse
+                \n + Xây dựng, phát triển các mô hình dữ liệu để có thể đáp ứng yêu cầu kinh doanh của doanh nghiệp.
+                \n + Tư vấn các giải pháp về dữ liệu, báo cáo, phân tích cho các phòng ban nghiệp vụ hoặc dự án CNTT trong doanh nghiệp.
+                \n + Tư vấn kiến trúc và tích hợp dữ liệu cho quá trình vận hành doanh nghiệp một cách hiệu quả.
+            \n Trường Đại học/Viện nghiên cứu:
+              \n Giảng viên, Nghiên cứu viên, Nhà Khoa học dữ liệu (Data Scientist)
+              \n Mô tả công việc: 
+                \n + Nghiên cứu giảng dạy các môn học về quản trị dữ liệu, lập trình phân tích dữ liệu, Khai phá dữ liệu và Học máy (Machine learning),…
+                \n + Nghiên cứu, phát triển mô hình dự đoán và thực hiện các dự án khoa học dữ liệu sử dụng công nghệ trí tuệ nhân tạo (AI)
+            \n Hoạt động tự doanh và khởi nghiệp kinh doanh:
+              \n Giám đốc/Chủ tịch công ty /Thành viên sáng lập/Chủ trung tâm đào tạo về dữ liệu,…
+              \n Mô tả công việc: 
+                \n + Thực hiện các dịch vụ liên quan đến dữ liệu
+                \n + Triển khai các khóa học ngắn hạn liên quan đến khai thác và phân tích dữ liệu trong kinh tế và kinh doanh
+                \n + Nghiên cứu lộ trình triển khai chuyển đổi số phù hợp với bối cảnh doanh nghiệp
+            \n Về khả năng học tập, nâng cao trình độ sau khi ra trường:
+              \n + Có đủ điều kiện và khả năng tự nghiên cứu, phát triển trình độ kiến thức và tham gia đào tạo ở bậc sau đại học trong và ngoài nước;
+              \n + Bảo đảm việc liên thông khối kiến thức ngành Kinh tế, Thương mại điện tử hoặc Ngành Khoa học dữ liệu với các cơ sở đào tạo khác ở Việt Nam và quốc tế;
+              \n + Độc lập thực hiện các công trình nghiên cứu khoa học, sản phẩm liên quan đến phân tích dữ liệu, kinh tế và kinh doanh.
+              \n Về mức lương trong nghành dữ liệu bạn có thể tham khảo bài viết sau: http://apd.edu.vn/ket-qua-ao-tao7/-/asset_publisher/pUi3OHQl1tYa/content/id/1272522
+              \n Bạn có thể tham khảo bài viết sau đây: http://apd.edu.vn/cac-chuong-trinh-dao-tao6/-/asset_publisher/oZMtrdKOuKAe/content/id/1571365"
+
+  utter_ask_tg_ho_so:
+    - text: "Khoa kinh tế số Nhận hồ sơ trực tuyến từ ngày 15/06/2023 đến hết 24h00’ ngày 15/07/2023. Thông báo kết quả xét tuyển trong tháng 8/2023."
+
+  utter_ask_hinh_thuc_dky_xt:
+    - text: "Bạn có thể đăng ký xét tuyển online bằng đường dẫn https://dkxt.apd.edu.vn/user/login và làm theo các bước hướng dẫn."
+
+  utter_ask_ho_so_xt:
+    - text: "Các giấy tờ cần chuẩn bị bao gồm:
+            \n - Ảnh chụp Học bạ THPT (bản gốc hoặc bản sao công chứng)
+            \n - Ảnh chụp giấy chứng nhận, giấy tờ có liên quan đến đối tượng xét tuyển (chứng chỉ Tiếng Anh, chứng chỉ năng lục quốc tế, kết quả các bài thi đánh giá năng lực, Kết quả bài thi đánh giá tư duy, giải thưởng thi học sinh giỏi,…)
+            \n - Ảnh chụp các giấy tờ có liên quan đến đối tượng ưu tiên (nếu có).
+            \n Bạn cần chuẩn bị những giấy tờ trên và nén thành file để upload theo hướng dẫn ở đường link https://dkxt.apd.edu.vn/user/login"
+
+  utter_ask_hp_kts:
+    - text: "Theo quy định của Nhà nước đối với trường công lập. Năm học 2023 – 2024, học phí chương trình đại học hệ chuẩn của Khoa Kinh tế số là 360.000 VNĐ/tín chỉ tương đương khoảng 12.000.000 VNĐ/năm học."
+
+  utter_ask_cc_dau_ra:
+    - text: "Hiện nay ở APD bạn cần có 2 chứng chỉ sau để đáp ứng chuẩn đầu ra:
+              \n Về tin học: cần có chứng chỉ IC3 và chứng chỉ MOS
+              \n Về tiếng anh: cần có chứng chỉ TOEIC hoặc các chứng chỉ như TOEFL ITP, TOEFL iBT, IELTS, Cambridge, Vstep, Aptis ESOL "
+
+  utter_ask_mos:
+    - text : "MOS (Microsoft Office  Specialist)  là bài thi đánh giá kỹ năng tin học văn phòng được sử dụng rộng rãi nhất trên thế giới với hơn 1 triệu bài thi được tổ chức hàng năm. MOS là chứng chỉ duy nhất xác nhận kỹ năng sử dụng phần mềm tin học văn phòng Microsoft Office và do Microsoft trực tiếp cấp chứng chỉ. Chứng chỉ nhằm công nhận mức độ hiểu biết và khả năng sử dụng của cá nhân đối với các ứng dụng văn phòng của Microsoft như: Word, Excel, Powerpint, Outlook, Access. \n Để đáp ứng chuẩn đầu ra tại APD bạn chỉ cần thi mos phiên bản năm 2019 ở mức độ Specialist với số điểm như sau ở mỗi phần như sau:
+                \n - wrold: 700/1000 hoặc hơn 
+                \n - excel: 700/1000 hoặc hơn 
+                \n Với mos thời hạn là vĩnh viễn"
+  utter_ask_ic3:
+    - text: "IC3 (The Internet and Computing Core Certification) là chứng nhận quốc tế về sử dụng máy tính và Internet cơ bản do Certipot (Hoa Kỳ) sáng tạo. Chuẩn tin học IC3 hiện nay đã được công nhận và sử dụng phổ biến trên toàn thế giới. Đây là chứng chỉ công nhận kỹ năng sử dụng, khai thác máy tính thành thạo của người học. Khẳng định hiểu biết của người học về phần cứng, phần mềm trên máy tính.\nBạn cần đạt mức điểm sau:
+              \n - Máy tính căn bản: 650/1000 hoặc hơn
+              \n - Phần mềm máy tính: 720/1000 hoặc hơn
+              \n - Kết nối trực tuyến: 620/1000 hoặc hơn \nVới ic3 thì thời hạn là vĩnh viễn"
+
+  utter_quy_doi_mos:
+    - text: "Bạn cần có 2 trong 3 chứng chỉ MOS (Microsoft Office Speccialist) vào đầu mỗi kỳ học để được xét chuẩn đầu ra tin học của học viện và miễn thi học phần tin học đại cương. Về điểm học phần tin học đại cương sẽ được quy đổi bằng với điểm trung bình các phần thi với mức điểm sau:
+              \n - MOS word: từ 700 đến 800 tương đương với 8 điểm, từ 800 đến 900 tương đương với 9 điểm, hơn 900 tương đương với 10 điểm
+              \n - MOS excel: từ 700 đến 800 tương đương với 8 điểm, từ 800 đến 900 tương đương với 9 điểm, hơn 900 tương đương với 10 điểm
+              \n - MOS power point: từ 700 đến 800 tương đương với 8 điểm, từ 800 đến 900 tương đương với 9 điểm, hơn 900 tương đương với 10 điểm"
+
+  utter_quy_doi_ic3:
+    - text: "Để quy đổi chứng chỉ IC3 trước hết bạn cần có chứng chỉ IC3 vào đầu mỗi kỳ học và bạn sẽ được miễn thi học phần tin học đại cương và quy đổi điểm học phần tính điểm trung bình chung học tập như sau:
+              \n - Phần thi máy tính căn bản: từ 650 đến dưới 700 quy đổi sẽ ra 7, từ 700 đến dưới 800 sẽ quy đổi được 8, từ 800 đến dưới 900 sẽ quy đô được 9, trên 900 sẽ quy đổi được 10
+              \n - Phần thi phần mềm máy tính: từ 650 đến dưới 700 quy đổi sẽ ra 7, từ 700 đến dưới 800 sẽ quy đổi được 8, từ 800 đến dưới 900 sẽ quy đô được 9, trên 900 sẽ quy đổi được 10
+              \n - Phần thi kết nối trực tuyến: từ 650 đến dưới 700 quy đổi sẽ ra 7, từ 700 đến dưới 800 sẽ quy đổi được 8, từ 800 đến dưới 900 sẽ quy đô được 9, trên 900 sẽ quy đổi được 10"
+
+  utter_ask_qt_mien_hoc_tin_hoc:
+    - text: "Nếu bạn có chứng chỉ tin học đáp ứng yêu cầu bạn cần làm đơn quy đổi và xét chuẩn đầu ra trên app slink của apd theo thông báo. Thông báo quy đổi và xét chuẩn đầu ra sẽ được thông báo trước đầu mỗi học kỳ và bạn cần hoàn thành đơn và nộp trước học kỳ sẽ được miễn thi học phần tin học đại cương. Về quy trình làm đơn quy đổi trước hết bạn cần vào app hoặc website của slink apd, sau khi đăng nhập xong ấn vào bộ phận một cửa ở đó sẽ hiện đơn quy đổi và xét chuẩn đầu ra tin học,bạn hoàn thành các thông tin trong đơn và sau đó nộp đơn. Tiếp theo, bạn lên trang tín sau đó chọn đăng ký môn học và chọn lớp đăng ký quy đổi và lớp xét chuẩn đầu ra rồi ấn đăng ký"
+
+  utter_ask_TOEFL_ITP:
+    - text: "Đối với TOEFL ITP (Institutional Testing Program) là kỳ thi nội bộ trong nước, tiền thân là kỳ thi TOEFL PBT (Paper Based Test), có hiệu lực 2 năm. Hình thức thi Thí sinh làm trắc nghiệm trên giấy. Bài thi gồm có 3 phần: nghe hiểu, ngữ pháp và đọc hiểu với thời gian làm bài 2 tiếng. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần đạt 450/677 điểm với chứng chỉ TOEFL ITP và chứng chỉ trong thời gian còn hiệu lực"
+
+  utter_ask_TOEFL_iBT:
+    - text: "TOEFL iBT (Internet Based Test) là bài thi thế hệ mới, sử dụng internet để chuyển đề thi từ ETS về đến trung tâm tổ chức thi. Bài thi bao gồm 4 kỹ năng: Nghe, nói, đọc, viết. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần đạt 61/120 điểm với chứng chỉ TOEFL ITP với 4 kỹ năng và chứng chỉ trong thời gian còn hiệu lực"
+
+  utter_ask_TOEIC:
+    - text: "Chứng chỉ TOEIC là viết tắt của cụm từ Test of English for International Communication nghĩa là bài thi kiểm tra trình độ tiếng Anh giao tiếp quốc tế. Chứng chỉ TOEIC được cấp bởi Viện Khảo thí giáo dục Hoa Kỳ (Educational Testing Service – ETS). Mỗi bài thi TOEIC đánh giá kết quả phản ánh thực tế mức độ thành thạo giao tiếp tiếng Anh trong tất cả các hoạt động như kinh doanh, thương mại, du lịch. Chứng chỉ TOEIC có thời hạn trong 2 năm. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần đạt 450/990 với 4 kỹ năng và chứng chỉ vẫn trong thời gian có hiệu lực."
+
+  utter_ask_IELTS:
+    - text: "IELTS là một hệ thống bài kiểm tra về khả năng sử dụng thành thạo tiếng Anh trải dài qua cả bốn kĩ năng Nghe, Nói, Đọc, Viết. Bài thi được đồng điều hành bởi ba tổ chức ESOL của Đại học Cambridge, Hội đồng Anh và tổ chức giáo dục IDP của Úc và được triển khai từ năm 1989. Thời hạn của chứng chỉ IELTS là 2 năm. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần đạt 4.5 và chứng chỉ trong thời gian còn hiệu lực"
+
+  utter_ask_Cambridge:
+    - text: "Chứng chỉ Cambridge là bằng ghi nhận thành tích khi thí sinh vượt qua các kỳ thi tiếng Anh quốc tế được tổ chức bởi Trường đại học Cambridge. Hệ thống các bài thi này được quản lý và tổ chức trực tiếp bởi Nhà xuất bản và Hội đồng Khảo thí Đại học Cambridge, chứng chỉ này có thời hạn vĩnh viễn. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần đạt 140/230 là đáp ứng chuẩn đầu ra tại APD"
+
+  utter_ask_Vstep:
+    - text: "VSTEP là từ viết tắt của tiếng Anh Vietnamese Standardized Test of English Proficiency. Đây là kỳ thi đánh giá năng lực tiếng Anh theo Khung năng lực ngoại ngữ (NLNN) 6 bậc dùng cho Việt Nam, tương đương với trình độ A1, A2, B1, B2, C1,C2. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần có chứng chỉ Vstep ở một trong các mức độ B1, B2, C1 tương đương với bậc 3,4,5 là đáp ứng yêu cầu chuẩn đầu ra tại APD "
+
+  utter_ask_Aptis_ESOL:
+    - text: "Aptis ESOL là bài thi đánh giá trình độ tiếng Anh trên máy tính ở cả bốn kỹ năng, được nghiên cứu và phát triển bởi Hội đồng Anh. Bài thi được tổ chức tại các địa điểm thi, được kiểm soát và công nhận bởi Cục Kiểm định Chất lượng và Quy chế thi (Ofqual) của Vương quốc Anh, chứng chỉ này có thời hạn vĩnh viễn. Áp dụng chuẩn đầu ra với các chuyên nghành hệ đào tạo chính quy tại APD, bạn cần có chứng chỉ Aptis ESOL ở mức độ B1 trở lên là đạt yêu cầu về đầu ra tại APD"
+
+  utter_quy_doi_TOEIC:
+    - text: "Khi có chứng chỉ TOEIC 4 kỹ năng với mức điểm từ 450 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ 450 đến 474 TOEIC: +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 9
+                                    \n +) TACB4: 8
+              \n Từ 475 đến 499 TOEIC: +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 10
+                                    \n +) TACB4: 9
+              \n Từ 500 TOEIC trở đi:  +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 10
+                                    \n +) TACB4: 10"
+
+  utter_quy_doi_IELTS:
+    - text: "Khi có chứng chỉ IELTS từ 4.5 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ 4.5 đến 4.9 IELTS: +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 9
+                                    \n +) TACB4: 8
+              \n Từ 5.0 IELTS trở lên: +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 10
+                                    \n +) TACB4: 10"
+
+  utter_quy_doi_TOEFL_ITP:
+    - text: "Khi có chứng chỉ TOEFL ITP từ 450 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ 450 đến 462 TOEFL ITP: +) TACB1: Đạt
+                                        \n +) TACB2: 10
+                                        \n +) TACB3: 9
+                                        \n +) TACB4: 8
+              \n Từ 463 TOEFL ITP trở lên: +) TACB1: Đạt
+                                        \n +) TACB2: 10
+                                        \n +) TACB3: 10
+                                        \n +) TACB4: 10"
+
+  utter_quy_doi_TOEFL_iBT:
+    - text: "Khi có chứng chỉ TOEFL iBT từ 45 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ 45 đến 59 TOEFL ITP: +) TACB1: Đạt
+                                      \n +) TACB2: 10
+                                      \n +) TACB3: 9
+                                      \n +) TACB4: 8
+              \n Từ 50 TOEFL ITP trở lên: +) TACB1: Đạt
+                                       \n +) TACB2: 10
+                                       \n +) TACB3: 10
+                                       \n +) TACB4: 10"
+
+  utter_quy_doi_Cambridge:
+    - text: "Khi có chứng chỉ Cambridge với mức điểm từ 450 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ 140 đến 142 Cambridge: +) TACB1: Đạt
+                                        \n +) TACB2: 10
+                                        \n +) TACB3: 9
+                                        \n +) TACB4: 8
+              \n Từ 143 đến 145 Cambridge: +) TACB1: Đạt
+                                        \n +) TACB2: 10
+                                        \n +) TACB3: 10
+                                        \n +) TACB4: 9
+              \n Từ 146 Cambridge trở đi:  +) TACB1: Đạt
+                                        \n +) TACB2: 10
+                                        \n +) TACB3: 10
+                                        \n +) TACB4: 10"
+
+  utter_quy_doi_Vstep:
+    - text: "Khi có chứng chỉ Vstep với cấp độ B1 tương đương bậc 3 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Với bậc 3 Vstep: +) TACB1: Đạt
+                               \n +) TACB2: 10
+                               \n +) TACB3: 9
+                               \n +) TACB4: 8
+              \n Với bậc 4 Vstep: +) TACB1: Đạt
+                               \n +) TACB2: 10
+                               \n +) TACB3: 10
+                               \n +) TACB4: 9
+              \n Từ bậc 5 Vstep trở đi:  +) TACB1: Đạt
+                                      \n +) TACB2: 10
+                                      \n +) TACB3: 10
+                                      \n +) TACB4: 10"
+
+  utter_quy_doi_AptisESOL:
+    - text: "Khi có chứng chỉ Aptis ESOL từ cấp độ B1 trở lên đạt chuẩn đầu ra theo yêu cầu học viện bạn sẽ được miễn các học phần tiếng anh và sẽ được quy đổi các điểm 4 học phần tiếng anh cơ bản theo các mức điểm sau:
+              \n Từ bậc B1 Aptis ESOL: +) TACB1: Đạt
+                                    \n +) TACB2: 10
+                                    \n +) TACB3: 9
+                                    \n +) TACB4: 8
+              \n Từ bậc B2 Aptis ESOL trở lên: +) TACB1: Đạt
+                                            \n +) TACB2: 10
+                                            \n +) TACB3: 10
+                                            \n +) TACB4: 10"
+
+  utter_ask_quy_doi_ta:
+    - text: "Nếu bạn có chứng chỉ tiếng đáp ứng yêu đầu ra của học viện cầu bạn cần làm đơn quy đổi và xét chuẩn đầu ra trên app slink của apd theo thông báo. Thông báo quy đổi và xét chuẩn đầu ra sẽ được thông báo trước đầu mỗi học kỳ và bạn cần hoàn thành đơn và nộp trước học kỳ sẽ được miễn thi học phần tiếng anh cơ bản. Về quy trình làm đơn quy đổi trước hết bạn cần vào app hoặc website của slink apd, sau khi đăng nhập xong ấn vào bộ phận một cửa ở đó sẽ hiện đơn quy đổi và xét chuẩn đầu ra tiếng anh,bạn hoàn thành các thông tin trong đơn và sau đó nộp đơn. Tiếp theo, bạn lên trang tín sau đó chọn đăng ký môn học và chọn lớp đăng ký quy đổi và lớp xét chuẩn đầu ra rồi ấn đăng ký"
+
+  utter_xep_lich_hoc:
+    - text: "Khi bắt đầu mỗi kỳ học sẽ có thông báo đăng ký tín chỉ cho sinh viên chuẩn bị. Khi đăng ký tín, sẽ có 3 môn sẽ được tự đăng ký bạn có thể đăng ký thêm các học phần khác hoặc đổi các lớp học phần và xắp xếp lịch học sao cho phù hợp với bạn nhất. Ngoài ra, bạn cũng có thể hủy các học phần nếu như bạn chưa sẵn sàng học một học phần nào đó."
+
+  utter_ask_clb:
+    - text: "Hiện tại ở APD còn những câu lạc bộ hoạt động sau:
+            \n +) CLB Tiếng Anh APD - AEC
+            \n +) CLB Truyền Thông APD - ACC
+            \n +) CLB Bóng đá APD
+            \n +) CLB Sinh viên Tình Nguyện APD - AVSC
+            \n +) CLB Cầu lông APD - ABM
+            \n +) CLB Bóng Rổ - APD Basketball
+            \n +) CLB Nhà đầu tư trẻ APD - AIYC
+            \n +) CLB Sinh Viên Nghiên Cứu Khoa Học APD - ASRE
+            \n +) CLB Kỹ Năng Kinh Doanh APD APD- BSC
+            \n +) CLB Tình nguyện viên quốc tế (APD International Volunteers Club)
+            \n +) CLB Nhà quản lý và Tư vấn Đấu thầu APD
+            \n +) Câu Lạc Bộ Sách APD - ABC
+            \n +) CLB Công nghệ thông tin và Truyền thông - ICT
+            \n +) CLB Võ Tổng Hợp APD - AMC
+            \n +) CLB Kế toán Kiểm toán trẻ APD - YAA
+            \n +) CLB STARTUP & MARKETING - SMC
+            \n +) CLB Thanh niên vận động hiến máu Học viện Chính sách và Phát triển
+            \n +) CLB Nhạc cụ APD - AIC
+            \n +) CLB Luật gia trẻ APD (YJAC)
+            \n +) CLB Nhảy APD (ADC)
+            v+) CLB Kỹ Năng Sống APD
+          \n Bạn muốn biết thêm thông tin của câu lạc bộ nào không?"
+
+  utter_ask_clb_TA:
+    - text: "Câu lạc bộ Tiếng Anh (AEC) được thành lập theo Quyết định số 471/QĐ-HVCSPT  ngày 19  tháng 09  năm 2014 do Giám đốc Học viện Chính sách và Phát triển ký.Tôn chỉ mục đích hoạt động: AEC được thành lập nhằm thúc đẩy đẩy việc sử dụng tiếng Anh giữa các sinh viên của Học viện Chính sách và Phát triển. Chúng tôi muốn mang đến cho sinh viên một sân chơi hữu ích và thân mật để cải thiện các kỹ năng mềm như gây quỹ, tổ chức sự kiện và làm việc nhóm. CLB tiếng Anh cũng tạo cơ hội để sinh viên thực hành tiếng Anh và kỹ năng giao tiếp, những điều mà thành viên quan tâm nhất.Các hình thức hoạt động: AEC hoạt động theo quy mô câu lạc bộ có tính chuyên môn và tổ chức các hoạt động phi lợi nhuận vì công đồng. Sau đây là thông tin liên lạc của câu lạc bộ:
+            +) Email: clbaecapd@gmail.com
+            +) Facebook: AEC – Câu lạc bộ Tiếng Anh APD (link:  https://www.facebook.com/aecapd/)"
+
+  utter_ask_clb_tt:
+    - text: "Câu lạc bộ truyền thông APD là một trong những clb hoạt động sôi nổi nhất tại trường. Bạn có thể xem thông tin clb tại các đường link sau:
+            \n +) Facebook: https://www.facebook.com/apdcommunicationclub/
+            \n +) Instagram: https://www.instagram.com/acc_clbtruyenthongapd
+            \n +) Tiktok: https://www.tiktok.com/@acc_apd
+            \n +) Gmail: Clbtruyenthongapd@gmail.com"
+
+  utter_ask_clb_bong_da:
+    - text: "Câu lạc bộ bóng đán ơi tập hợp của những người có niềm đam mê với trái bóng, với bộ môn nhảy đối kháng. Chúng tôi sẽ tạo ra những trận đấu hay nhất và chơi với tất cả niềm đam mê của bản thân. Cùng nhau góp sức mang APD đến với mọi người nhờ những trân cầu đỉnh cao và những điệu nhảy cháy nhất. Đoàn kết là sức mạnh của chúng tôi. Thông tin liên hệ:
+            \n +) Facebook: https://www.facebook.com/AFC.ADC.APD/
+            \n +) Gmail: caulacbobongdasinhvienafc.apd@gmail.com"
+
+  utter_ask_AVSC:
+    - text: "Câu lạc bộ sinh viên tình nguyện  được thành lập theo Quyết định số 01C ngày 10 tháng 10 năm 2019 do Giám đốc Học viện Chính sách và phát triển ký. Tôn chỉ mục đích hoạt động: Hoạt động đúng mục đích tình nguyện. Tất cả đều xuất phát từ tâm và sống có đạo đức. Các hình thức hoạt động: Hoạt động off CLB 1 lần/ 1tuần vào thứ 2 hàng tuần. Hỗ trợ tất cả hoạt động của Đoàn thanh niên và Học viện. Bên cạnh đó hoạt động các chương trình thiện nguyện ngoài xã hội. Thông tin liên hệ:
+            \n +) Email: clbsinhvientinhnguyen@apd.edu.vn
+            \n +) Facebook:  CLB Sinh Viên Tình Nguyện APD – AVSC (Link fb: https://www.facebook.com/CLBSvtnAPD/)"
+
+  utter_ask_clb_br:
+    - text: "CLB Bóng Rổ đây sẽ là nơi bạn được tự do theo đuổi sở thích, sống hết mình với đam mê, cũng như khám phá và trải nghiệm thêm nhiều điều mới mẻ trong những năm tháng ngồi trên ghế giảng đường Đại học. Thông tin liên hệ:
+            \n +) Link fanpage: https://www.facebook.com/apdbasketballclub
+            \n +) Link instagram: https://www.instagram.com/apd.basketball/
+            \n +) Email: basketballapd@gmail.com"
+
+  utter_ask_clb_nha_dau_tu_tre:
+    - text: "Câu lạc bộ nhà đầu tư trẻ là một câu lạc bộ vẫn đang hoạt động tại APD. Thông tin của câu lạc bộ:
+            \n +) Fangape: AYIC - Câu Lạc Bộ Nhà Đầu Tư Trẻ APD
+            \n +) Email: clbnhadaututreapd@gmail.com"
+
+  utter_ask_clb_nckh:
+    - text: "Nếu bạn là sinh viên thích nghiên cứu tìm tòi, hãy đến ngay với mái nhà chung ASRE. Chúng mình luôn dang rộng cánh tay chào đón các bạn.THÔNG TIN LIÊN HỆ:
+            \n +) Email: asrenghiencuukhoahoc@gmail.com
+            \n +) Fanpage: https://www.facebook.com/asreclub.apd
+            \n +) Instagram: https://instagram.com/asre.club_apd
+            \n +) TikTok: https://vt.tiktok.com/ZSd49CWXC/"
+
+  utter_ask_APD_BSC:
+    - text: "CLB Kỹ Năng Kinh Doanh APD  tự hào là một trong những CLB học thuật đầu tiên của Học Viện Chính Sách và Phát Triển, dưới sự bảo trợ của Viện Đào Tạo Quốc Tế. Đây là nơi nuôi dưỡng các tài năng trẻ, đặc biệt là trong lĩnh vực kinh doanh, kinh tế. Được thành lập vào ngày 13/02/2020 cho đến nay, BSC đã và đang dần trở nên hoàn thiện hơn, thu hút đông đảo các bạn sinh viên trong và ngoài Học viện. Các hoạt động của câu lạc bộ: CLB Kỹ Năng Kinh Doanh APD đã không ngừng nỗ lực trong suốt thời gian vừa qua, để lại dấu ấn trong lòng các bạn sinh viên trong và ngoài trường bằng những sự kiện hết sức bổ ích: Những kẻ lập dị phi thường , Hội thảo Lãnh đạo bản thân, dẫn lối sự nghiệp, Workshop (Bứt phá kỹ năng – Chinh phục nhà tuyển dụng), Workshop RECONNETION: Nắm bắt cơ hội, Vượt trội thành công v.v. Với những sự kiện học thuật như vậy, CLB Kỹ Năng Kinh Doanh APD đang ngày càng trưởng thành và sẽ trở thành một trong những CLB chuyên môn vững mạnh trong trường, cũng như là cầu nối giữa các doanh nghiệp, tổ chức hoạt động trong ngành với các bạn sinh viên trong và ngoài Học viện. Thông tin liên hệ:
+            \n +) Facebook: https://www.facebook.com/bsc.apd/
+            \n +) Email: clbkynangkinhdoanhapd@gmail.com"
+
+  utter_ask_AIVC:
+    - text: "CLB TÌNH NGUYỆN VIÊN QUỐC TẾ - AIVC có tiền thân là Đội tình nguyện viên đón các đoàn quốc tế đến thăm và làm việc tại Học viện Chính sách và Phát triển. Từ những thành công của các buổi đón tiếp Đoàn quốc tế như Roger William (Mỹ), Kadiri (Indonesia),... cùng với sự hỗ trợ và thông qua bởi học viện, AIVC chính thức được thành lập với tên gọi là câu lạc bộ tình nguyện viên quốc tế mang trong mình trí tuệ, sự sáng tạo, và nhiệt huyết tuổi trẻ. Học viện ký quyết định đổi tên, chính thức thành lập CLB TÌNH NGUYỆN VIÊN QUỐC TẾ -AIVC.  Mục tiêu hoạt động: Cung cấp và phát triển nguồn nhân lực (Tình nguyện viên) để đảm nhiệm các dự án giao lưu quốc tế của trường; trở thành cầu nối giữa Sinh viên quốc tế và sinh viên Học viện, đồng thời, CLB là nơi để tìm kiếm cơ hội giao lưu, tiếp cận các các chương trình trao đổi sinh viên quốc tế, các học bổng nước ngoài và giúp cải thiện các kỹ năng cơ bản. Thông tin liên hệ:
+            \n +)  Fanpage: https://www.facebook.com/profile.php?id=61551222453622 
+            \n +) Gmail: apdinternationalvolunteersclub@gmail.com"
+
+  utter_ask_qly_dtu:
+    - text: "CLB Nhà Quản lý và Tư vấn đấu thầu APD được Bộ môn đấu thầu và quản lý dự án thành lập và cố vấn hoạt động nhằm tạo môi trường, sân chơi lành mạnh để sinh viên được tham gia trải nghiệm, học tập, rèn luyện cả về học thuật, kinh nghiệm thực tiễn, kỹ năng mềm và các kỹ năng cần thiết khác đáp ứng yêu cầu công việc và phát triển sự nghiệp trong tương lai. CLB Nhà quản lý và Tư vấn đấu thầu là cầu nối giữa các cán bộ, giảng viên, sinh viên với các CEO, Giám đốc doanh nghiệp, chuyên gia đấu thầu qua đó giúp nâng cao trình độ, kiến thức thực tiễn đối với sinh viên, tăng cường cơ hội việc làm và trải nghiệm thực tiễn đối với sinh viên. Ngoài ra, CLB Nhà Quản lý và Tư vấn đấu thầu còn tổ chức nhiều hoạt động ngoại khóa, hoạt động thực tế, đào tạo nội bộ giúp sinh viên ngày càng hoàn thiện về mọi mặt, hướng tới phát triển toàn diện, đáp ứng các yêu cầu, tiêu chuẩn công dân toàn cầu. Thông tin liên hệ:
+            \n +) Mail: clbdauthaupmc@gmail.com
+            \n +) Facebook: CLB Nhà quản lý và Tư vấn Đấu thầu APD"
+
+  utter_ask_ABC:
+    - text: "Câu lạc bộ Sách APD  được thành lập theo Quyết định số 584/QĐ – BKH  ngày   12 tháng 5  năm 2008  do Giám Đốc Học viện Chính sách và phát triển ký. Tôn chỉ mục đích hoạt động : Với mong muốn đem lại những cuốn sách thiết       thực và bổ ích đôi với sinh viên học viện. Hơn hết với mục đích giúp sinh viên có cái nhìn đúng nhất về  việc đọc sách, hình thành thói quen đọc sách. Các hình thức hoạt động : theo chu kì 2 tuần/ 1 lần CLB vẫn duy trì sinh hoạt và trao đổi sách cho các thành viên CLB. Thông tin liên hệ:
+            \n +) Hotline: 0387526724
+            \n +) Email : clbsach.apd@gmail.com
+            \n +) FacebooK : Câu Lạc Bộ Sách APD (Link : https://www.facebook.com/caulacbosach/)"
+
+  utter_ask_ict:
+    - text: "Công nghệ thông tin và truyền thông, thường được gọi là ICT, là cụm từ thường dùng như từ đồng nghĩa rộng hơn cho công nghệ thông tin (IT). ICT đã tạo nên một xã hội toàn cầu, nơi mà mọi người có thể tương tác và liên lạc với nhau một cách nhanh chóng và hiệu quả. Với mục đích giúp cho các bạn sinh viên Học viện Chính sách và Phát triển nâng cao hiểu biết về công nghệ thông tin và truyền thông, đáp ứng tốt hơn các yêu cầu của nhà tuyển dụng khi ra trường và là diễn đàn để kết nối giữa các thế hệ sinh viên nên ICT Club đã được Ban giám đốc Học viện phê duyệt thành lập theo quyết định số 742/QĐ-HVCSPT ngày 9/9/2020. Thông tin liên hệ:
+            \n +) Fanpage: https://www.facebook.com/ICTClubAPD
+            \n +) Email: ictclub0303@gmail.com"
+
+  utter_ask_AMC:
+    - text: "CLB Võ Tổng Hợp AMC được đồng chí Trần Tùng Dương thành lập dưới sự bảo trợ của khoa Tài chính đầu tư. Thông tin liên hệ:
+            \n +) Facebook : https://www.facebook.com/apdmmaclub
+            \n +) Tiktok : https://vt.tiktok.com/ZSeeVHKEL/
+            \n +) Gmail: apd.mmaclub@gmail.com"
+
+  utter_ask_YAA:
+    - text: " YAA - Câu lạc bộ Kế toán - Kiểm toán trẻ thuộc Học viện Chính sách và Phát triển với phương châm: Sinh viên Kế - Kiểm năng động, sáng tạo, không ngại thử thách. Chỉ cần cùng nhau, chúng mình tin rằng, mọi điều có thể!  YAA mong muốn tạo một môi trường phát triển toàn diện cho các bạn sinh viên. Đó không chỉ là nơi để rèn luyện kỹ năng nghiệp vụ về Kế - Kiểm mà còn là nơi để các bạn tự tin thể hiện bản thân, phát triển các kỹ năng, tạo những mối quan hệ gắn bó thân thiết trong cuộc đời sinh viên của mình. Thông tin liên hệ:
+            \n +) Gmail: YAA.FAA.APD@gmail.com
+            \n +) Fanpage YAA - CLB Kế toán - Kiểm toán trẻ (link: https://www.facebook.com/ClbKTKT)"
+
+  utter_ask_SMC:
+    - text: "CLB Startup & Marketing (SMC) được thành lập bởi Khoa Quản Trị Kinh Doanh - Học viện Chính sách và Phát triển với mục tiêu tạo nền móng, xây dựng môi trường học tập, giao lưu cho các nhà khởi nghiệp trẻ tài năng, đam mê. Với mục tiêu tạo dựng không khí học tập và làm việc hiệu quảĐào tạo ra những nhân tài khởi nghiệp trẻ, dám thử thách để hoàn thiện bản thân. Tạo môi trường giao lưu - nơi giúp các bạn xây dựng kỹ năng sẵn sàng thực chiến trên thương trường. Thông tin liên hệ:
+            \n +) Mail: clbstartupmarketingapd@gmail.com"
+
+  utter_ask_CMA:
+    - text: "CLB Thanh niên vận động hiến máu Học viện Chính sách và Phát triển - CMA có tiền thân từ Đội 25 APD - là 1 trong 3 đội trực thuộc C25 Lạc Hồng - Câu lạc bộ 25 Việt Nam. CLB Thanh niên vận động hiến máu Học viện Chính sách và Phát triển - CMA là nơi các bạn trẻ có đam mê với công việc tình nguyện nói chung và hiến máu nói riêng cùng tham gia hoạt động. Thông tin liên lạc:
+            \n +) Email: truyenthong25apd@gmail.com
+            \n +) Facebook: https://www.facebook.com/cmaapd"
+
+  utter_ask_AIC:
+    - text: "Câu Lạc Bộ Nhạc Cụ - APD Instruments Club thành lập vào 12/09/2014, là nơi cho các bạn có đam mê học một số các loại nhạc cụ như guitar, sáo,cajon,ukulele... (đặc biệt là guitar) đối với các bạn đã biết, tiếp xúc làm quen với các loại nhạc cụ trên và với các bạn có đam mê nhưng chưa có cơ hội tiếp xúc, tạo sân chơi năng động, giao lưu âm nhạc, cùng nhau giúp đỡ - cùng nhau phát triển, tạo cầu nối âm nhạc giữa các thành viên trong câu lạc bộ với các câu lạc bộ khác trong phạm vi một số trường ĐH, tạo band nhạc đại diện cho câu lạc bộ tham gia các chương trình hoạt động của APD nói riêng và các chương trình giao lưu với các câu lạc bộ khác. Thông tin liên lạc:
+            \n +) Mail: aicmedia.apd@gmail.com
+            \n +) Page: https://www.facebook.com/apdinstrumentsclub
+            \n +) Youtube: https://www.youtube.com/channel/UCiInklsYzHPpt6OdMumOv3Q 
+            \n +) Tiktok: https://www.tiktok.com/@aicapd?lang=vi-VN 
+            \n +) Instagram: https://www.instagram.com/aic.apd/"
+
+  utter_ask_YJAC:
+    - text: "Các thông liên quan và thông tin liên hệ của câu lạc bộ luật gia trẻ YJAC:
+            \n +) Page:https://www.facebook.com/CLBLuatgiatreAPD
+            \n +) Mail: yjac.luatgiatreapd139@gmail.com"
+
+  utter_ask_ADC:
+    - text: "Câu lạc bộ nhảy hiện đại với tên gọi 𝑨𝑫𝑪 𝑪𝒓𝒆𝒘 (𝑨𝑷𝑫-𝑫𝒂𝒏𝒄𝒆-𝑪𝒍𝒖𝒃) là câu lạc bộ nhảy ĐẦU TIÊN và DUY NHẤT của trường 𝐻𝑜̣𝑐 𝑣𝑖𝑒̣̂𝑛 𝐶ℎ𝑖́𝑛ℎ 𝑠𝑎́𝑐ℎ 𝑣𝑎̀ 𝑃ℎ𝑎́𝑡 𝑡𝑟𝑖𝑒̂̉𝑛. Đây là sân chơi bổ ích dành cho các bạn trẻ nhiệt huyết, muốn phát triển những cá tính tiềm ẩn với bộ môn nghệ thuật nhảy hiện đại. Được thành lập từ năm học 2015 và hoạt động liên tục đến nay, Với những đóng góp và cống hiến cho rất nhiều các hoạt động văn nghệ, sự kiện của trường, 𝑨𝑫𝑪 𝑪𝒓𝒆𝒘 đã khẳng định mình ngày càng phát triển và lớn mạnh trong năm học vừa qua.Đặc biệt hơn, ngoài việc công diễn trực tiếp, CLB cũng tổ chức quay các video clip đăng tải trên các trang mạng như 𝑌𝑜𝑢𝑡𝑢𝑏𝑒, 𝐹𝑎𝑐𝑒𝑏𝑜𝑜𝑘, 𝐼𝑛𝑠𝑡𝑎𝑔𝑟𝑎𝑚, 𝑇𝑖𝑘𝑡𝑜𝑘… nhằm hướng đến việc quảng bá cho hình ảnh năng động, sáng tạo của sinh viên trường 𝐻𝑜̣𝑐 𝑣𝑖𝑒̣̂𝑛 𝐶ℎ𝑖́𝑛ℎ 𝑠𝑎́𝑐ℎ 𝑣𝑎̀ 𝑃ℎ𝑎́𝑡 𝑡𝑟𝑖𝑒̂̉𝑛 cũng như phát triển hơn về mảng diễn xuất cũng như phát triển nội dung.  Bên cạnh đó, các thành viên nhà 𝑨𝑫𝑪 𝑪𝒓𝒆𝒘 luôn yêu thương và giúp đỡ lẫn nhau cũng không kém cạnh những “𝑎𝑛ℎ 𝑐ℎ𝑖̣ 𝑒𝑚” khác khiến gia đình này như một tập thể đông con siêu ấm áp và hạnh phúc vậy ^^ , bạn không chỉ có cơ hội được giao lưu và học hỏi ở những đàn anh, đàn chị đi trước về kĩ năng nhảy múa của mình, mà còn có dịp được làm quen hay kết thân với những bạn có cùng ngọn lửa đam mê nữa chứ, mấy khi lại kiếm được một người bạn có nhiều điểm chung như thế này phải không?. Với lời giới thiệu trên, chúng tớ mong rằng bạn sẽ có thêm sự lựa chọn trong việc tham gia vào những CLB của trường, đặc biệt là CLB nhảy hiện đại của chúng mình. Vì vậy, hãy vào 𝑨𝑫𝑪 𝑪𝒓𝒆𝒘 để được “𝑐ℎ𝑎́𝑦” cùng chúng mình nhé!!!!!!. Thông tin liên hệ: 
+            \n +) Fanpage Facebook: https://www.facebook.com/ADCCREW2018
+            \n +) Youtube: https://www.youtube.com/channel/UCIvhP8HePSUeD7h_xyv_9SA
+            \n +) Tiktok: https://www.tiktok.com/@adc_crew?lang=vi-VN&is_copy_url=1...  
+            \n +) Instagram: https://www.instagram.com/adccrew.2018/"
+
+  utter_ask_APDLifeSkillsClub:
+    - text: "Bạn có thể tham khảo các thông tin liên quan tới câu lạc bộ kỹ năng sống ở trang web sau: http://apd.edu.vn/cac-clb-sinh-vien/-/asset_publisher/fWgnTZlyLnoe/content/id/525692#:~:text=V%E1%BB%8B%20tr%C3%AD%3A%20C%C3%A2u%20l%E1%BA%A1c%20b%E1%BB%99,ngo%E1%BA%A1i%20kh%C3%B3a%20c%E1%BB%A7a%20sinh%20vi%C3%AAn."
+
+  utter_ask_cocau_tcochuc:
+    - text: "Bạn xem cơ cấu tổ chức của APD tại đây nhé: http://apd.edu.vn/cac-don-vi-truc-thuoc"
+
+  utter_khong_hieu_y_dinh:
+    - text: "Xin lỗi mình không hiểu ý của Bạn.\nBạn có thể nói rõ lại được không."
+
+  utter_modau:
+    - text: "Xin chào, mình có thể giúp gì cho bạn"
+
+  utter_ask_quoc_phong:
+    - text: "Chương trình giáo dục Quốc phòng an ninh của APD được tổ chức tại đại học Hùng Vương tại Việt Trì, Phú Thọ. Chương trình đào tạo sẽ kéo dài khoảng 28 ngày, với hai phần học chính lý thuyết và thực hành. Môn học này gồm 8 tín và bạn sẽ đóng thêm tiền ăn khi tham gia môn học này."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - utter_quy_doi_thang4
+  - utter_ask_ct_tinh_thang4
+  - utter_ask_muc_khen_thuong_hoc_bongdt
+  - utter_ask_cai_thien
+  - utter_ask_hoc_lai
+  - utter_ask_tc_kts
+  - utter_ask_van_phong_kts
+  - utter_ask_hotline_kts
+  - utter_ask_APD_toc
+  - utter_ask_hđ_nk
+  - utter_ask_tham_quan_dn
+  - utter_ask_chuong_trinh_hoc_dll
+  - utter_ask_chuong_trinh_hoc_ktkds
+  - utter_ask_thi_dau_vao
+  - utter_ask_chuong_trinh_hop_tac
+  - utter_ask_APD
+  - utter_ask_nghanh_dt
+  - utter_ask_nghanh_clc
+  - utter_ask_dao_tao_ts
+  - utter_greet
+  - utter_goodbye
+  - utter_ma_tuyen_sinh
+  - utter_so_luong_chi_tieu
+  - utter_cao_dang
+  - utter_ask_ability
+  - utter_noworries
+  - utter_happy
+  - utter_sorry
+  - utter_hold_an_exam
+  - utter_admissions_online
+  - utter_ask_main_link
+  - utter_ask_admissions_link
+  - utter_kytucxa
+  - utter_ask_dang_ky_tin_chi
+  - utter_ask_thoi_gian_hoc_trong_ngay
+  - utter_ask_de_xe
+  - utter_ask_bus_19
+  - utter_ask_thu_vien
+  - utter_dung_tai_lieu_thi
+  - utter_co_so_vat_chat
+  - utter_ask_kts
+  - utter_ask_ptts
+  - utter_ask_to_hop_xt
+  - utter_ask_ptts_kts_tuyen_thang
+  - utter_ask_ptts_kts_tuyen_danh_gia_nang_luc
+  - utter_ask_ptts_kts_hsg
+  - utter_ask_ptts_kts_hoc_ba
+  - utter_ask_ptts_kts_cc
+  - utter_ask_dll
+  - utter_ask_tg_ho_so
+  - utter_ask_hinh_thuc_dky_xt
+  - utter_ask_ho_so_xt
+  - utter_ask_hp_kts
+  - utter_ask_cc_dau_ra
+  - utter_ask_mos
+  - utter_ask_ic3
+  - utter_quy_doi_mos
+  - utter_quy_doi_ic3
+  - utter_ask_qt_mien_hoc_tin_hoc
+  - utter_ask_TOEFL_ITP
+  - utter_ask_TOEFL_iBT
+  - utter_ask_TOEIC
+  - utter_ask_IELTS
+  - utter_ask_Cambridge
+  - utter_ask_Vstep
+  - utter_ask_Aptis_ESOL
+  - utter_quy_doi_TOEIC
+  - utter_quy_doi_IELTS
+  - utter_quy_doi_TOEFL_ITP
+  - utter_quy_doi_TOEFL_iBT
+  - utter_quy_doi_Cambridge
+  - utter_quy_doi_Vstep
+  - utter_quy_doi_AptisESOL
+  - utter_ask_quy_doi_ta
+  - utter_xep_lich_hoc
+  - utter_ask_clb
+  - utter_ask_clb_TA
+  - utter_ask_clb_tt
+  - utter_ask_clb_bong_da
+  - utter_ask_AVSC
+  - utter_ask_clb_br
+  - utter_ask_clb_nha_dau_tu_tre
+  - utter_ask_clb_nckh
+  - utter_ask_APD_BSC
+  - utter_ask_AIVC
+  - utter_ask_qly_dtu
+  - utter_ask_ABC
+  - utter_ask_ict
+  - utter_ask_AMC
+  - utter_ask_YAA
+  - utter_ask_SMC
+  - utter_ask_CMA
+  - utter_ask_AIC
+  - utter_ask_YJAC
+  - utter_ask_ADC
+  - utter_ask_APDLifeSkillsClub
+  - utter_ask_cocau_tcochuc
+  - utter_khong_hieu_y_dinh
+  - utter_modau
+  - utter_ask_quoc_phong
+

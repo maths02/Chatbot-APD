@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Rasa</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/rasa-webchat/lib/rasa-webchat.min.js"></script>
+</head>
+<body>
+    <div id="webchat"></div>
+    <script>
+        $(document).ready(function() {
+            const socket = new WebSocket("ws://localhost:5005/websocket");
+            const webchat = new RasaWebchat({
+                socket: socket,
+                initMessage: "Xin chào! Tôi có thể giúp gì cho bạn?",
+            });
+            $("#webchat").append(webchat.el);
+        });
+    </script>
+</body>
+</html>
